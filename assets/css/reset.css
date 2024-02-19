@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+h4,
+h5,
+h6 {
+    display: block;
+    font-family: var(--secondary-font);
+}
+
+p {
+    font-family: var(--secondary-font);
+    font-size: var(--size-text);
+}
+
+.font-1 {
+    font-family: var(--primary-font);
+}
+
+.font-2 {
+    font-family: var(--secondary-font);
+}
+
+
+
+.f1 {
+    font-size: var(--size-title)
+}
+
+.f2 {
+    font-size: var(--size-subtitle)
+}
+
+.f3 {
+    font-size: var(--size-text)
+}
+
+.f4 {
+    font-size: var(--size-smal)
+}

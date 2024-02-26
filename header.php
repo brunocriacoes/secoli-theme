@@ -63,7 +63,7 @@
                         <i class="fa-solid fa-bars"></i>
                     </div>
                     <div>
-                        <img height="26" src="./assets/images/logo.svg" alt="logo">
+                        <img height="26" src="<?php echo esc_url( get_theme_file_uri( '/assets/images/logo.svg' ) ); ?>" alt="logo">
                     </div>
                     <div>
                     </div>
@@ -76,19 +76,13 @@
                 <div class="container">
                     <div class="grid grid__menu">
                         <a href="./index.html">
-                            <img class="header__logo" src="assets/images/logo.svg" alt="logo">
+                            <img class="header__logo" src="<?php echo esc_url( get_theme_file_uri( '/assets/images/logo.svg' ) ); ?>" alt="logo">
                         </a>
                         <div>
-                            <div class="header__none">
-                                <a class="header__menu" href="./que-somos.html">A SECOLI</a>
-                                <a class="header__menu" href="./blog.html">BLOG</a>
-                                <a class="header__menu" href="./contato.html">CONSULTORIA PERSONALIZADA</a>
-                                <a class="header__menu" href="./media/catalogo.pdf">CATÁLOGO DIGITAL</a>
-                                <a class="header__menu" href="./produtos.html">PROMOÇÕES</a>
-                                <a class="header__menu" href="./produtos.html">TENDÊNCIAS</a>
-                                <a class="header__menu" href="./produtos.html">LINHA PREMIUM</a>
-                                <a class="header__menu" href="./contato.html">CONTATO</a>
-                            </div>
+                        <div class="header__none">
+                            <?php print_menu('menu_principal', 'header__menu')?>
+                        </div>
+
                             <div class="header__search__contact contatos-empilhados">
                                 <form class="header__search" action="./produtos.html" method="get">
                                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -121,35 +115,38 @@
 
             <div class="full category__bg">
                 <div class="container">
+                    <?php 
+                    $url = 'http://localhost/wp-json/smartlead-api/v1/categorias';
+
+                    $response = file_get_contents( $url );
+                    $response = json_decode($response, true);
+                    ?>
                     <ul class="category__list">
                         <li>
                             <a href="./produtos.html">
                                 <i class="fa-regular fa-image"></i>
                                 TODAS AS CATEGORIAS
                             </a>
-                            <ul>
-                                <span>BOLSAS E SACOLAS</span>
-                                <li><a href="./produtos.html">Bolsa Feminina</a></li>
-                                <li><a href="./produtos.html">Bolsa Escritório</a></li>
-                                <li><a href="./produtos.html">Sacola Eco</a></li>
-                                <li><a href="./produtos.html">Sacola Enfeite</a></li>
-                                <li><a href="./produtos.html">Sacola Eco</a></li>
-                                <li><a href="./produtos.html">Sacola Enfeite</a></li>
-                                <li><a href="./produtos.html">Sacola Eco</a></li>
-                                <li><a href="./produtos.html">Sacola Enfeite</a></li>
-                                <img src="./assets/images/img-category.png" alt="imagem Categoria">
-                                <a href="./produtos.html">VER TODOS</a>
-                            </ul>
                         </li>
-                        <li><a href="./produtos.html"><i class="fa-regular fa-image"></i>NECESSAIRE</a></li>
-                        <li><a href="./produtos.html"><i class="fa-regular fa-image"></i>BOLSAS E MOCHILAS</a></li>
-                        <li><a href="./produtos.html"><i class="fa-regular fa-image"></i>CARTEIRAS</a></li>
-                        <li><a href="./produtos.html"><i class="fa-regular fa-image"></i>SACOLAS</a></li>
-                        <li><a href="./produtos.html"><i class="fa-regular fa-image"></i>ECOLÓGICO</a></li>
-                        <li><a href="./produtos.html"><i class="fa-regular fa-image"></i>CASES E EMBALAGENS</a></li>
-                        <li><a href="./produtos.html"><i class="fa-regular fa-image"></i>DESENVOLVIMENTO</a></li>
-                        <li><a href="./produtos.html"><i class="fa-regular fa-image"></i>ESCRITÓRIO</a></li>
-                        <li><a href="./produtos.html"><i class="fa-regular fa-image"></i>DIA-A-DIA</a></li>
+                        <?php foreach($response as $cat){ ?>
+                            <li>
+                                <a href="">
+                                    <i class="fa-regular fa-image"></i>
+                                    <?php echo $cat["name"]?>
+                                </a>
+                                <ul>
+                                    <?php foreach($cat["subcategories"] as $sub){?>
+                                        <li>
+                                            <a href="<?php echo $sub["id"]?>">
+                                                <?php echo $sub["name"]?>
+                                            </a>
+                                        </li>
+                                    <?php }?>
+                                    <img src="<?php __F('assets/images/img-category.png') ?>" alt="imagem Categoria">
+                                    <a href="./produtos.html">VER TODOS</a>
+                                </ul>
+                            </li>
+                        <?php }?>
                     </ul>
                 </div>
             </div>

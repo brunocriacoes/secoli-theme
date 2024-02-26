@@ -33,100 +33,33 @@
                             INSTITUCIONAL
                         </h5>
                         <span class="space"></span>
-                        <a class="footer__link" href="./que-somos.html">
-                            Quem somos
-                        </a>
-                        <a class="footer__link" href="./page.html">
-                            Sustentabilidade
-                        </a>
+                        <?php print_menu('menu_rodape_institucioanal', 'footer__link')?>
                     </div>
                     <div>
                         <h5 class="footer__tittle">PRODUTOS</h5>
                         <span class="space"></span>
-                        <a class="footer__link" href="./produtos.html">
-                            Todas as Categorias
-                        </a>
-                        <a class="footer__link" href="./produtos.html">
-                            Lançamentos
-                        </a>
-                        <a class="footer__link" href="./produtos.html">
-                            Projetos Especiais
-                        </a>
-                        <a class="footer__link" href="./produtos.html">
-                            Kit Boas Vindas
-                        </a>
-                        <a class="footer__link" href="./produtos.html">
-                            Bolsas e Sacolas
-                        </a>
-                        <a class="footer__link" href="./produtos.html">
-                            Nécessaires
-                        </a>
-                        <a class="footer__link" href="./produtos.html">
-                            Malas e Mochilas
-                        </a>
-                        <a class="footer__link" href="./produtos.html">
-                            Térmicas
-                        </a>
-                        <a class="footer__link" href="./produtos.html">
-                            Escritório
-                        </a>
-                        <a class="footer__link" href="./produtos.html">
-                            Tech
-                        </a>
+                        <?php print_menu('menu_rodape_produtos', 'footer__link')?>
                     </div>
                     <div>
                         <h5 class="footer__tittle">
                             LINKS
                         </h5>
                         <span class="space"></span>
-                        <a class="footer__link" href="./page.html">
-                            Consultoria Personalizada
-                        </a>
-                        <a class="footer__link" href="./media/catalogo.pdf">
-                            Catálogo Digital
-                        </a>
-                        <a class="footer__link" href="./produtos.html">
-                            Promoções
-                        </a>
-                        <a class="footer__link" href="./page.html">
-                            Tendências
-                        </a>
-                        <a class="footer__link" href="./produtos.html">
-                            Linha Premium
-                        </a>
-                        <a class="footer__link" href="./contato.html">
-                            Contato
-                        </a>
+                        <?php print_menu('menu_rodape_links', 'footer__link')?>
                     </div>
                     <div>
                         <h5 class="footer__tittle">
                             BLOG
                         </h5>
                         <span class="space"></span>
-                        <a class="footer__link" href="./page.html">
-                            Título da notícia
-                        </a>
-                        <a class="footer__link" href="./page.html">
-                            Título da notícia
-                        </a>
-                        <a class="footer__link" href="./page.html">
-                            Título da notícia
-                        </a>
-                        <a class="footer__link" href="./page.html">
-                            Título da notícia
-                        </a>
+                        <?php print_menu('menu_rodape_blog', 'footer__link')?>
                     </div>
                     <div>
                         <h5 class="footer__tittle">
                             INFORMAÇÕES
                         </h5>
                         <span class="space"></span>
-                        <a class="footer__link" href="./page.html">
-                            Política de Qualidade
-                        </a>
-                        <a class="footer__link" href="./page.html">
-                            Política de Privacidade
-                        </a>
+                        <?php print_menu('menu_rodape_informacoes', 'footer__link')?>
                         <span class="space"></span>
                         <h5 class="footer__tittle">
                             CONTATOS

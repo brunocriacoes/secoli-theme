@@ -1,3 +1,8 @@
+<?php
+
+$opcoes = get_option('secoli_theme_info');
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -54,7 +59,7 @@
 
 	<div app-data="./media/db.json">
 
-		<?php include __DIR__ . '/promo.php' ?>
+		<?php include __DIR__ . '/parts/promo.php' ?>
 
         <div class="full">
             <div class="container">
@@ -88,13 +93,13 @@
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                     <input class="header__input" type="search" name="s" required placeholder="Buscar no site">
                                 </form>
-                                <a class="header__contact " href="http://" href="tel:+55112684-5500">
+                                <a class="header__contact" href="tel:+55<?php echo $opcoes['telefone_header'] ?>">
                                     <i class="fa-solid fa-phone"></i>
-                                    <span>11 2684-5500</span>
+                                    <span><?php echo $opcoes['telefone_header'] ?></span>
                                 </a>
-                                <a class="header__contact" href="mailto:comercial@secoli.com.br">
+                                <a class="header__contact" href="mailto:<?php echo $opcoes['email_header'] ?>">
                                     <i class="fa-solid fa-envelope"></i>
-                                    <span>comercial@secoli.com.br</span>
+                                    <span><?php echo $opcoes['email_header'] ?></span>
                                 </a>
                             </div>
                         </div>
@@ -131,7 +136,7 @@
                         <?php foreach($response as $cat){ ?>
                             <li>
                                 <a href="">
-                                    <i class="fa-regular fa-image"></i>
+                                    <img class="icon_category_menu" src="<?php echo __F('assets/icons/' . $cat['id'].'.svg') ?>" alt="">
                                     <?php echo $cat["name"]?>
                                 </a>
                                 <ul>

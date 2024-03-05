@@ -1,6 +1,17 @@
 <?php 
 
+include __DIR__ . "/includ/factor-cunston-posts.php";
+include __DIR__ . "/includ/factor-meta-box.php";
+include __DIR__ . "/includ/widget.php";
+
 include __DIR__ . "/admin/config.php";
+include __DIR__ . "/admin/banner.php";
+include __DIR__ . "/admin/promo.php";
+include __DIR__ . "/admin/prod_destaque.php";
+include __DIR__ . "/admin/equipe.php";
+
+add_theme_support('post-thumbnails');
+
 
 function __F($path){
     echo esc_url( get_theme_file_uri( $path ) ); 

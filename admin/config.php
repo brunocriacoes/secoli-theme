@@ -185,7 +185,7 @@ function secoli_instagram_callback() {
     echo '<input type="text" name="secoli_theme_info[instagram]" value="' . esc_attr($opcoes['instagram']) . '"/>';
 }
 
-register_setting('secoli-config-theme-info', 'meu_plugin_opcoes', 'sanitize_opcoes_info');
+register_setting('secoli-config-theme-info', 'meu_theme_opcoes', 'sanitize_opcoes_info');
 
 function sanitize_opcoes_info($opcoes) {
     $opcoes['telefone_header'] = sanitize_text_field($opcoes['telefone_header']);

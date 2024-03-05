@@ -1,22 +1,12 @@
+
 <?php get_header() ?>
 
-	<div class="full">
-		<div class="banner swiper">
-			<div class="inner__banner swiper-wrapper">
-				<div class="iten__banner swiper-slide" app-repeat="banner">
-					<div class="iten__bg__banner" style="background-image: url(./media/paginas/index/{{img}})">
-						<div>
-							<h2 class="title">{{title}}</h2>
-							<p class="text text__black">{{description}}</p>
-							<span class="long-space"></span>
-							<a class="btn gradient-1" href="{{link}}">SOLICITE UM CONTATO</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-pagination"></div>
-		</div>
-	</div>
+<?php
+
+$opcoes = get_option('secoli_theme_info');
+
+?>
+	<?php include __DIR__ . '/parts/banner.php' ?>
 
 	<div class="long-space"></div>
 
@@ -42,9 +32,18 @@
 					</a>
 				</div>
 				<div class="grid c-3 personalizados__img">
-					<div app-repeat="linhas">
-						<img src="./media/catalogo/{{img}}" title="{{img}}">
-					</div>
+					<?php foreach([
+						 "Porta-Cartao-10417-114115.jpg",
+						 "Agenda-7681d1-1533567506.jpg",
+						 "Caderno-AMARELA-902-1508516757.png",
+						 "PBL-803.jpg",
+						 "Necessaire-10847-174021.jpg",
+						 "Porta-documento-7624-141922.jpg"
+					] as $photo){ ?>
+						<div>
+							<img src="<?php __F("media/catalogo/{$photo}") ?>">
+						</div>
+					<?php } ?>
 				</div>
 			</div>
 		</div>
@@ -53,37 +52,12 @@
 	<div class="full">
 		<div class="container">
 			<div>
-				<img width="100%" src="./assets/images/publicidade1.png" alt="publicidade">
+				<img width="100%" src="<?php __F('assets/images/publicidade1.png') ?>" alt="publicidade">
 			</div>
 		</div>
 	</div>
 
-	<div class="full">
-		<div class="container">
-			<div class="long-space"></div>
-			<h3 class="title">
-				Confira os destaques do mês
-			</h3>
-			<div class="space"></div>
-			<div class="slide__destaque">
-				<div class="slide__destaque__inner swiper-wrapper ">
-					<div class="slide__destaque__iten swiper-slide" app-repeat="destaques">
-						<img src="./media/catalogo/{{img}}" alt="{{title}}">
-						<a class="slide__destaque__btn" href="./produto.html?slug={{slug}}">
-							Saiba mais
-						</a>
-					</div>
-				</div>
-				<div class="slide__destaque__next">
-					<i class="fa-solid fa-chevron-right"></i>
-				</div>
-				<div class="slide__destaque__prev">
-					<i class="fa-solid fa-chevron-left"></i>
-				</div>
-			</div>
-			<div class="long-space"></div>
-		</div>
-	</div>
+	<?php include __DIR__ . '/parts/destaque.php' ?>
 
 	<div class="full idealize__bg">
 		<div class="container">
@@ -119,7 +93,7 @@
 	<div class="full">
 		<div class="container">
 			<div>
-				<img width="100%" src="./assets/images/publicidade1.png" alt="publicidade">
+				<img width="100%" src="<?php __F('assets/images/publicidade1.png') ?>" alt="publicidade">
 			</div>
 		</div>
 	</div>
@@ -145,12 +119,12 @@
 				<div class="text-center">
 					<div class="video-mask">
 						<video autoplay loop muted class="video">
-							<source src="assets/images/video.mp4" type="video/mp4">
+							<source src="<?php __F('assets/images/video.mp4') ?>" type="video/mp4">
 						</video>
 					</div>
 					<div class="text-center">
 						<span class="space"></span>
-						<img src="./assets/images/logo.svg" height="50" alt="secoli">
+						<img src="<?php __F('assets/images/logo.svg') ?>" height="50" alt="secoli">
 					</div>
 				</div>
 			</div>
@@ -159,57 +133,9 @@
 		</div>
 	</div>
 
-	<div class="full feedback__bgb">
-		<div class="container">
-			<h3 class="title text-center ">
-				Empresas que confiam na Secoli
-			</h3>
-			<span class="long-space"></span>
-			<div class="slide__feedback">
-				<div class="slide__feedback__inner swiper-wrapper">
-					<div class="slide__feedback__iten swiper-slide" app-repeat="clientes">
-						<img src="./media/clientes/{{url}}" alt="destaque">
-					</div>
-				</div>
-				<div class="slide__feedback__next">
-					<i class="fa-solid fa-chevron-right"></i>
-				</div>
-				<div class="slide__feedback__prev">
-					<i class="fa-solid fa-chevron-left"></i>
-				</div>
-			</div>
-			<span class="long-space"></span>
-			<hr>
-		</div>
-	</div>
+	<?php include __DIR__ . '/parts/empresas.php' ?>
 
-	<div class="full profile__bg">
-		<div class="container">
-			<div class="long-space"></div>
-			<div class="card__profile">
-				<div class="card__profile__inner swiper-wrapper">
-					<div class="card__profile__iten swiper-slide" app-repeat="profile">
-						<img src="{{img}}" alt="avatar">
-						<p>
-							<span>
-								<i>
-									{{depoiment}}
-								</i>
-							</span>
-						</p>
-						<span class="space"></span>
-						<p>
-							<strong>{{name}}</strong>
-							<br>
-							<i>{{office}}</i>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="pagination__profile"></div>
-			<div class="long-space"></div>
-		</div>
-	</div>
+	<?php include __DIR__ . '/parts/equipe.php' ?>
 
 	<div class="full gradient-1 contact__bg">
 		<div class="container">
@@ -295,39 +221,23 @@
 					</p>
 					<span class="long-space"></span>
 					<div>
-						<a class="social__link" href="http://" target="_blank" rel="noopener noreferrer">
+						<a class="social__link" href="<?php echo $opcoes['facebook'] ?>" target="_blank" rel="noopener noreferrer">
 							<i class="fa-brands fa-instagram"></i>
 						</a>
-						<a class="social__link" href="http://" target="_blank" rel="noopener noreferrer">
+						<a class="social__link" href="<?php echo $opcoes['twitter'] ?>" target="_blank" rel="noopener noreferrer">
 							<i class="fa-brands fa-twitter"></i>
 						</a>
-						<a class="social__link" href="http://" target="_blank" rel="noopener noreferrer">
+						<a class="social__link" href="<?php echo $opcoes['instagram'] ?>" target="_blank" rel="noopener noreferrer">
 							<i class="fa-brands fa-facebook"></i>
 						</a>
 					</div>
 				</div>
 				<div class="grid c-3">
-					<a class="social__post" href="http://" target="_blank" rel="noopener noreferrer">
-						<img src="./assets/images/img-post.png" alt="post">
-						<div class="social_desc">
-							<img src="./assets/images/infinite-orange.svg" alt="logo">
-							<p>Excepteur sint occaecat…</p>
-						</div>
-					</a>
-					<a class="social__post" href="http://" target="_blank" rel="noopener noreferrer">
-						<img src="./assets/images/img-post.png" alt="post">
-						<div class="social_desc">
-							<img src="./assets/images/infinite-orange.svg" alt="logo">
-							<p>Excepteur sint occaecat…</p>
-						</div>
-					</a>
-					<a class="social__post" href="http://" target="_blank" rel="noopener noreferrer">
-						<img src="./assets/images/img-post.png" alt="post">
-						<div class="social_desc">
-							<img src="./assets/images/infinite-orange.svg" alt="logo">
-							<p>Excepteur sint occaecat…</p>
-						</div>
-					</a>
+				<?php
+					if ( is_active_sidebar( 'secoli-widget-footer' ) ) { 
+						dynamic_sidebar( 'secoli-widget-footer' ); 
+					}
+				?>
 				</div>
 			</div>
 		</div>

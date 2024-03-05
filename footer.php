@@ -1,3 +1,8 @@
+<?php
+
+$opcoes = get_option('secoli_theme_info');
+
+?>
         <div class="full news__bg">
             <div class="container">
                 <h4 class="title">
@@ -65,20 +70,20 @@
                             CONTATOS
                         </h5>
                         <span class="space"></span>
-                        <a class="footer__link " href="tel:+551126845500">
-                            +55 (11) 2684-5500
+                        <a class="footer__link " href="tel:+55<?php echo $opcoes['telefone_rodape'] ?>">
+                            +55 <?php echo $opcoes['telefone_rodape'] ?>
                         </a>
-                        <a class="footer__link" href="mailto:comercial@secoli.com.br">
-                            comercial@secoli.com.br
+                        <a class="footer__link" href="mailto:<?php echo $opcoes['email_rodape'] ?>">
+                            <?php echo $opcoes['email_rodape'] ?>
                         </a>
                         <div class="space"></div>
-                        <a class="footer__link footer__link__social" href="http://" target="_blank" rel="noopener noreferrer">
+                        <a class="footer__link footer__link__social" href="<?php echo $opcoes['instagram'] ?>" target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-instagram"></i>&emsp;
                         </a>
-                        <a class="footer__link footer__link__social" href="http://" target="_blank" rel="noopener noreferrer">
+                        <a class="footer__link footer__link__social" href="<?php echo $opcoes['twitter'] ?>" target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-twitter"></i>&emsp;
                         </a>
-                        <a class="footer__link footer__link__social" href="http://" target="_blank" rel="noopener noreferrer">
+                        <a class="footer__link footer__link__social" href="<?php echo $opcoes['facebook'] ?>" target="_blank" rel="noopener noreferrer">
                             <i class="fa-brands fa-facebook-f"></i>&emsp;
                         </a>
                         <span class="space"></span>
@@ -92,7 +97,7 @@
     </div>
     
     <?php wp_footer(); ?>
-
+    <script src="<?php echo esc_url( get_theme_file_uri( 'assets/js/carrinho.js' ) ); ?>"></script>
     <script src="<?php echo esc_url( get_theme_file_uri( 'assets/js/app.js' ) ); ?>"></script>
     <script src="<?php echo esc_url( get_theme_file_uri( 'assets/js/main.js' ) ); ?>"></script>
 

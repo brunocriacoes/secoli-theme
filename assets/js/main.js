@@ -1,4 +1,5 @@
 const cart = new Cart()
+var _app_data = {cart:[]}
 _app_data.cart = cart.allProducts()
 function agendar_contato() {
     const dialog = document.getElementById("favDialog");

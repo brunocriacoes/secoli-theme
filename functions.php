@@ -9,6 +9,7 @@ include __DIR__ . "/admin/banner.php";
 include __DIR__ . "/admin/promo.php";
 include __DIR__ . "/admin/prod_destaque.php";
 include __DIR__ . "/admin/equipe.php";
+include __DIR__ . "/admin/anuncio.php";
 
 add_theme_support('post-thumbnails');
 

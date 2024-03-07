@@ -737,7 +737,7 @@ body {
 }
 
 .grid_produtos .categorias li ul {
-    display: none;
+    /* display: none; */
 }
 
 .grid_produtos .categorias li.active a i {

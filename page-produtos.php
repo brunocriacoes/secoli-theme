@@ -1,5 +1,24 @@
 
+<?php
+/*
+Template Name: Smartlead lista de produtos
+*/
+?>
 
+<?php get_header(); ?>
+<?php 
+	$url = 'http://localhost/wp-json/smartlead-api/v1/categorias';
+
+	$response = file_get_contents( $url );
+	$response = json_decode($response, true);
+	$id = $_GET['cat'];
+	$url_prod = 'http://localhost/wp-json/smartlead-api/v1/produtos-categoria-id/?categoria_id='.$id;
+
+	$response_prod = file_get_contents( $url_prod );
+	
+	$response_prod = json_decode($response_prod, true);
+
+?>
 		<div class="full">
 			<div class="container">
 				<div class="menu__category">
@@ -16,37 +35,48 @@
 				<div class="grid_produtos">
 					<div class="categorias">
 						<strong style="cursor:pointer;">CATEGORIAS <i class="fa-solid fa-plus" id="iconCategorias"></i></strong>
-						<ul id="listaCategorias" style="display: none;">
-							<li id="categoriaMae">
-								<span style="cursor:pointer;">Categoria Mãe <i class="fa-solid fa-plus"
-										id="iconCategoriaMae"></i></span>
-								<ul class="subcategorias" style="display: none;">
-									<li><a href="#"><span>Categoria 1</span></a></li>
-									<li><a href="#"><span>Categoria 2</span></a></li>
-									<li><a href="#"><span>Categoria 3</span></a></li>
-								</ul>
-							</li>
+						<ul id="listaCategorias">
+							<?php foreach($response as $cat){ ?>
+								<li id="categoriaMae">
+									<span style="cursor:pointer;">
+										<a href="produtos/?cat=<?php echo $cat['id'] ?>">
+											<?php echo $cat['name'] ?>
+										</a>
+										<i class="fa-solid fa-plus" id="iconCategoriaMae"></i>
+									</span>
+									<ul class="subcategorias">
+										<?php foreach($cat["subcategories"] as $sub){?>
+											<li><a href="produtos/?cat=<?php echo $sub['id'] ?>"><span><?php echo $sub['name'] ?></span></a></li>
+										<?php } ?>
+									</ul>
+								</li>
+							<?php } ?>
 						</ul>
 					</div>
 
 					<div>
 						<div class="produtos">
 							<div class="grid c-1 lg-c-4">
-								<div class="produto" app-repeat="produtos">
-									<a href="./produto.html">
-										<img src="./media/catalogo/AGE-1901A.jpg" alt="" />
-									</a>
-									<small> AGE-1901A </small>
-									<strong>
-										Bolsa Feminina em couro com alça
-										duas cores
-									</strong>
-									<span class="space"></span>
-									<a class="btn gradient-1 btn__orcamento"  onclick="return cart.add('{{sku}}', '{{title}}', '{{img}}', '{{sku}}', 'description', 'color', '{{cat_prod}}')" href="./carrinho.html">
-										<i class="fa-solid fa-cart-plus"></i>
-										<span>ORÇAR ESTE PRODUTO</span>
-									</a>
-								</div>
+								<?php foreach($response_prod as $produto){ ?>
+									<div class="produto">
+										<a href="produto?id=<?php echo $produto['id'] ?>">
+											<img src="https://app.secolibrindes.com.br/<?php echo $produto['photos'][0]['path'] ?>" alt="<?php echo $produto['name'] ?>" />
+										</a>
+										<small> <?php echo $produto['cod'] ?> </small>
+										<strong>
+											<?php echo $produto['name'] ?>
+										</strong>
+										<span class="space"></span>
+										<a class="btn gradient-1 btn__orcamento"  
+											onclick="return cart.add('<?php echo $produto['id'] ?> ',
+												'<?php echo $produto['name'] ?>',
+												'https:\/\/app.secolibrindes.com.br\/<?php echo $produto['photos'][0]['path'] ?>', '<?php echo $produto['cod'] ?>', '', 'color', '<?php echo $_GET['cat']?>')" 
+											href="carrinho">
+											<i class="fa-solid fa-cart-plus"></i>
+											<span>ORÇAR ESTE PRODUTO</span>
+										</a>
+									</div>
+								<?php } ?>
 							</div>
 						</div>
 					</div>
@@ -183,4 +213,4 @@
 			</form>
 		</dialog>
 
-		
+<?php get_footer(); ?>

@@ -49,13 +49,7 @@ $opcoes = get_option('secoli_theme_info');
 		</div>
 	</div>
 
-	<div class="full">
-		<div class="container">
-			<div>
-				<img width="100%" src="<?php __F('assets/images/publicidade1.png') ?>" alt="publicidade">
-			</div>
-		</div>
-	</div>
+	<?php include __DIR__ . '/parts/anuncio.php' ?>
 
 	<?php include __DIR__ . '/parts/destaque.php' ?>
 
@@ -90,13 +84,7 @@ $opcoes = get_option('secoli_theme_info');
 
 	<span class="long-space"></span>
 
-	<div class="full">
-		<div class="container">
-			<div>
-				<img width="100%" src="<?php __F('assets/images/publicidade1.png') ?>" alt="publicidade">
-			</div>
-		</div>
-	</div>
+	<?php include __DIR__ . '/parts/anuncio.php' ?>
 
 	<div class="full">
 		<div class="container">

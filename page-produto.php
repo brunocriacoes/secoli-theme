@@ -1,82 +1,90 @@
+<?php
+/*
+Template Name: Smartlead página produto
+*/
+?>
 
+<?php get_header(); ?>
+<?php 
+	$id = $_GET['id'];
+	$url_prod = 'http://localhost/wp-json/smartlead-api/v1/produto/?produto_id='.$id;
+
+	$response_prod = file_get_contents( $url_prod );
+	
+	$response_prod = json_decode($response_prod, true);
+
+?>
         <span class="long-space"></span>
         <div class="full">
             <div class="container">
                 <div class="grid__prod">
                     <div>
                         <div id="img-container">
-                            <img id="featured" class="js-image-grande" src="./media/paginas/produto/produto.png" alt="">
+                            <img id="featured" class="js-image-grande" src="https://app.secolibrindes.com.br/<?php echo $response_prod[0]['photos'][0]['path'] ?>" alt="teste">
                         </div>
                         <span class="long-space"></span>
                         <div class="slide__prod swiper">
                             <div class="slide__inner__prod swiper-wrapper">
+                                <?php foreach($response_prod[0]['photos'] as $f){ ?>
                                 <div class=" swiper-slide">
-                                    <img onmouseover="troca_image(this)" src="./media/paginas/produto/min-1.png" alt="">
+                                    <img onmouseover="troca_image(this)" src="https://app.secolibrindes.com.br/<?php echo $f['path'] ?>" alt="<?php echo $f['id'] ?>">
                                 </div>
-                                <div class=" swiper-slide">
-                                    <img onmouseover="troca_image(this)" src="./media/paginas/produto/min-2.png" alt="">
-                                </div>
-                                <div class=" swiper-slide">
-                                    <img onmouseover="troca_image(this)" src="./media/paginas/produto/min-3.png" alt="">
-                                </div>
-                                <div class=" swiper-slide">
-                                    <img onmouseover="troca_image(this)" src="./media/paginas/produto/min-1.png" alt="">
-                                </div>
-                                <div class=" swiper-slide">
-                                    <img onmouseover="troca_image(this)" src="./media/paginas/produto/min-2.png" alt="">
-                                </div>
-                                <div class=" swiper-slide">
-                                    <img onmouseover="troca_image(this)" src="./media/paginas/produto/min-3.png" alt="">
-                                </div>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
                     <div>
                         <h3 class="title">
-                            Título do produto aqui com até duas linhas de comprimento
+                            <?php echo $response_prod[0]['name'] ?>
                         </h3>
                         <div class="card__feature">
                             <div class="feature__header">
-                                <strong>Características</strong>
+                                <strong>DESCRIÇÃO</strong>
                                 <i class="fa-solid fa-pen-ruler"></i>
-
                             </div>
                             <div>
                                 <span class="space"></span>
-                                <b class="text">LINHA TREVO</b>
                                 <p class="text">
-                                    Nossa Linha Trevo, feita com juta, foi desenvolvida para trazer um design arrojado e
-                                    moderno para renovar as opções no mercado de brindes.
-                                </p>
-                                <span class="space"></span>
-                                <b class="text">PORTA ESPELHO</b>
-                                <p class="text">
-                                    Porta espelho ou espelho de bolsa, perfeito para levar onde precisar sem ocupar
-                                    espaço, feito com material de juta, esse item é perfeito para a rotina diária,
-                                    essencial para garantir qualquer retoque na aparência durante o dia. Expanda suas
-                                    variações em brindes, campanhas compre e ganhe e estratégias de endomarketing.
+                                    <?php echo $response_prod[0]['description'] ?>
                                 </p>
                                 <span class="space"></span>
                                 <b class="text">CARACTERÍSTICAS</b>
+                                <span class="space"></span>
+                                <p class="text">
+                                    COD
+                                </p>
+                                <p class="text">
+                                    <?php echo $response_prod[0]['cod'] ?>
+                                </p>
+                                <span class="space"></span>
                                 <p class="text">
                                     Estruturado
                                 </p>
                                 <p class="text">
-                                    7,20 cm x 7,60 cm (fechado)
-                                </p>
-                                <p class="text">
-                                    7,20 cm X 15,5 cm (aberto)
+                                    <?php echo $response_prod[0]['specifications'] ?>
                                 </p>
                                 <span class="space"></span>
-                                <b class="text">GRAVRAÇÕES</b>
                                 <p class="text">
-                                    Baixo relevo
+                                    Parte Interna
+                                </p>
+                                <p class="text">
+                                    <?php echo $response_prod[0]['internal_part'] ?>
                                 </p>
                                 <span class="space"></span>
-                                <b class="text">Especificações</b>
-                                <ul class="desc__especificacoes">
-                                    <li class="text">Dimensões: 70 x 75mm</li>
-                                </ul>
+                                <p class="text">
+                                    Parte Externa
+                                </p>
+                                <p class="text">
+                                    <?php echo $response_prod[0]['external_part'] ?>
+                                </p>
+                                <span class="space"></span>
+                                <p class="text">
+                                    Gravações
+                                </p>
+                                <p class="text">
+                                    <?php echo $response_prod[0]['recordings'] ?>
+                                </p>
+                                
                             </div>
                             <span class="long-space"></span>
                             <a class="btn gradient-1" href="">
@@ -91,9 +99,9 @@
 
         <div class="single__produto__bg">
             <div class="single__produto">
-                <img src="./media/paginas/produto/single-1.png">
-                <img src="./media/paginas/produto/single-2.png">
-                <img src="./media/paginas/produto/single-3.png">
+                <img src="<?php __F('media/paginas/produto/single-1.png') ?>">
+                <img src="<?php __F('media/paginas/produto/single-2.png') ?>">
+                <img src="<?php __F('media/paginas/produto/single-3.png') ?>">
             </div>
         </div>
 
@@ -122,7 +130,7 @@
                 <div class="slide__destaque">
                     <div class="slide__destaque__inner swiper-wrapper ">
                         <div class="slide__destaque__iten swiper-slide" app-repeat="destaques">
-                            <img src="./assets/images/destaque1.png" alt="destaque">
+                            <img src="<?php __F('assets/images/destaque1.png')?>" alt="destaque">
                             <a class="slide__destaque__btn" href="http://">Saiba mais</a>
                         </div>
                     </div>

@@ -57,7 +57,7 @@ $opcoes = get_option('secoli_theme_info');
 
 <body>
 
-	<div app-data="./media/db.json">
+	<div>
 
 		<?php include __DIR__ . '/parts/promo.php' ?>
 
@@ -126,29 +126,30 @@ $opcoes = get_option('secoli_theme_info');
                     $response = file_get_contents( $url );
                     $response = json_decode($response, true);
                     ?>
+                    
                     <ul class="category__list">
                         <li>
-                            <a href="./produtos.html">
+                            <a href="produtos?cat=0">
                                 <i class="fa-regular fa-image"></i>
                                 TODAS AS CATEGORIAS
                             </a>
                         </li>
                         <?php foreach($response as $cat){ ?>
                             <li>
-                                <a href="">
+                                <a href="produtos?cat=<?php echo $cat['id']?>">
                                     <img class="icon_category_menu" src="<?php echo __F('assets/icons/' . $cat['id'].'.svg') ?>" alt="">
                                     <?php echo $cat["name"]?>
                                 </a>
                                 <ul>
                                     <?php foreach($cat["subcategories"] as $sub){?>
                                         <li>
-                                            <a href="<?php echo $sub["id"]?>">
+                                            <a href="produtos?cat=<?php echo $sub['id']?>">
                                                 <?php echo $sub["name"]?>
                                             </a>
                                         </li>
                                     <?php }?>
                                     <img src="<?php __F('assets/images/img-category.png') ?>" alt="imagem Categoria">
-                                    <a href="./produtos.html">VER TODOS</a>
+                                    <a href="produtos?cat=<?php echo $cat['id']?>">VER TODOS</a>
                                 </ul>
                             </li>
                         <?php }?>

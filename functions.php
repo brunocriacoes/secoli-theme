@@ -10,6 +10,7 @@ include __DIR__ . "/admin/promo.php";
 include __DIR__ . "/admin/prod_destaque.php";
 include __DIR__ . "/admin/equipe.php";
 include __DIR__ . "/admin/anuncio.php";
+include __DIR__ . "/admin/pagina_foto.php";
 
 add_theme_support('post-thumbnails');
 

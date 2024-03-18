@@ -14,7 +14,7 @@ include __DIR__ . "/admin/pagina_foto.php";
 
 add_theme_support('post-thumbnails');
 
-define('API_SMARTLEAD', 'https://'. $_SERVER['SERVER_NAME']);
+define('API_SMARTLEAD', 'https://secoli-com-br.preview-domain.com');
 
 function __F($path)
 {

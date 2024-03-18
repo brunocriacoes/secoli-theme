@@ -7,12 +7,12 @@ Template Name: Smartlead lista de produtos
 
 <?php get_header(); ?>
 <?php 
-	$url = 'http://localhost/wp-json/smartlead-api/v1/categorias';
+	$url = API_SMARTLEAD . '/wp-json/smartlead-api/v1/categorias';
 
 	$response = file_get_contents( $url );
 	$response = json_decode($response, true);
 	$id = $_GET['cat'];
-	$url_prod = 'http://localhost/wp-json/smartlead-api/v1/produtos-categoria-id/?categoria_id='.$id;
+	$url_prod = API_SMARTLEAD . '/wp-json/smartlead-api/v1/produtos-categoria-id/?categoria_id='.$id;
 
 	$response_prod = file_get_contents( $url_prod );
 	

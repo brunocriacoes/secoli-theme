@@ -7,7 +7,7 @@ Template Name: Smartlead página produto
 <?php get_header(); ?>
 <?php 
 	$id = $_GET['id'];
-	$url_prod = 'http://localhost/wp-json/smartlead-api/v1/produto/?produto_id='.$id;
+	$url_prod = API_SMARTLEAD . '/wp-json/smartlead-api/v1/produto/?produto_id='.$id;
 
 	$response_prod = file_get_contents( $url_prod );
 	

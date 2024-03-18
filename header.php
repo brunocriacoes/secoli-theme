@@ -121,7 +121,7 @@ $opcoes = get_option('secoli_theme_info');
             <div class="full category__bg">
                 <div class="container">
                     <?php 
-                    $url = 'http://localhost/wp-json/smartlead-api/v1/categorias';
+                    $url = API_SMARTLEAD . '/wp-json/smartlead-api/v1/categorias';
 
                     $response = file_get_contents( $url );
                     $response = json_decode($response, true);

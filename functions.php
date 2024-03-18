@@ -14,6 +14,7 @@ include __DIR__ . "/admin/pagina_foto.php";
 
 add_theme_support('post-thumbnails');
 
+define('API_SMARTLEAD', 'https://'. $_SERVER['SERVER_NAME']);
 
 function __F($path)
 {

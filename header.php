@@ -126,7 +126,8 @@ $opcoes = get_option('secoli_theme_info');
                     $response = file_get_contents( $url );
                     $response = mb_convert_encoding($response, 'UTF-8', 'ISO-8859-1');
                     $response = json_decode($response, true);
-                    var_dump('teste'. $response);
+                    var_dump($url);
+                    var_dump($response);
                     
                     ?>
                     

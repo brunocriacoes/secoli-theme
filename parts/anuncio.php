@@ -18,6 +18,7 @@ foreach($anuncios as $anuncio){
     ];
 }
 $indice = array_rand($loop);
+var_dump($indice);
 ?>
 
 <div class="full">

@@ -30,7 +30,7 @@ if(count($loop)>0){
     <div class="container">
         <div>
             <a href="<?php echo $loop[$indice]['link'] ?>">
-                <img width="100%" src="<?php echo $loop[$indice]['photo'] ?>" alt="publicidade">
+                <img width="100%" src="<?php echo $loop[$indice]['photo'] ?>" alt="publicidade" onerror="this.src='<?php __F('/assets/images/banner-padrao.jpg'); ?>'">
             </a>
         </div>
     </div>

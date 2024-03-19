@@ -32,7 +32,7 @@ $opcoes = get_option('secoli_theme_info');
 						de qualidade superior e alto nível de customização.
 					</p>
 					<span class="long-space"></span>
-					<a class="btn gradient-1" href="./produtos.html">
+					<a class="btn gradient-1" href="<?php __L('/produtos?cat=10'); ?>">
 						SAIBA MAIS
 					</a>
 				</div>

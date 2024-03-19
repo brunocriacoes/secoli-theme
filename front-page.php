@@ -79,7 +79,7 @@ $opcoes = get_option('secoli_theme_info');
 					</p>
 					<span class="long-space"></span>
 					<span class="long-space"></span>
-					<a class="btn gradient-1">
+					<a class="btn gradient-1" href="https://api.whatsapp.com/send?phone=551126845500&text=FALE%20COM%20UM%20DOS%20NOSSOS%20ESPECIALISTAS">
 						FALE COM UM DOS NOSSOS ESPECIALISTAS
 					</a>
 				</div>

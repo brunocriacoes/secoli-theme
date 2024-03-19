@@ -17,8 +17,12 @@ foreach($anuncios as $anuncio){
         "link" => $link,
     ];
 }
-var_dump($loop);
-$indice = array_rand($loop);
+if(count($loop)>0){
+    $indice = array_rand($loop);
+}else{
+    $indice = 0;
+}
+
 
 ?>
 

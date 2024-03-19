@@ -107,7 +107,7 @@ $opcoes = get_option('secoli_theme_info');
 						em criar produtos personalizados exclusivos
 					</p>
 					<span class="long-space"></span>
-					<a class="btn gradient-1" href="">SAIBA MAIS</a>
+					<a class="btn gradient-1" href="<?php __L('/a-secoli') ?>">SAIBA MAIS</a>
 				</div>
 				<div class="text-center">
 					<div class="video-mask">

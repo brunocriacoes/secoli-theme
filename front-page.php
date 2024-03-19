@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Página HOME
+*/
+?>
 
 <?php get_header() ?>
 

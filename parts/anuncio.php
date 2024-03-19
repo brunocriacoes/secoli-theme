@@ -3,7 +3,7 @@ $anuncios = get_posts(array(
     'post_type' => 'post_anuncio',
     'posts_per_page' => -1,
 ));
-
+var_dump($anuncios);
 $loop = [];
 
 foreach($anuncios as $anuncio){
@@ -18,7 +18,7 @@ foreach($anuncios as $anuncio){
     ];
 }
 $indice = array_rand($loop);
-var_dump($indice);
+
 ?>
 
 <div class="full">

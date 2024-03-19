@@ -54,7 +54,7 @@ $opcoes = get_option('secoli_theme_info');
 		</div>
 	</div>
 
-	<?php # include __DIR__ . '/parts/anuncio.php' ?>
+	<?php include __DIR__ . '/parts/anuncio.php' ?>
 
 	<?php include __DIR__ . '/parts/destaque.php' ?>
 

@@ -80,7 +80,7 @@ $opcoes = get_option('secoli_theme_info');
             <div class="full header__bg">
                 <div class="container">
                     <div class="grid grid__menu">
-                        <a href="./index.html">
+                        <a href="<?php __L('/') ?>">
                             <img class="header__logo" src="<?php echo esc_url( get_theme_file_uri( '/assets/images/logo.svg' ) ); ?>" alt="logo">
                         </a>
                         <div>
@@ -89,7 +89,7 @@ $opcoes = get_option('secoli_theme_info');
                         </div>
 
                             <div class="header__search__contact contatos-empilhados">
-                                <form class="header__search" action="./produtos.html" method="get">
+                                <form class="header__search" action="<?php __L('/produtos') ?>" method="get">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                     <input class="header__input" type="search" name="s" required placeholder="Buscar no site">
                                 </form>
@@ -104,12 +104,12 @@ $opcoes = get_option('secoli_theme_info');
                             </div>
                         </div>
                         <div>
-                            <a href="./que-somos.html" class="btn header__btn__black">
+                            <a href="<?php __L('/a-secoli') ?>" class="btn header__btn__black">
                                 <i class="fa-solid fa-house"></i>
                                 &emsp;CONHEÇA A SECOLI
                             </a>
                             <span class="space js__space__remove"></span>
-                            <a href="./carrinho.html" class="btn gradient-1">
+                            <a href="<?php __L('/carrinho') ?>" class="btn gradient-1">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 &emsp;CARRINHO
                             </a>

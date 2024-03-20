@@ -34,7 +34,8 @@ function api_lead_fn($request)
         'email' => $request['email'],
         'to' => $opcoes['secoli_email_newsletter'],
         'next' => $send,
-        'message' => 'Seu e-mail foi cadastrado com sucesso!'
+        'message' => 'Seu e-mail foi cadastrado com sucesso!',
+        'debug' => $opcoes,
     ];
 
     return rest_ensure_response($data);

@@ -13,6 +13,7 @@ include __DIR__ . "/admin/anuncio.php";
 include __DIR__ . "/admin/pagina_foto.php";
 
 include __DIR__ . "/api/lead.php";
+include __DIR__ . "/api/agendar-contato.php";
 
 add_theme_support('post-thumbnails');
 

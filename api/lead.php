@@ -26,7 +26,7 @@ function api_lead_fn($request)
 
     $to = 'maxsouza150@hotmail.com';
     $subject = 'Novo lead';
-    $message = "Novo lead adicionado nome: " . $request['nome'] . " email: " . $request['email'];
+    $message = "Novo lead adicionado, <br> <b>nome: </b>" . $request['nome'] . "<br> <b>email: </b>" . $request['email'];
     $headers = array('Content-Type: text/html; charset=UTF-8');
 
     wp_mail($to, $subject, $message, $headers);

@@ -22,7 +22,7 @@ function api_lead_fn($request)
     $opcoes = get_option('secoli_theme_info');
     
 
-    $to = 'maxsouza150@hotmail.com';
+    $to = $opcoes['email_newsletter'];
     $subject = 'Novo lead';
     $message = "Novo lead adicionado, <br> <b>Nome: </b>" . $request['nome'] . "<br> <b>E-mail: </b>" . $request['email'];
     $headers = array('Content-Type: text/html; charset=UTF-8');
@@ -32,10 +32,9 @@ function api_lead_fn($request)
     $data = [
         'nome' => $request['nome'],
         'email' => $request['email'],
-        'to' => $opcoes['secoli_email_newsletter'],
+        'to' => $opcoes['email_newsletter'],
         'next' => $send,
         'message' => 'Seu e-mail foi cadastrado com sucesso!',
-        'debug' => $opcoes,
     ];
 
     return rest_ensure_response($data);

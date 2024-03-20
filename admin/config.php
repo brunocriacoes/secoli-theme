@@ -100,7 +100,7 @@ function secoli_register_config() {
     add_settings_field(
         'secoli_email_newsletter', // ID do campo
         'E-mail para cadastro de newsletter', // Título do campo
-        'secoli_email_budget_callback', // Callback para renderizar o campo
+        'secoli_email_newsletter_callback', // Callback para renderizar o campo
         'secoli-config-thema', // Página em que este campo deve ser exibido
         'informacao' // Seção em que este campo deve ser incluído
     );
@@ -168,6 +168,11 @@ function secoli_email_project_callback() {
 function secoli_email_budget_callback() {
     $opcoes = get_option('secoli_theme_info');
     echo '<input type="text" name="secoli_theme_info[email_budget]" value="' . esc_attr($opcoes['email_budget']) . '"/>';
+}
+
+function secoli_email_newsletter_callback() {
+    $opcoes = get_option('secoli_theme_info');
+    echo '<input type="text" name="secoli_theme_info[email_newsletter]" value="' . esc_attr($opcoes['email_newsletter']) . '"/>';
 }
 
 function secoli_facebook_callback() {

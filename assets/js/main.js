@@ -187,7 +187,6 @@ img_container.addEventListener("mousemove", (e) => {
     });
 });
 
-
 async function buscarDadosAPI(urlBase, parametros) {
     function construirParametrosConsulta(params) {
         return Object.keys(params)
@@ -218,19 +217,20 @@ async function buscarDadosAPI(urlBase, parametros) {
     }
 }
 
-async function addLead(event,$e){
+async function addLead(event, $e) {
     event.preventDefault();
-    $e.reset()
+    $e.reset();
     let payload = {
-        nome: document.querySelector('.js_lead_name').value,
-        email: document.querySelector('.js_lead_email').value
+        nome: document.querySelector(".js_lead_name").value,
+        email: document.querySelector(".js_lead_email").value,
     };
 
-    let alert = document.querySelector('.news__alert');
+    let alert = document.querySelector(".news__alert");
+    alert.removeAttribute("hidden");
+    let addLeadApi = await buscarDadosAPI(_domain, payload);
+    console.log(addLeadApi);
 
-    alert.removeAttribute('hidden');
-    setTimeout(()=>{
-        alert.setAttribute('hidden', 'true');
-    },6000);
-    
+    setTimeout(() => {
+        alert.setAttribute("hidden", "true");
+    }, 6000);
 }

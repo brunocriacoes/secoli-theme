@@ -224,7 +224,6 @@ async function addLead(event){
         nome: document.querySelector('.js_lead_name'),
         email: document.querySelector('.js_lead_email')
     };
-    
 
     console.log(payload);
 }

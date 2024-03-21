@@ -893,4 +893,6 @@ body {
     /* display: none; */
     background: #4299e1;
     border: 1px solid #033d6c;
+    color: #ffffff;
+    padding: 8px;
 }

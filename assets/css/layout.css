@@ -890,5 +890,7 @@ body {
 }
 
 .news__alert{
-    display: none;
+    /* display: none; */
+    background: #4299e1;
+    border: 1px solid #033d6c;
 }

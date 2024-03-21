@@ -12,12 +12,12 @@ $opcoes = get_option('secoli_theme_info');
                     Receba também promoções em primeira mão.
                 </p>
                 <span class="space"></span>
-                <form class="grid c-1 md-c-3" action="javascript:void(0)">
+                <form class="grid c-1 md-c-3" action="addLead()">
                     <div>
-                        <input class="news__input" type="text" name="nome" placeholder="Nome" required>
+                        <input class="news__input js_lead_name" type="text" name="nome" placeholder="Nome" required>
                     </div>
                     <div>
-                        <input class="news__input" type="email" name="email" placeholder="E-mail" required>
+                        <input class="news__input js_lead_email" type="email" name="email" placeholder="E-mail" required>
                     </div>
                     <div>
                         <button class="news__btn btn gradient-1" type="submit">

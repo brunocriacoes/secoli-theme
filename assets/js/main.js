@@ -1,6 +1,6 @@
-const cart = new Cart()
-var _app_data = {cart:[]}
-_app_data.cart = cart.allProducts()
+const cart = new Cart();
+var _app_data = { cart: [] };
+_app_data.cart = cart.allProducts();
 function agendar_contato() {
     const dialog = document.getElementById("favDialog");
     dialog.showModal();
@@ -151,8 +151,8 @@ function troca_image($e) {
 
 // #####################################
 
-document.querySelectorAll('.img-container').forEach(elem =>{
-    let x,y, width, height;
+document.querySelectorAll(".img-container").forEach((elem) => {
+    let x, y, width, height;
     elem.onmouseenter = () => {
         const size = elem.getBoundingClientRect();
 
@@ -162,15 +162,14 @@ document.querySelectorAll('.img-container').forEach(elem =>{
         height = size.height;
     };
 
-    elem.onmousemove = e => {
-        const horizontal = (e.clientX - x) / width*100;
-        const vertical = (e.clientY - y) / height*100;
+    elem.onmousemove = (e) => {
+        const horizontal = ((e.clientX - x) / width) * 100;
+        const vertical = ((e.clientY - y) / height) * 100;
 
-        elem.style.setPropert('--x', horizontal + '%');
-        elem.style.setPropert('--y', vertical + '%');
-
+        elem.style.setPropert("--x", horizontal + "%");
+        elem.style.setPropert("--y", vertical + "%");
     };
-})
+});
 
 const img_container = document.getElementById("img-container");
 const img = document.getElementById("featured");
@@ -185,6 +184,44 @@ img_container.addEventListener("mousemove", (e) => {
     img_container.addEventListener("mouseleave", () => {
         img.style.transformOrigin = "center";
         img.style.transform = "scale(1)";
-    })
-})
+    });
+});
 
+
+async function buscarDadosAPI(urlBase, parametros) {
+    function construirParametrosConsulta(params) {
+        return Object.keys(params)
+            .map(
+                (chave) =>
+                    encodeURIComponent(chave) +
+                    "=" +
+                    encodeURIComponent(params[chave])
+            )
+            .join("&");
+    }
+
+    const urlComParametros =
+        urlBase + "?" + construirParametrosConsulta(parametros);
+
+    try {
+        const response = await fetch(urlComParametros);
+
+        if (!response.ok) {
+            throw new Error("A requisição falhou: " + response.statusText);
+        }
+
+        const data = await response.json();
+        console.log(data);
+        return data;
+    } catch (error) {
+        console.error("Houve um problema com sua requisição:", error);
+    }
+}
+
+async function addLead(){
+    let payload = {
+        nome: document.querySelector('.js_lead_name'),
+        email: document.querySelector('.js_lead_email')
+    };
+    console.log(payload);
+}

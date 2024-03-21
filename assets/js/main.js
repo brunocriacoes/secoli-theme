@@ -227,4 +227,9 @@ async function addLead(event,$e){
     };
 
     let alert = document.querySelector('.news__alert');
+
+    setTimeout(()=>{
+        alert.removeAttribute('hidden')
+    },6000);
+    
 }

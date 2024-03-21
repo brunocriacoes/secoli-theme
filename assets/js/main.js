@@ -218,12 +218,13 @@ async function buscarDadosAPI(urlBase, parametros) {
     }
 }
 
-async function addLead(event){
+async function addLead(event,$e){
     event.preventDefault();
+    $e.reset()
     let payload = {
         nome: document.querySelector('.js_lead_name').value,
         email: document.querySelector('.js_lead_email').value
     };
 
-    console.log(payload);
+    console.log($e);
 }

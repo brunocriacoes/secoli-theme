@@ -228,8 +228,9 @@ async function addLead(event,$e){
 
     let alert = document.querySelector('.news__alert');
 
+    alert.removeAttribute('hidden');
     setTimeout(()=>{
-        alert.removeAttribute('hidden')
+        alert.setAttribute('hidden', 'true');
     },6000);
     
 }

@@ -25,7 +25,7 @@ $opcoes = get_option('secoli_theme_info');
                             <i class="fa-regular fa-paper-plane"></i>
                         </button>
                     </div>
-                    <div class="news__alert js_lead_alert" hidden><i class="fa-solid fa-circle-info"></i>Alert</div>
+                    <div class="news__alert js_lead_alert" hidden><i class="fa-solid fa-circle-info"></i><span>Alert</span></div>
                 </form>
             </div>
         </div>

@@ -226,8 +226,10 @@ async function addLead(event, $e) {
     };
 
     let alert = document.querySelector(".news__alert");
-    alert.removeAttribute("hidden");
+    let message = document.querySelector(".news__alert span");
     let addLeadApi = await buscarDadosAPI(_domain+"/wp-json/secoli/v1/lead/", payload);
+    message.innerHTML = addLeadApi.message;
+    alert.removeAttribute("hidden");
     console.log(addLeadApi);
 
     setTimeout(() => {

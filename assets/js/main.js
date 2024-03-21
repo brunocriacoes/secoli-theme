@@ -226,5 +226,5 @@ async function addLead(event,$e){
         email: document.querySelector('.js_lead_email').value
     };
 
-    console.log($e);
+    
 }

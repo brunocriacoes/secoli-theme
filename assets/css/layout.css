@@ -890,7 +890,10 @@ body {
 }
 
 .news__alert{
-    /* display: none; */
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    gap: 8px;
     background: #4299e1;
     border: 1px solid #033d6c;
     color: #ffffff;

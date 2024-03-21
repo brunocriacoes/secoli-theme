@@ -888,3 +888,7 @@ body {
     object-fit: contain;
     object-position: center center;
 }
+
+.news_alert{
+    display: none;
+}

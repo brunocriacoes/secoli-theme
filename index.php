@@ -149,7 +149,7 @@ $opcoes = get_option('secoli_theme_info');
 	</div>
 
 	<dialog class="dialog__bg" close id="favDialog">
-		<form method="dialog">
+		<form onsubmit="addLead(event, this)" method="dialog" action="javascript:void(0)">
 			<h3 class="title">
 				Você tem um projeto especial?
 			</h3>
@@ -186,7 +186,7 @@ $opcoes = get_option('secoli_theme_info');
 			<div class="text__right">
 				<span class="long-space"></span>
 				<div class="news__alert js_lead_alert" hidden><i class="fa-solid fa-circle-info"></i><span>Alert</span></div>
-				<button class="btn gradient-1" onclick="close_contato()" type="submit">SOLICITAR AGORA</button>
+				<button class="btn gradient-1" type="submit">SOLICITAR AGORA</button>
 			</div>
 		</form>
 	</dialog>

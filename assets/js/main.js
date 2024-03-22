@@ -219,12 +219,12 @@ async function buscarDadosAPI(urlBase, parametros) {
 
 async function addLead(event, $e) {
     event.preventDefault();
-    $e.reset();
+    
     let payload = {
         nome: document.querySelector(".js_lead_name").value,
         email: document.querySelector(".js_lead_email").value,
     };
-
+    $e.reset();
     let alert = document.querySelector(".news__alert");
     let message = document.querySelector(".news__alert span");
     let addLeadApi = await buscarDadosAPI(_domain+"/wp-json/secoli/v1/lead/", payload);

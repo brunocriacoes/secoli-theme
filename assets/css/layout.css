@@ -623,6 +623,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
+    align-items: center;
 }
 
 .dialog__bg .text {

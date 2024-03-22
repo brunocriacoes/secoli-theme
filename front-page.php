@@ -1,8 +1,3 @@
-<?php
-/*
-Template Name: Página HOME
-*/
-?>
 
 <?php get_header() ?>
 
@@ -32,7 +27,7 @@ $opcoes = get_option('secoli_theme_info');
 						de qualidade superior e alto nível de customização.
 					</p>
 					<span class="long-space"></span>
-					<a class="btn gradient-1" href="<?php __L('/produtos?cat=10'); ?>">
+					<a class="btn gradient-1" href="./produtos.html">
 						SAIBA MAIS
 					</a>
 				</div>
@@ -79,7 +74,7 @@ $opcoes = get_option('secoli_theme_info');
 					</p>
 					<span class="long-space"></span>
 					<span class="long-space"></span>
-					<a class="btn gradient-1" href="https://api.whatsapp.com/send?phone=551126845500&text=Fale%20com%20nossos%20especialistas!" target="_blank">
+					<a class="btn gradient-1">
 						FALE COM UM DOS NOSSOS ESPECIALISTAS
 					</a>
 				</div>
@@ -107,7 +102,7 @@ $opcoes = get_option('secoli_theme_info');
 						em criar produtos personalizados exclusivos
 					</p>
 					<span class="long-space"></span>
-					<a class="btn gradient-1" href="<?php __L('/a-secoli') ?>">SAIBA MAIS</a>
+					<a class="btn gradient-1" href="">SAIBA MAIS</a>
 				</div>
 				<div class="text-center">
 					<div class="video-mask">
@@ -154,7 +149,7 @@ $opcoes = get_option('secoli_theme_info');
 	</div>
 
 	<dialog class="dialog__bg" close id="favDialog">
-		<form method="dialog">
+		<form onsubmit="addContact(event, this)" action="javascript:void(0)">
 			<h3 class="title">
 				Você tem um projeto especial?
 			</h3>
@@ -164,33 +159,34 @@ $opcoes = get_option('secoli_theme_info');
 				nossos especialistas. Retornaremos o mais rápido possível.
 			</p>
 			<span class="space"></span>
-			<label class="dialog__lb">
+			<label class="dialog__lb ">
 				<i class="fa-solid fa-user"></i>
-				<input type="text" name="name" placeholder="Nome completo">
+				<input class="js_dialog_name" type="text" name="name" placeholder="Nome completo" required>
 			</label>
-			<label class="dialog__lb">
+			<label class="dialog__lb ">
 				<i class="fa-solid fa-phone"></i>
-				<input type="tel" name="tel" placeholder="Telefone">
+				<input class="js_dialog_phone" type="tel" name="tel" placeholder="Telefone" required>
 			</label>
-			<label class="dialog__lb">
+			<label class="dialog__lb ">
 				<i class="fa-solid fa-envelope"></i>
-				<input type="email" name="email" placeholder="error@mail.com">
+				<input class="js_dialog_email" type="email" name="email" placeholder="error@mail.com" required>
 			</label>
-			<label class="dialog__lb">
+			<label class="dialog__lb ">
 				<i class="fa-solid fa-building"></i>
-				<input type="text" name="empresa" placeholder="Nome da empresa">
+				<input class="js_dialog_empresa" type="text" name="empresa" placeholder="Nome da empresa" required>
 			</label>
-			<label class="dialog__lb">
+			<label class="dialog__lb ">
 				<i class="fa-solid fa-wallet"></i>
-				<input type="text" name="cnpj" placeholder="CNPJ">
+				<input class="js_dialog_cnpj" type="text" name="cnpj" placeholder="CNPJ" required>
 			</label>
-			<label class="dialog__lb">
+			<label class="dialog__lb ">
 				<i></i>
-				<textarea name="desc" rows="3" placeholder="Descreva brevemente sobre seu projeto...."></textarea>
+				<textarea class="js_dialog_desc" name="desc" rows="3" placeholder="Descreva brevemente sobre seu projeto...." required></textarea>
 			</label>
 			<div class="text__right">
 				<span class="long-space"></span>
-				<button class="btn gradient-1" onclick="close_contato()" type="submit">SOLICITAR AGORA</button>
+				<div class="news__alert js_lead_alert" hidden><i class="fa-solid fa-circle-info"></i><span>Alert</span></div>
+				<button class="btn gradient-1" type="submit">SOLICITAR AGORA</button>
 			</div>
 		</form>
 	</dialog>

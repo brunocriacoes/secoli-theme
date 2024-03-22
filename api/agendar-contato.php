@@ -52,7 +52,7 @@ function api_agendar_fn($request)
         'email' => $request['email'],
         'to' => $opcoes['email_budget'],
         'next' => $send,
-        'message' => 'Seu agendamento foi feito com sucesso!',
+        'message' => 'Agendamento feito com sucesso!',
     ];
 
     return rest_ensure_response($data);

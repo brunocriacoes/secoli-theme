@@ -183,8 +183,8 @@ $opcoes = get_option('secoli_theme_info');
 				<i></i>
 				<textarea class="js_dialog_desc" name="desc" rows="3" placeholder="Descreva brevemente sobre seu projeto...." required></textarea>
 			</label>
+			<span class="long-space"></span>
 			<div class="text__center">
-				<span class="long-space"></span>
 				<div class="news__alert js_lead_alert" hidden><i class="fa-solid fa-circle-info"></i><span>Alert</span></div>
 				<button class="btn gradient-1" type="submit">SOLICITAR AGORA</button>
 			</div>

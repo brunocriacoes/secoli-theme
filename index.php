@@ -161,27 +161,27 @@ $opcoes = get_option('secoli_theme_info');
 			<span class="space"></span>
 			<label class="dialog__lb ">
 				<i class="fa-solid fa-user"></i>
-				<input class="js_dialog_name" type="text" name="name" placeholder="Nome completo">
+				<input class="js_dialog_name" type="text" name="name" placeholder="Nome completo" required>
 			</label>
 			<label class="dialog__lb ">
 				<i class="fa-solid fa-phone"></i>
-				<input class="js_dialog_phone" type="tel" name="tel" placeholder="Telefone">
+				<input class="js_dialog_phone" type="tel" name="tel" placeholder="Telefone" required>
 			</label>
 			<label class="dialog__lb ">
 				<i class="fa-solid fa-envelope"></i>
-				<input class="js_dialog_email" type="email" name="email" placeholder="error@mail.com">
+				<input class="js_dialog_email" type="email" name="email" placeholder="error@mail.com" required>
 			</label>
 			<label class="dialog__lb ">
 				<i class="fa-solid fa-building"></i>
-				<input class="js_dialog_empresa" type="text" name="empresa" placeholder="Nome da empresa">
+				<input class="js_dialog_empresa" type="text" name="empresa" placeholder="Nome da empresa" required>
 			</label>
 			<label class="dialog__lb ">
 				<i class="fa-solid fa-wallet"></i>
-				<input class="js_dialog_cnpj" type="text" name="cnpj" placeholder="CNPJ">
+				<input class="js_dialog_cnpj" type="text" name="cnpj" placeholder="CNPJ" required>
 			</label>
 			<label class="dialog__lb ">
 				<i></i>
-				<textarea class="js_dialog_desc" name="desc" rows="3" placeholder="Descreva brevemente sobre seu projeto...."></textarea>
+				<textarea class="js_dialog_desc" name="desc" rows="3" placeholder="Descreva brevemente sobre seu projeto...." required></textarea>
 			</label>
 			<div class="text__right">
 				<span class="long-space"></span>

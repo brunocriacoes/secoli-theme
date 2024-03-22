@@ -185,7 +185,9 @@ $opcoes = get_option('secoli_theme_info');
 			</label>
 			<span class="long-space"></span>
 			<div class="text__center">
+				<div>
 				<div class="news__alert js_lead_alert" ><i class="fa-solid fa-circle-info"></i><span>Alert</span></div>
+				</div>
 				<button class="btn gradient-1" type="submit">SOLICITAR AGORA</button>
 			</div>
 		</form>

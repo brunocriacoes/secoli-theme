@@ -277,10 +277,10 @@ function mascaraCNPJ(cnpj) {
     valor = valor.substring(0, 11); 
 
     valor = valor.replace(/^(\d{2})(\d)/g, "($1) $2");
-    valor = valor.replace(/(\d{4})(\d)/, "$1-$2"); 
+    valor = valor.replace(/(\d{5})(\d)/, "$1-$2"); 
 
     if(valor.length > 13) {
-      valor = valor.replace(/(\d{5})(\d)/, "$1-$2");
+      valor = valor.replace(/(\d{4})(\d)/, "$1-$2");
     }
 
     telefone.value = valor;

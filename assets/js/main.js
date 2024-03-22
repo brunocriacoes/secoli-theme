@@ -242,10 +242,11 @@ async function addContact(event, $e) {
     
     let payload = {
         nome: document.querySelector(".js_dialog_name").value,
-        phone: document.querySelector(".js_dialog_phone").value,
+        telefone: document.querySelector(".js_dialog_phone").value,
         email: document.querySelector(".js_dialog_email").value,
-        empresa: document.querySelector(".js_dialog_empresa").value,
+        nome_empresa: document.querySelector(".js_dialog_empresa").value,
         cnpj: document.querySelector(".js_dialog_cnpj").value,
+        descricao: document.querySelector(".js_dialog_desc").value,
     };
     $e.reset();
     let alert = document.querySelector(".news__alert");

@@ -274,14 +274,13 @@ function mascaraCNPJ(cnpj) {
 
   function mascaraTelefone(telefone) {
     let valor = telefone.value.replace(/\D/g, "");
-    valor = valor.substring(0, 11); 
+    let mascara;
 
-    valor = valor.replace(/^(\d{2})(\d)/g, "($1) $2");
-    valor = valor.replace(/(\d{4})(\d)/, "$1-$2"); 
-
-    if(valor.length > 13) {
-      valor = valor.replace(/(\d{5})(\d)/, "$1-$2");
+    if(valor.length <= 10) {
+      mascara = valor.replace(/(\d{4})(\d)/, "$1-$2");
+      telefone.value = mascara;
+    } else if(valor.length === 11) {
+      mascara = valor.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1)$2-$3");
+      telefone.value = mascara;
     }
-
-    telefone.value = valor;
   }

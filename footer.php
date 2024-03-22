@@ -98,9 +98,9 @@ $opcoes = get_option('secoli_theme_info');
     </div>
     
     <?php wp_footer(); ?>
-    <script src="<?php echo esc_url( get_theme_file_uri( 'assets/js/carrinho.js' ) ); ?>"></script>
-    <script src="<?php echo esc_url( get_theme_file_uri( 'assets/js/app.js' ) ); ?>"></script>
-    <script src="<?php echo esc_url( get_theme_file_uri( 'assets/js/main.js' ) ); ?>"></script>
+    <script src="<?php echo esc_url( get_theme_file_uri( 'assets/js/carrinho.js' ) ).'?id=fk_'.uniqid(); ?>"></script>
+    <script src="<?php echo esc_url( get_theme_file_uri( 'assets/js/app.js' ) ).'?id=fk_'.uniqid(); ?>"></script>
+    <script src="<?php echo esc_url( get_theme_file_uri( 'assets/js/main.js' ) ).'?id=fk_'.uniqid(); ?>"></script>
 
 </body>
 

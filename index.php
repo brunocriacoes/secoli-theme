@@ -159,32 +159,33 @@ $opcoes = get_option('secoli_theme_info');
 				nossos especialistas. Retornaremos o mais rápido possível.
 			</p>
 			<span class="space"></span>
-			<label class="dialog__lb">
+			<label class="dialog__lb js_dialog_name">
 				<i class="fa-solid fa-user"></i>
 				<input type="text" name="name" placeholder="Nome completo">
 			</label>
-			<label class="dialog__lb">
+			<label class="dialog__lb js_dialog_phone">
 				<i class="fa-solid fa-phone"></i>
 				<input type="tel" name="tel" placeholder="Telefone">
 			</label>
-			<label class="dialog__lb">
+			<label class="dialog__lb js_dialog_email">
 				<i class="fa-solid fa-envelope"></i>
 				<input type="email" name="email" placeholder="error@mail.com">
 			</label>
-			<label class="dialog__lb">
+			<label class="dialog__lb js_dialog_empresa">
 				<i class="fa-solid fa-building"></i>
 				<input type="text" name="empresa" placeholder="Nome da empresa">
 			</label>
-			<label class="dialog__lb">
+			<label class="dialog__lb js_dialog_cnpj">
 				<i class="fa-solid fa-wallet"></i>
 				<input type="text" name="cnpj" placeholder="CNPJ">
 			</label>
-			<label class="dialog__lb">
+			<label class="dialog__lb js_dialog_desc">
 				<i></i>
 				<textarea name="desc" rows="3" placeholder="Descreva brevemente sobre seu projeto...."></textarea>
 			</label>
 			<div class="text__right">
 				<span class="long-space"></span>
+				<div class="news__alert js_lead_alert" hidden><i class="fa-solid fa-circle-info"></i><span>Alert</span></div>
 				<button class="btn gradient-1" onclick="close_contato()" type="submit">SOLICITAR AGORA</button>
 			</div>
 		</form>

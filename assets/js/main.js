@@ -236,3 +236,26 @@ async function addLead(event, $e) {
         alert.setAttribute("hidden", "true");
     }, 6000);
 }
+
+async function addContact(event, $e) {
+    event.preventDefault();
+    
+    let payload = {
+        nome: document.querySelector(".js_dialog_name").value,
+        phone: document.querySelector(".js_dialog_phone").value,
+        email: document.querySelector(".js_dialog_email").value,
+        empresa: document.querySelector(".js_dialog_empresa").value,
+        cnpj: document.querySelector(".js_dialog_cnpj").value,
+    };
+    $e.reset();
+    let alert = document.querySelector(".news__alert");
+    let message = document.querySelector(".news__alert span");
+    let addContactApi = await buscarDadosAPI(_domain+"/wp-json/secoli/v1/agendar-contato/", payload);
+    message.innerHTML = addContactApi.message;
+    alert.removeAttribute("hidden");
+    console.log(addContactApi);
+
+    setTimeout(() => {
+        alert.setAttribute("hidden", "true");
+    }, 6000);
+}

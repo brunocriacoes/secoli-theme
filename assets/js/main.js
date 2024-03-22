@@ -260,3 +260,11 @@ async function addContact(event, $e) {
         alert.setAttribute("hidden", "true");
     }, 6000);
 }
+
+function mascaraCNPJ(cnpj) {
+    cnpj.value = cnpj.value.replace(/\D/g, "");
+    cnpj.value = cnpj.value.replace(/^(\d{2})(\d)/, "$1.$2"); 
+    cnpj.value = cnpj.value.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3"); 
+    cnpj.value = cnpj.value.replace(/\.(\d{3})(\d)/, ".$1/$2"); 
+    cnpj.value = cnpj.value.replace(/(\d{4})(\d)/, "$1-$2");
+  }

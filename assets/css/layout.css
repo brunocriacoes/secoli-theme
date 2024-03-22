@@ -619,8 +619,9 @@ body {
     padding: 8px 0;
 }
 
-.text__right {
-    text-align: right;
+.text__center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .dialog__bg .text {

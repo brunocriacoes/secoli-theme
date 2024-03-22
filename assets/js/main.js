@@ -253,7 +253,7 @@ async function addContact(event, $e) {
     let addContactApi = await buscarDadosAPI(_domain+"/wp-json/secoli/v1/agendar-contato/", payload);
     message.innerHTML = addContactApi.message;
     alert.removeAttribute("hidden");
-    console.log(addContactApi);
+    console.log(payload);
 
     setTimeout(() => {
         alert.setAttribute("hidden", "true");

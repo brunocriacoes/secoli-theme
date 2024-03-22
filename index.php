@@ -149,7 +149,7 @@ $opcoes = get_option('secoli_theme_info');
 	</div>
 
 	<dialog class="dialog__bg" close id="favDialog">
-		<form onsubmit="addContact(event, this)" method="dialog" action="javascript:void(0)">
+		<form onsubmit="addContact(event, this)" action="javascript:void(0)">
 			<h3 class="title">
 				Você tem um projeto especial?
 			</h3>

@@ -177,7 +177,7 @@ $opcoes = get_option('secoli_theme_info');
 			</label>
 			<label class="dialog__lb ">
 				<i class="fa-solid fa-wallet"></i>
-				<input class="js_dialog_cnpj" type="text" name="cnpj" placeholder="CNPJ" oninput="mascaraCNPJ(this)" required>
+				<input class="js_dialog_cnpj" type="text" name="cnpj" placeholder="CNPJ" oninput="mascaraCNPJ(this)" maxlength="18" required>
 			</label>
 			<label class="dialog__lb ">
 				<i></i>

@@ -262,9 +262,12 @@ async function addContact(event, $e) {
 }
 
 function mascaraCNPJ(cnpj) {
-    cnpj.value = cnpj.value.replace(/\D/g, "");
-    cnpj.value = cnpj.value.replace(/^(\d{2})(\d)/, "$1.$2"); 
-    cnpj.value = cnpj.value.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3"); 
-    cnpj.value = cnpj.value.replace(/\.(\d{3})(\d)/, ".$1/$2"); 
-    cnpj.value = cnpj.value.replace(/(\d{4})(\d)/, "$1-$2");
+    let valor = cnpj.value.replace(/\D/g, "");
+    valor = valor.substring(0, 14);
+    valor = valor.replace(/^(\d{2})(\d)/, "$1.$2");
+    valor = valor.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3");
+    valor = valor.replace(/\.(\d{3})(\d)/, ".$1/$2");
+    valor = valor.replace(/(\d{4})(\d)/, "$1-$2");
+
+    cnpj.value = valor;
   }

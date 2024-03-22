@@ -165,7 +165,7 @@ $opcoes = get_option('secoli_theme_info');
 			</label>
 			<label class="dialog__lb ">
 				<i class="fa-solid fa-phone"></i>
-				<input class="js_dialog_phone" type="tel" name="tel" placeholder="Telefone" oninput="mascaraTelefone(this)" maxlength="13" required>
+				<input class="js_dialog_phone" type="tel" name="tel" placeholder="Telefone" oninput="mascaraTelefone(this)" maxlength="15" required>
 			</label>
 			<label class="dialog__lb ">
 				<i class="fa-solid fa-envelope"></i>

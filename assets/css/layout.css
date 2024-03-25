@@ -935,3 +935,10 @@ body {
     color: #fff;
   }
 }
+
+.category__desktop {
+  display: none;
+  @media (min-width: 640px) {
+    display: flex;
+  }
+}

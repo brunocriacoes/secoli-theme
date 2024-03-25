@@ -135,7 +135,7 @@ $opcoes = get_option('secoli_theme_info');
                     </div>
                 </div>
             </div>
-            <div class="full category__bg">
+            <div class="full category__bg category__desktop">
                 <div class="container">
                     <?php
                     $url = API_SMARTLEAD . '/wp-json/smartlead-api/v1/categorias/';

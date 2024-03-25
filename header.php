@@ -123,7 +123,7 @@ $opcoes = get_option('secoli_theme_info');
                     </div>
                 </div>
             </div>
-            <div class="full" category__bg>
+            <div class="full category__bg">
                 <div class="container">
                     <div class="category__mobile">
                         <div class="grid__category__mobile">

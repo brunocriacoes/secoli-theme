@@ -890,7 +890,9 @@ body {
   left: 0;
   background: #fff;
 }
-
+.menu__mobile__check {
+  display: none;
+}
 .menu__mobile__check:checked ~ .menu__itens {
   display: block;
 }

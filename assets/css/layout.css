@@ -933,5 +933,7 @@ body {
   }
   & i {
     color: #fff;
+    align-items: center;
+    text-align: center;
   }
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .menu {
+            position: relative;
+        }
+
+        .menu>div {
+            display: none;
+            position: absolute;
+            top: 48px;
+            left: 0;
+            background: #fff;
+        }
+
+        .menu>input:checked~div {
+            display: block;
+        }
+    </style>
+    <div class="menu">
+        <label for="menu__mobile">
+            <i>Menu</i>
+        </label>
+        <input id="menu__mobile" type="checkbox" hidden>
+        <div>
+            <a href="">menu 1</a>
+            <a href="">menu 2</a>
+            <a href="">menu 3</a>
+        </div>
+    </div>
+    <h1>qualquer coisa</h1>
+</body>
+
+</html>

@@ -925,8 +925,10 @@ body {
   @media (min-width: 1024px) {
     display: none;
   }
-  & label {
-    align-items: center;
+
+  & span {
+    display: grid;
+    text-align: center;
   }
   & i {
     color: #fff;

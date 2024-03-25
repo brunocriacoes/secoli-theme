@@ -948,3 +948,13 @@ body {
 .category__list__mobile {
   display: grid;
 }
+.menu_category__link_mobile {
+  display: grid;
+  grid-template-columns: 48px 1fr 48px;
+  gap: 8px;
+  & img {
+    display: block;
+    width: 48px;
+    height: 48px;
+  }
+}

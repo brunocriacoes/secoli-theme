@@ -884,13 +884,13 @@ body {
 }
 
 .menu__itens {
-  display: block;
+  display: none;
   position: absolute;
   top: 48px;
   left: 0;
   background: #fff;
 }
 
-.menu__mobile__check > input:checked ~ .menu__itens {
+.menu_mobile > input:checked ~ .menu__itens {
   display: block;
 }

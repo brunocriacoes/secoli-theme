@@ -952,9 +952,12 @@ body {
   display: grid;
   grid-template-columns: 48px 1fr 48px;
   gap: 8px;
+  width: 100vw;
+  text-decoration: none;
   & img {
     display: block;
     width: 48px;
     height: 48px;
+    filter: invert(1);
   }
 }

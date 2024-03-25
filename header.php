@@ -76,9 +76,7 @@ $opcoes = get_option('secoli_theme_info');
                     </div>
                     <input id="menu__mobile__id" type="checkbox" class="menu__mobile__check">
                     <div class="menu__itens">
-                        <a href="">menu 1</a>
-                        <a href="">menu 2</a>
-                        <a href="">menu 3</a>
+                        <?php print_menu('menu_principal', 'header__menu') ?>
                     </div>
                 </div>
             </div>

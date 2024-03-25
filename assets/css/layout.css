@@ -883,8 +883,8 @@ body {
   position: relative;
 }
 
-.menu__mobile .menu__itens {
-  display: none;
+.menu__itens {
+  display: block;
   position: absolute;
   top: 48px;
   left: 0;

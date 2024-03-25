@@ -891,7 +891,11 @@ body {
   background: #fff;
 }
 .menu__mobile__check {
-  display: none;
+  display: block;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
 }
 .menu__mobile__check:checked ~ .menu__itens {
   display: block;

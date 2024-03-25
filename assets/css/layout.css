@@ -929,6 +929,7 @@ body {
   & span {
     display: grid;
     text-align: center;
+    color: #fff;
   }
   & i {
     color: #fff;

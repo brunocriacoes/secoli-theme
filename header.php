@@ -129,6 +129,7 @@ $opcoes = get_option('secoli_theme_info');
                         <div class="grid__category__mobile">
                             <label for="">
                                 <i class="fa-solid fa-bars"></i>
+                                <span>Categorias</span>
                             </label>
                         </div>
                     </div>

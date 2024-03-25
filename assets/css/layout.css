@@ -914,3 +914,15 @@ body {
 .menu__mobile__check:checked ~ div.menu__itens {
   display: block;
 }
+
+.grid__category__mobile {
+  display: grid;
+  grid-template-columns: 48px 1fr 48px;
+  align-items: center;
+  min-height: 48px;
+  text-align: center;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}

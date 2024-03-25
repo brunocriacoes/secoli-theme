@@ -143,12 +143,6 @@ $opcoes = get_option('secoli_theme_info');
                                 ?>
 
                                 <ul class="category__list">
-                                    <li>
-                                        <a href="produtos?cat=0">
-                                            <i class="fa-regular fa-image"></i>
-                                            TODAS AS CATEGORIAS
-                                        </a>
-                                    </li>
                                     <?php foreach ($response as $cat) { ?>
                                         <li>
                                             <a href="produtos?cat=<?php echo $cat['id'] ?>">
@@ -163,8 +157,6 @@ $opcoes = get_option('secoli_theme_info');
                                                         </a>
                                                     </li>
                                                 <?php } ?>
-                                                <img src="<?php __F('assets/images/img-category.png') ?>" alt="imagem Categoria">
-                                                <a href="produtos?cat=<?php echo $cat['id'] ?>">VER TODOS</a>
                                             </ul>
                                         </li>
                                     <?php } ?>

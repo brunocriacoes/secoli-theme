@@ -945,15 +945,6 @@ body {
     display: flex;
   }
 }
-
-.menu > div {
-  display: none;
-  position: absolute;
-  top: 48px;
-  left: 0;
-  background: #fff;
-}
-
-.menu > input:checked ~ div {
-  display: block;
+.category__list__mobile {
+  display: grid;
 }

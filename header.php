@@ -142,7 +142,7 @@ $opcoes = get_option('secoli_theme_info');
 
                                 ?>
 
-                                <ul class="category__list">
+                                <ul class="category__list__mobile">
                                     <?php foreach ($response as $cat) { ?>
                                         <li>
                                             <a href="produtos?cat=<?php echo $cat['id'] ?>">

@@ -74,7 +74,7 @@ $opcoes = get_option('secoli_theme_info');
                             <img height="26" src="<?php echo esc_url(get_theme_file_uri('/assets/images/logo.svg')); ?>" alt="logo">
                         </div>
                     </div>
-                    <input id="menu__mobile__id" type="checkbox">
+                    <input id="menu__mobile__id" type="checkbox" class="menu__mobile__check" hidden>
                     <div class="menu__itens">
                         <a href="">menu 1</a>
                         <a href="">menu 2</a>

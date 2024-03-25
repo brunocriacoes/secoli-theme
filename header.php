@@ -133,9 +133,42 @@ $opcoes = get_option('secoli_theme_info');
                             <span>Categorias</span>
                             <input id="menu__category__mobile" type="checkbox">
                             <div>
-                                <a href="">menu 1</a>
-                                <a href="">menu 2</a>
-                                <a href="">menu 3</a>
+                                <?php
+                                $url = API_SMARTLEAD . '/wp-json/smartlead-api/v1/categorias/';
+                                $response = file_get_contents($url);
+
+                                $response = mb_convert_encoding($response, 'UTF-8', 'ISO-8859-1');
+                                $response = json_decode($response, true);
+
+                                ?>
+
+                                <ul class="category__list">
+                                    <li>
+                                        <a href="produtos?cat=0">
+                                            <i class="fa-regular fa-image"></i>
+                                            TODAS AS CATEGORIAS
+                                        </a>
+                                    </li>
+                                    <?php foreach ($response as $cat) { ?>
+                                        <li>
+                                            <a href="produtos?cat=<?php echo $cat['id'] ?>">
+                                                <img class="icon_category_menu" src="<?php echo __F('assets/icons/' . $cat['id'] . '.svg') ?>" alt="">
+                                                <?php echo $cat["name"] ?>
+                                            </a>
+                                            <ul>
+                                                <?php foreach ($cat["subcategories"] as $sub) { ?>
+                                                    <li>
+                                                        <a href="produtos?cat=<?php echo $sub['id'] ?>">
+                                                            <?php echo $sub["name"] ?>
+                                                        </a>
+                                                    </li>
+                                                <?php } ?>
+                                                <img src="<?php __F('assets/images/img-category.png') ?>" alt="imagem Categoria">
+                                                <a href="produtos?cat=<?php echo $cat['id'] ?>">VER TODOS</a>
+                                            </ul>
+                                        </li>
+                                    <?php } ?>
+                                </ul>
                             </div>
                         </div>
                     </div>

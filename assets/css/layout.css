@@ -897,6 +897,6 @@ body {
   height: 1px;
   opacity: 0;
 }
-.menu__mobile__check:checked ~ .menu__itens {
+.menu__mobile__check:checked ~ div.menu__itens {
   display: block;
 }

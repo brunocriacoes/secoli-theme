@@ -127,10 +127,16 @@ $opcoes = get_option('secoli_theme_info');
                 <div class="container">
                     <div class="category__mobile">
                         <div class="grid__category__mobile">
-                            <label for="">
+                            <label for="menu__category__mobile">
                                 <i class="fa-solid fa-bars"></i>
                             </label>
                             <span>Categorias</span>
+                            <input id="menu__category__mobile" type="checkbox">
+                            <div>
+                                <a href="">menu 1</a>
+                                <a href="">menu 2</a>
+                                <a href="">menu 3</a>
+                            </div>
                         </div>
                     </div>
                 </div>

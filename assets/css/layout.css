@@ -891,7 +891,7 @@ body {
   background: #fff;
 }
 
-.menu_mobile > input:checked ~ div {
+.menu_mobile > input:checked ~ .menu__itens {
   display: block;
 }
 

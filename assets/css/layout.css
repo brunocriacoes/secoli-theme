@@ -894,7 +894,3 @@ body {
 .menu_mobile > input:checked ~ .menu__itens {
   display: block;
 }
-
-.menu__mobile__check {
-  display: none;
-}

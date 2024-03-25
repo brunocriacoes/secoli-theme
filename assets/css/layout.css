@@ -934,34 +934,15 @@ body {
   & i {
     color: #fff;
   }
+  & a {
+    color: #fff;
+  }
 }
 
 .category__desktop {
   display: none;
   @media (min-width: 640px) {
     display: flex;
-  }
-}
-
-.grid__category__mobile {
-  display: grid;
-  grid-template-columns: 48px 1fr 48px;
-  align-items: center;
-  min-height: 48px;
-  text-align: center;
-  color: #fff;
-
-  @media (min-width: 1024px) {
-    display: none;
-  }
-
-  & span {
-    display: grid;
-    text-align: center;
-    color: #fff;
-  }
-  & i {
-    color: #fff;
   }
 }
 

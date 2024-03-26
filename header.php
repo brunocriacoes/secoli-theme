@@ -146,11 +146,11 @@ $opcoes = get_option('secoli_theme_info');
                             <ul class="category__list__mobile">
                                 <?php foreach ($response as $cat) { ?>
                                     <li>
-                                        <a href="produtos?cat=<?php echo $cat['id'] ?>" class="menu_category__link_mobile">
+                                        <span class="menu_category__link_mobile">
                                             <img src="<?php echo __F('assets/icons/' . $cat['id'] . '.svg') ?>" alt="">
-                                            <span> <?php echo $cat["name"] ?> </span>
+                                            <a href="produtos?cat=<?php echo $cat['id'] ?>"> <?php echo $cat["name"] ?> </a>
                                             <i class="fa-solid fa-chevron-down"></i>
-                                        </a>
+                                        </span>
                                         <ul>
                                             <?php foreach ($cat["subcategories"] as $sub) { ?>
                                                 <li>

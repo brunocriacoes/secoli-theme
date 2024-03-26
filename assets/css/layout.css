@@ -950,6 +950,9 @@ body {
   align-items: center;
   text-align: left;
   padding: 16px;
+  & li {
+    list-style: none;
+  }
   & a {
     text-decoration: none;
   }

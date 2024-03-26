@@ -932,10 +932,10 @@ body {
     display: none;
   }
 }
-.grid__category__mobile > div {
+.category__mobile > input ~ div {
   display: none;
 }
-.category__list__mobile > input:checked ~ div {
+.category__mobile > input:checked ~ div {
   display: block;
 }
 

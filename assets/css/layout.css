@@ -952,11 +952,10 @@ body {
   padding: 0;
   & li {
     list-style: none;
-    line-height: 22px;
-
+    line-height: 48px;
+    border: 1px solid #111;
     & ul {
       background: #222;
-      border: 1px solid #111;
     }
   }
 

@@ -952,6 +952,7 @@ body {
   padding: 0;
   & li {
     list-style: none;
+    line-height: 22px;
     & ul {
       background: #222;
     }

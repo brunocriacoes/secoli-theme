@@ -31,10 +31,25 @@ function get_blog_posts($post_type = 'post', $posts_per_page = 10)
     return $blog;
 }
 
-$blog = get_blog_posts();
+function get_post_data()
+{
+    $page = [
+        "title" => "",
+        "content" => ""
+    ];
+    if (have_posts()) {
+        while (have_posts()) : the_post();
+            $page['title'] =  get_the_title();
+            $page['content'] =  get_the_content();
+        endwhile;
+    }
+    return $page;
+}
+
+$page = get_post_data();
+$posts = get_blog_posts();
 
 ?>
-
 
 <div class="full about__banner">
     <div class="container">
@@ -103,22 +118,11 @@ $blog = get_blog_posts();
         </div>
         <div class="space"></div>
         <h2 class="title text-center">
-            Especializada em criar produtos <br> personalizados e exclusivos
+            <?php $page['title'] ?>
         </h2>
         <div class="space"></div>
         <div class="w-2">
-            <p>
-                Além de ter conquistado o equilíbrio entre a mais moderna tecnologia e o cuidado da manufatura artesanal,
-                a Secoli se diferencia também por sua versatilidade e especialidade em criar produtos personalizados exclusivos,
-                encantando e surpreendendo o público mais exigente.
-            </p>
-            <p>
-                Mantendo o compromisso com qualidade e prazo e aproveitando a expertise em desenvolvimentos especiais,
-                hoje a Secoli também oferece soluções que vão além da sua linha de produção. Através de
-                parceiros dentro e fora de nossas fronteiras, expandindo o leque de possibilidades para
-                tudo o que há de melhor no mundo dos brindes, as mais diversas ramificações e necessidades
-                do mercado corporativo são atendidas.
-            </p>
+            <?php $page['content'] ?>
         </div>
     </div>
 </div>

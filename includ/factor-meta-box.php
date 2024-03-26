@@ -9,11 +9,16 @@ function adicionar_campos_personalizados($campos, $post_type_slug, $metabox_id, 
             function ($post) use ($campos) {
                 foreach ($campos as $campo) {
                     $nome_campo = $campo['nome'];
+                    $label = $campo['nome'];
+                    $label = explode('_', $label);
+                    unset($label[0]);
+                    unset($label[1]);
+                    $label = implode(' ', $label);
                     $tipo_campo = $campo['tipo'];
                     $valor = get_post_meta($post->ID, $nome_campo, true);
             ?>
                         <p>
-                            <label for="<?php echo $nome_campo; ?>"><?php echo ucfirst($nome_campo); ?>:</label><br>
+                            <label for="<?php echo $nome_campo; ?>"><?php echo ucfirst($label); ?>:</label><br>
                             <?php if ($tipo_campo != 'textarea') { ?>
                                 <input type="<?php echo $tipo_campo ?>" id="<?php echo $nome_campo; ?>" name="<?php echo $nome_campo; ?>" value="<?php echo esc_attr($valor); ?>">
                             <?php } elseif ($tipo_campo == 'textarea') { ?>

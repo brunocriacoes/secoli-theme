@@ -992,4 +992,7 @@ body {
     font-weight: bold;
     color: #fff;
   }
+  & i {
+    color: #fff;
+  }
 }

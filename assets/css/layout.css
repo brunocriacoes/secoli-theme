@@ -962,4 +962,7 @@ body {
     height: 22px;
     filter: invert(1);
   }
+  & span {
+    text-align: left;
+  }
 }

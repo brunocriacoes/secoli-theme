@@ -54,6 +54,10 @@ body {
   height: 48px;
   min-width: 327px;
   border-radius: 48px;
+  margin: 0 auto;
+  @media (min-width: 640px) {
+    margin: 0;
+  }
 }
 
 .video-mask {

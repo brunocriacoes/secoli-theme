@@ -925,9 +925,6 @@ body {
   @media (min-width: 1024px) {
     display: none;
   }
-  .grid__category__mobile > input:checked ~ div {
-    display: block;
-  }
   & span {
     display: grid;
     text-align: center;
@@ -939,6 +936,12 @@ body {
   & a {
     color: #fff;
   }
+}
+.grid__category__mobile > div {
+  display: none;
+}
+.grid__category__mobile > input:checked ~ div {
+  display: block;
 }
 
 .category__desktop {

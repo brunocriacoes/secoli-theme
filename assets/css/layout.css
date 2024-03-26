@@ -969,7 +969,7 @@ body {
   display: block;
 }
 .category__list__mobile li.ativo i {
-  transform: rotate(-180deg);
+  transform: rotate(-45deg);
 }
 
 .category__list__mobile li ul li {

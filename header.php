@@ -131,38 +131,38 @@ $opcoes = get_option('secoli_theme_info');
                                 <i class="fa-solid fa-bars"></i>
                             </label>
                             <span>Categorias</span>
-                            <input id="menu__category__mobile" type="checkbox" hidden>
-                            <div>
-                                <?php
-                                $url = API_SMARTLEAD . '/wp-json/smartlead-api/v1/categorias/';
-                                $response = file_get_contents($url);
+                        </div>
+                        <input id="menu__category__mobile" type="checkbox" hidden>
+                        <div>
+                            <?php
+                            $url = API_SMARTLEAD . '/wp-json/smartlead-api/v1/categorias/';
+                            $response = file_get_contents($url);
 
-                                $response = mb_convert_encoding($response, 'UTF-8', 'ISO-8859-1');
-                                $response = json_decode($response, true);
+                            $response = mb_convert_encoding($response, 'UTF-8', 'ISO-8859-1');
+                            $response = json_decode($response, true);
 
-                                ?>
+                            ?>
 
-                                <ul class="category__list__mobile">
-                                    <?php foreach ($response as $cat) { ?>
-                                        <li>
-                                            <a href="produtos?cat=<?php echo $cat['id'] ?>" class="menu_category__link_mobile">
-                                                <img src="<?php echo __F('assets/icons/' . $cat['id'] . '.svg') ?>" alt="">
-                                                <span> <?php echo $cat["name"] ?> </span>
-                                                <i class="fa-solid fa-chevron-down"></i>
-                                            </a>
-                                            <ul>
-                                                <?php foreach ($cat["subcategories"] as $sub) { ?>
-                                                    <li>
-                                                        <a href="produtos?cat=<?php echo $sub['id'] ?>">
-                                                            <?php echo $sub["name"] ?>
-                                                        </a>
-                                                    </li>
-                                                <?php } ?>
-                                            </ul>
-                                        </li>
-                                    <?php } ?>
-                                </ul>
-                            </div>
+                            <ul class="category__list__mobile">
+                                <?php foreach ($response as $cat) { ?>
+                                    <li>
+                                        <a href="produtos?cat=<?php echo $cat['id'] ?>" class="menu_category__link_mobile">
+                                            <img src="<?php echo __F('assets/icons/' . $cat['id'] . '.svg') ?>" alt="">
+                                            <span> <?php echo $cat["name"] ?> </span>
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </a>
+                                        <ul>
+                                            <?php foreach ($cat["subcategories"] as $sub) { ?>
+                                                <li>
+                                                    <a href="produtos?cat=<?php echo $sub['id'] ?>">
+                                                        <?php echo $sub["name"] ?>
+                                                    </a>
+                                                </li>
+                                            <?php } ?>
+                                        </ul>
+                                    </li>
+                                <?php } ?>
+                            </ul>
                         </div>
                     </div>
                 </div>

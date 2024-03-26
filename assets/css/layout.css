@@ -953,7 +953,7 @@ body {
   & li {
     list-style: none;
     line-height: 48px;
-    border: 1px solid #111;
+    border-bottom: 1px solid #111;
     & ul {
       background: #222;
     }

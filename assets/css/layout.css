@@ -956,6 +956,10 @@ body {
   gap: 2px;
   width: 100vw;
   text-decoration: none;
+  & div {
+    text-align: left;
+    gap: 2px;
+  }
   & img {
     display: block;
     width: 22px;

@@ -54,11 +54,13 @@ body {
   align-items: center;
   padding: 0 16px;
   height: 48px;
-  min-width: 327px;
+  min-width: 80vw;
   border-radius: 48px;
   margin: 0 auto;
   @media (min-width: 640px) {
     margin: 0;
+    display: inline-flex;
+    min-width: 327px;
   }
 }
 

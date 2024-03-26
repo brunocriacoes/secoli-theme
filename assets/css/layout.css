@@ -968,6 +968,9 @@ body {
 .category__list__mobile li.ativo ul {
   display: block;
 }
+.category__list__mobile li.ativo i {
+  transform: rotate(-180deg);
+}
 
 .category__list__mobile li ul li {
   list-style: none;

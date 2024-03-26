@@ -956,11 +956,6 @@ body {
   gap: 2px;
   width: 100vw;
   text-decoration: none;
-  & div {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
   & img {
     display: block;
     width: 22px;
@@ -969,6 +964,5 @@ body {
   }
   & span {
     text-align: left;
-    background: #4299e1;
   }
 }

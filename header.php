@@ -71,7 +71,9 @@ $opcoes = get_option('secoli_theme_info');
                             <i class="fa-solid fa-bars"></i>
                         </label>
                         <div>
-                            <img height="26" src="<?php echo esc_url(get_theme_file_uri('/assets/images/logo.svg')); ?>" alt="logo">
+                            <a href="<?php __L('/a-secoli') ?>">
+                                <img height="26" src="<?php echo esc_url(get_theme_file_uri('/assets/images/logo.svg')); ?>" alt="logo">
+                            </a>
                         </div>
                     </div>
                     <input id="menu__mobile__id" type="checkbox" class="menu__mobile__check">

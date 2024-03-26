@@ -921,20 +921,15 @@ body {
   align-items: center;
   min-height: 48px;
   text-align: center;
-
-  @media (min-width: 1024px) {
-    display: none;
-  }
   & span {
-    display: grid;
-    text-align: center;
     color: #fff;
   }
   & i {
     color: #fff;
   }
-  & a {
-    color: #fff;
+
+  @media (min-width: 640px) {
+    display: none;
   }
 }
 .grid__category__mobile > div {

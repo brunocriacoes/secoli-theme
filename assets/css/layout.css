@@ -950,14 +950,15 @@ body {
   align-items: center;
   text-align: left;
   padding: 16px;
-  & li {
-    list-style: none;
-    text-indent: 48px;
-  }
   & a {
     text-decoration: none;
   }
 }
+.category__list__mobile li ul li {
+  list-style: none;
+  text-indent: 48px;
+}
+
 .menu_category__link_mobile {
   display: grid;
   align-items: center;

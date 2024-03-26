@@ -290,17 +290,34 @@ function mascaraTelefone(telefone) {
   telefone.value = valor;
 }
 
-$(document).ready(function () {
-  // Quando um link de categoria é clicado
-  $(".menu_category__link_mobile").click(function (e) {
-    e.preventDefault(); // Previne o comportamento padrão do link
+document.addEventListener("DOMContentLoaded", function () {
+  // Seleciona todos os links de categorias
+  var links = document.querySelectorAll(".menu_category__link_mobile");
 
-    // Encontra o próximo elemento <ul> (que contém as subcategorias) e alterna a visibilidade
-    $(this).next("ul").slideToggle("fast");
+  // Adiciona um event listener a cada link
+  links.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); // Previne o comportamento padrão do link
 
-    // Alterna a classe do ícone de seta para cima/para baixo (se desejar)
-    $(this)
-      .find("i.fa-chevron-down, i.fa-chevron-up")
-      .toggleClass("fa-chevron-down fa-chevron-up");
+      // Encontra o próximo elemento <ul> (que contém as subcategorias)
+      var subMenu = this.nextElementSibling;
+
+      // Verifica se as subcategorias estão visíveis e alterna a visibilidade
+      if (subMenu.style.display === "block") {
+        subMenu.style.display = "none";
+        // Atualiza o ícone para 'fa-chevron-down' se as subcategorias forem ocultadas
+        this.querySelector("i.fa-solid").classList.replace(
+          "fa-chevron-up",
+          "fa-chevron-down"
+        );
+      } else {
+        subMenu.style.display = "block";
+        // Atualiza o ícone para 'fa-chevron-up' se as subcategorias forem mostradas
+        this.querySelector("i.fa-solid").classList.replace(
+          "fa-chevron-down",
+          "fa-chevron-up"
+        );
+      }
+    });
   });
 });

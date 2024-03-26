@@ -964,6 +964,11 @@ body {
     color: #fff;
   }
 }
+
+.category__list__mobile li.ativo ul {
+  display: block;
+}
+
 .category__list__mobile li ul li {
   list-style: none;
   text-indent: 48px;

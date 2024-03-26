@@ -131,8 +131,6 @@ $opcoes = get_option('secoli_theme_info');
                                 <i class="fa-solid fa-bars"></i>
                             </label>
                             <span>Categorias</span>
-                            <div>
-                            </div>
                             <input id="menu__category__mobile" type="checkbox" hidden>
                             <div>
                                 <?php

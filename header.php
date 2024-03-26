@@ -131,7 +131,7 @@ $opcoes = get_option('secoli_theme_info');
                                 <i class="fa-solid fa-bars"></i>
                             </label>
                             <span>Categorias</span>
-                            <input id="menu__category__mobile" type="checkbox">
+                            <input id="menu__category__mobile" type="checkbox" hidden>
                             <div>
                                 <?php
                                 $url = API_SMARTLEAD . '/wp-json/smartlead-api/v1/categorias/';

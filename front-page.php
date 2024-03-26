@@ -17,7 +17,7 @@ $opcoes = get_option('secoli_theme_info');
 		<span class="long-space"></span>
 		<div class="grid c-1 lg-c-2 v-center">
 			<div>
-				<h2 class="title ">
+				<h2 class="title">
 					Conheça a nossa linha de brindes e presentes personalizados.
 				</h2>
 				<span class="space"></span>
@@ -210,7 +210,7 @@ $opcoes = get_option('secoli_theme_info');
 					Acompanhe conteúdos atualizados em nossas redes sociais.
 				</p>
 				<span class="long-space"></span>
-				<div>
+				<div class="icons_social__link">
 					<a class="social__link" href="<?php echo $opcoes['facebook'] ?>" target="_blank" rel="noopener noreferrer">
 						<i class="fa-brands fa-instagram"></i>
 					</a>

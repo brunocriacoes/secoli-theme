@@ -640,9 +640,9 @@ body {
   cursor: pointer;
 }
 .icons_social__link {
-  padding: 16px;
+  justify-content: center;
   @media (min-width: 640px) {
-    padding: 0;
+    justify-content: left;
   }
 }
 

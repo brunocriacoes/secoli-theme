@@ -951,7 +951,7 @@ body {
 .menu_category__link_mobile {
   display: grid;
   align-items: center;
-  text-align: left;
+  justify-items: start;
   grid-template-columns: 48px 1fr 48px;
   gap: 2px;
   width: 100vw;

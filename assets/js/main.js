@@ -291,6 +291,7 @@ function mascaraTelefone(telefone) {
 }
 
 function toggleClass($e, className = "ativo") {
+  var _debug = $e;
   if ($e) {
     $e.classList.toggle(className);
   }

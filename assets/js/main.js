@@ -295,7 +295,3 @@ function toggleClass($e, className = "ativo") {
     $e.classList.toggle(className);
   }
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Seleciona todos os links de categorias
-  var links = document.querySelectorAll(".menu_category__link_mobile");

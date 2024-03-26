@@ -149,7 +149,7 @@ $opcoes = get_option('secoli_theme_info');
                                         <span class="menu_category__link_mobile">
                                             <img src="<?php echo __F('assets/icons/' . $cat['id'] . '.svg') ?>" alt="">
                                             <a href="produtos?cat=<?php echo $cat['id'] ?>"> <?php echo $cat["name"] ?> </a>
-                                            <i class="fa-solid fa-chevron-down"></i>
+                                            <i class="fa-solid fa-chevron-down" onclick="toggleClass(this)"></i>
                                         </span>
                                         <ul>
                                             <?php foreach ($cat["subcategories"] as $sub) { ?>

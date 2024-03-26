@@ -290,6 +290,12 @@ function mascaraTelefone(telefone) {
   telefone.value = valor;
 }
 
+function toggleClass($e, className = "ativo") {
+  if ($e) {
+    $e.classList.toggle(className);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   // Seleciona todos os links de categorias
   var links = document.querySelectorAll(".menu_category__link_mobile");

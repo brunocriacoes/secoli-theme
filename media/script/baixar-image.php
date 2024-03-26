@@ -18,4 +18,3 @@ foreach($prods as $p) {
     file_put_contents($pt, $g);
 }
 
-// php .\app-data\baixar-image.php

@@ -18,4 +18,3 @@ foreach ($prods as $p) {
 }
 echo "finish";
 
-// php .\app-data\baixar-clientes.php

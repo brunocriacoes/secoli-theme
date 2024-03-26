@@ -1,4 +1,5 @@
 <?php get_header() ?>
+
 <div class="full about__banner">
     <div class="container">
         <div class="grid c-1 lg-c-2">

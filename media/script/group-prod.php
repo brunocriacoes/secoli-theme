@@ -10,4 +10,3 @@ foreach ($files as $f) {
 
 file_put_contents(__DIR__ . "/json/prods.json", json_encode($data));
 
-// php .\app-data\group-prod.php

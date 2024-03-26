@@ -950,7 +950,9 @@ body {
   align-items: center;
   text-align: left;
   padding: 16px;
-  text-decoration: none;
+  & a {
+    text-decoration: none;
+  }
 }
 .menu_category__link_mobile {
   display: grid;

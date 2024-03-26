@@ -50,7 +50,7 @@ if (isset($_POST['email'])) {
             Envie uma mensagem e retornaremos em breve
         </h2>
         <div class="long-space"></div>
-        <form action="" method="POST">
+        <form action="<?php __L('/contato')?>" method="POST">
             <div class=" grid c-1 lg-c-2">
                 <label class="input__theme">
                     <span>NOME</span>

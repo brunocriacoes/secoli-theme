@@ -67,8 +67,8 @@ body {
 }
 
 .video-mask {
-  width: 122mm;
-  height: 55mm;
+  width: 100mm;
+  height: 45mm;
   mask-image: url("../images/infinite.svg");
   mask-size: cover;
   display: block;

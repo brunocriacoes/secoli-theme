@@ -20,6 +20,10 @@
 .text {
   font-size: var(--fs-3);
   color: var(--cor-7);
+  padding: 0 16px;
+  @media (min-width: 640px) {
+    padding: 0;
+  }
 }
 
 .text__black {

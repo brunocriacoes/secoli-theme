@@ -1001,3 +1001,28 @@ body {
     color: #fff;
   }
 }
+
+
+
+
+
+.alert {
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+
+  &__message {
+      display: inline-block;
+      vertical-align: middle;
+  }
+
+  &--success {
+      border-color: #4caf50;
+      background-color: #dff0d8;
+  }
+
+  &--error {
+      border-color: #d9534f;
+      background-color: #f2dede;
+  }
+}

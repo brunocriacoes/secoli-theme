@@ -11,7 +11,6 @@ add_action('init', function() {
         array('nome' => 'secoli_promo_link', 'tipo' => 'url'),
         array('nome' => 'secoli_promo_data_init', 'tipo' => 'date'),
 		array('nome' => 'secoli_promo_data_end', 'tipo' => 'date'),
-
     );
     adicionar_campos_personalizados($campos_personalizados, 'post_promo', 'secoli_promo_metabox', 'Campos personalizados promo');
 });

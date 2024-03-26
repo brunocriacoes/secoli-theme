@@ -8,6 +8,24 @@
 
 <?php get_header() ?>
 
+<?php
+$send = null;
+if (isset($_POST['email'])) {
+
+    $to = $opcoes['email_budget'];
+    $subject = $_POST['subject'];
+    $message = "Nova mensagem de contato, <br>";
+    $message .= "<b>Nome: </b>" . $_POST['name'] . "<br>";
+    $message .= "<b>Telefone: </b>" . $_POST['phone'] . "<br>";
+    $message .= "<b>E-mail: </b>" . $_POST['email'] . "<br>";
+    $message .= "<b>Empresa: </b>" . $_POST['company'] . "<br>";
+    $message .= "<b>Descricao: </b>" . $_POST['description'] . "<br>";
+    $headers = array('Content-Type: text/html; charset=UTF-8');
+
+    $send = wp_mail($to, $subject, $message, $headers);
+}
+?>
+
 <div class="full contact_banner">
     <div class="container">
         <div class="grid c-1 lg-c-2">
@@ -66,6 +84,30 @@
                     ENVIAR MENSAGEM
                 </button>
             </div>
+            <?php
+
+            if ($send === false) {
+                echo '
+                    <div class="alert alert--error">
+                        <div class="alert__message">
+                        Error ao enviar, por favor tente mais tarde.
+                        </div>
+                    </div>
+                ';
+            }
+
+            if ($send === true) {
+                echo "<span></span>";
+                echo '
+                    <div class="alert alert--success">
+                        <div class="alert__message">
+                            Sua mensagem foi enviada com sucesso respoderemos assim que possivel.
+                        </div>
+                    </div>
+                ';
+            }
+            
+            ?>
         </form>
         <div class="long-space"></div>
     </div>

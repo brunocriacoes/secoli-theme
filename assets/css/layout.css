@@ -947,6 +947,8 @@ body {
 }
 .category__list__mobile {
   display: grid;
+  align-items: center;
+  text-align: left;
 }
 .menu_category__link_mobile {
   display: grid;

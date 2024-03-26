@@ -949,7 +949,7 @@ body {
   display: grid;
   align-items: center;
   text-align: left;
-  padding: 16px;
+  padding: 0;
   & li {
     list-style: none;
     & ul {

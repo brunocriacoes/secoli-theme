@@ -206,7 +206,7 @@ $opcoes = get_option('secoli_theme_info');
 				<h3 class="title">
 					Siga a Secoli nas redes.
 				</h3>
-				<p class="text">
+				<p class="text text__mobile__center">
 					Acompanhe conteúdos atualizados em nossas redes sociais.
 				</p>
 				<span class="long-space"></span>

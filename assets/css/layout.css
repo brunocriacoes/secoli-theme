@@ -960,6 +960,7 @@ body {
   }
   & a {
     text-decoration: none;
+    color: #fff;
   }
 }
 .category__list__mobile li ul li {

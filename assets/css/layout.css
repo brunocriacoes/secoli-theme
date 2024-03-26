@@ -11,6 +11,10 @@
   color: var(--cor-6);
   display: block;
   font-family: var(--font);
+  padding: 0 16px;
+  @media (min-width: 640px) {
+    padding: 0;
+  }
 }
 
 .text {

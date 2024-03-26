@@ -17,7 +17,7 @@ $opcoes = get_option('secoli_theme_info');
 		<span class="long-space"></span>
 		<div class="grid c-1 lg-c-2 v-center">
 			<div>
-				<h2 class="title ">
+				<h2 class="title">
 					Conheça a nossa linha de brindes e presentes personalizados.
 				</h2>
 				<span class="space"></span>

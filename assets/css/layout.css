@@ -956,6 +956,7 @@ body {
     border-bottom: 1px solid #111;
     & ul {
       background: #222;
+      display: none;
     }
   }
   & a {

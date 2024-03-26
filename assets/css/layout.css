@@ -935,7 +935,7 @@ body {
 .grid__category__mobile > div {
   display: none;
 }
-.grid__category__mobile > input:checked ~ div {
+.category__list__mobile > input:checked ~ div {
   display: block;
 }
 

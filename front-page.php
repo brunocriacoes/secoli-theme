@@ -210,7 +210,7 @@ $opcoes = get_option('secoli_theme_info');
 					Acompanhe conteúdos atualizados em nossas redes sociais.
 				</p>
 				<span class="long-space"></span>
-				<div>
+				<div class="icons_social__link">
 					<a class="social__link" href="<?php echo $opcoes['facebook'] ?>" target="_blank" rel="noopener noreferrer">
 						<i class="fa-brands fa-instagram"></i>
 					</a>

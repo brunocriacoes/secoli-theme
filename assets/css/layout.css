@@ -639,6 +639,9 @@ body {
   justify-content: center;
   cursor: pointer;
 }
+.icons_social__link {
+  padding: 16px;
+}
 
 .social__post {
   width: 100%;

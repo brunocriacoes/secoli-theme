@@ -958,9 +958,10 @@ body {
   text-decoration: none;
   & img {
     display: block;
-    width: 22px;
-    height: 22px;
+    width: 48px;
+    height: 48px;
     filter: invert(1);
+    padding: 16px;
   }
   & span {
     text-align: left;

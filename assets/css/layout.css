@@ -768,7 +768,7 @@ body {
 
 .grid_produtos .produtos .produto {
   margin: 0 auto;
-  width: 250px;
+  width: 100%;
   padding: 20px;
   border-radius: 8px;
   text-align: center;

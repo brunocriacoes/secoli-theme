@@ -35,9 +35,11 @@ $response_prod = json_decode($response_prod, true);
 			</a>
 			<span>/</span>
 		</div>
+		<div class="space"></div>
 		<div class="grid_produtos">
 			<div class="categorias">
 				<strong style="cursor:pointer;">CATEGORIAS</strong>
+				<div class="space"></div>
 				<ul id="listaCategorias">
 					<?php foreach ($response as $cat) { ?>
 						<li id="categoriaMae">

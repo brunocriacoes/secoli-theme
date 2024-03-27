@@ -705,6 +705,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+
   @media (min-width: 640px) {
     grid-template-columns: 1fr 3fr;
   }
@@ -714,6 +715,9 @@ body {
   padding: 18px;
   border-radius: 16px;
   display: none;
+  @media (min-width: 640px) {
+    display: block;
+  }
 }
 
 .grid_produtos .categorias ul {
@@ -763,6 +767,7 @@ body {
 }
 
 .grid_produtos .produtos .produto {
+  margin: 0 auto;
   width: 250px;
   padding: 20px;
   border-radius: 8px;

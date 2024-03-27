@@ -18,7 +18,6 @@ foreach ($response as $c) {
 		$categoriaAtual = $c['name'];
 	}
 }
-var_dump($response);
 $response_prod = file_get_contents($url_prod);
 
 $response_prod = json_decode($response_prod, true);

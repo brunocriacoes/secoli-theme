@@ -21,11 +21,11 @@ $response_prod = json_decode($response_prod, true);
 <div class="full">
 	<div class="container">
 		<div class="menu__category">
-			<a class="text" href="./index.html">Home</a>
+			<a class="text" href="<?php __L('/') ?>">Home</a>
 			<span>/</span>
-			<a class="text" href="./produtos.html">Produtos</a>
+			<a class="text" href="<?php __L('/produtos/?cat=0') ?>">Produtos</a>
 			<span>/</span>
-			<a class="text" href="./produtos.html?c=Categoria X">Categoria X</a>
+			<a class="text" href="<?php __L('/produtos/?cat=' . $_GET['cat']) ?>">Categoria atual</a>
 			<span>/</span>
 		</div>
 		<div class="grid_produtos">

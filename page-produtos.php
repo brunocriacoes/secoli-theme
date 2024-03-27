@@ -38,7 +38,6 @@ $response_prod = json_decode($response_prod, true);
 								<a href="produtos/?cat=<?php echo $cat['id'] ?>">
 									<?php echo $cat['name'] ?>
 								</a>
-								<i class="fa-solid fa-plus" id="iconCategoriaMae"></i>
 							</span>
 							<ul class="subcategorias">
 								<?php foreach ($cat["subcategories"] as $sub) { ?>

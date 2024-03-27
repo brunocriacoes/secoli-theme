@@ -15,7 +15,7 @@ $url_prod = API_SMARTLEAD . '/wp-json/smartlead-api/v1/produtos-categoria-id/?ca
 $categoriaAtual = 'Categoria atual';
 foreach ($response as $c) {
 	if ($id == $c['id']) {
-		$categotiaAtual = $c['name'];
+		$categoriaAtual = $c['name'];
 	}
 }
 var_dump($response);

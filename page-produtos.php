@@ -35,9 +35,11 @@ $response_prod = json_decode($response_prod, true);
 					<?php foreach ($response as $cat) { ?>
 						<li id="categoriaMae">
 							<span style="cursor:pointer;">
-								<a href="produtos/?cat=<?php echo $cat['id'] ?>">
-									<?php echo $cat['name'] ?>
-								</a>
+								<b>
+									<a href="produtos/?cat=<?php echo $cat['id'] ?>">
+										<?php echo $cat['name'] ?>
+									</a>
+								</b>
 							</span>
 							<ul class="subcategorias">
 								<?php foreach ($cat["subcategories"] as $sub) { ?>

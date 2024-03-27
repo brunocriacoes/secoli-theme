@@ -810,7 +810,7 @@ body {
 }
 
 .menu__category {
-  padding: 16px;
+  padding-left: 16px;
 }
 
 .menu__category a {

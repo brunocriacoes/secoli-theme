@@ -710,6 +710,7 @@ body {
 .grid_produtos .categorias {
   padding: 18px;
   border-radius: 16px;
+  display: none;
 }
 
 .grid_produtos .categorias ul {

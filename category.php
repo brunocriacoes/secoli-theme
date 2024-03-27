@@ -8,7 +8,6 @@
                     Secoli Brindes,
                     conectando empresas, parceiros e pessoas.
                 </h1>
-
             </div>
         </div>
     </div>

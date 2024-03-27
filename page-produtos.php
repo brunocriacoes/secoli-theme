@@ -68,10 +68,14 @@ $response_prod = json_decode($response_prod, true);
 								<a href="produto?id=<?php echo $produto['id'] ?>">
 									<img src="https://app.secolibrindes.com.br/<?php echo $produto['photos'][0]['path'] ?>" alt="<?php echo $produto['name'] ?>" onerror="this.src='<?php __F('/assets/images/img-default.png') ?>'" />
 								</a>
-								<small> <?php echo $produto['cod'] ?> </small>
-								<strong>
-									<?php echo $produto['name'] ?>
-								</strong>
+								<a href="produto?id=<?php echo $produto['id'] ?>">
+									<small> <?php echo $produto['cod'] ?> </small>
+								</a>
+								<a href="produto?id=<?php echo $produto['id'] ?>">
+									<strong>
+										<?php echo $produto['name'] ?>
+									</strong>
+								</a>
 								<span class="space"></span>
 								<a class="btn gradient-1 btn__orcamento" onclick="return cart.add('<?php echo $produto['id'] ?> ',
 												'<?php echo $produto['name'] ?>',

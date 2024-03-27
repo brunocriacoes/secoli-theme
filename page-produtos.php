@@ -25,6 +25,7 @@ $response_prod = json_decode($response_prod, true);
 ?>
 <div class="full">
 	<div class="container">
+		<div class="space"></div>
 		<div class="menu__category">
 			<a class="text" href="<?php __L('/') ?>">Home</a>
 			<span>/</span>

@@ -809,8 +809,11 @@ body {
   font-size: 50px;
 }
 
+.menu__category {
+  padding: 16px;
+}
+
 .menu__category a {
-  margin-left: 16px;
   text-decoration: none;
   color: var(--cor-7);
   cursor: pointer;

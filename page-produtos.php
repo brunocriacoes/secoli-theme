@@ -12,7 +12,12 @@ $response = file_get_contents($url);
 $response = json_decode($response, true);
 $id = $_GET['cat'];
 $url_prod = API_SMARTLEAD . '/wp-json/smartlead-api/v1/produtos-categoria-id/?categoria_id=' . $id;
-
+$categoriaAtual = 'Categoria atual';
+foreach ($response as $c) {
+	if ($id == $c['id']) {
+		$categotiaAtual = $c['name'];
+	}
+}
 $response_prod = file_get_contents($url_prod);
 
 $response_prod = json_decode($response_prod, true);
@@ -25,7 +30,9 @@ $response_prod = json_decode($response_prod, true);
 			<span>/</span>
 			<a class="text" href="<?php __L('/produtos/?cat=0') ?>">Produtos</a>
 			<span>/</span>
-			<a class="text" href="<?php __L('/produtos/?cat=' . $_GET['cat']) ?>">Categoria atual</a>
+			<a class="text" href="<?php __L('/produtos/?cat=' . $_GET['cat']) ?>">
+				<?php echo $categoriaAtual ?>
+			</a>
 			<span>/</span>
 		</div>
 		<div class="grid_produtos">
@@ -33,7 +40,7 @@ $response_prod = json_decode($response_prod, true);
 				<strong style="cursor:pointer;">CATEGORIAS</strong>
 				<ul id="listaCategorias">
 					<?php foreach ($response as $cat) { ?>
-						<li id="categoriaMae" onclick="toggleClass(this)">
+						<li id="categoriaMae">
 							<span style="cursor:pointer;">
 								<b>
 									<a href="produtos/?cat=<?php echo $cat['id'] ?>">

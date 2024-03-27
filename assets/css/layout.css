@@ -776,6 +776,9 @@ body {
   border-radius: 8px;
   text-align: center;
 }
+.produto a {
+  text-decoration: none;
+}
 
 .btn__orcamento {
   min-width: 50px;

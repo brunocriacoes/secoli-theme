@@ -66,7 +66,7 @@ $response_prod = json_decode($response_prod, true);
 						<?php foreach ($response_prod as $produto) { ?>
 							<div class="produto">
 								<a href="produto?id=<?php echo $produto['id'] ?>">
-									<img src="https://app.secolibrindes.com.br/<?php echo $produto['photos'][0]['path'] ?>" alt="<?php echo $produto['name'] ?>" />
+									<img src="https://app.secolibrindes.com.br/<?php echo $produto['photos'][0]['path'] ?>" alt="<?php echo $produto['name'] ?>" onerror="this.src='<?php $__F('/assets/images/img-default.png') ?>'" />
 								</a>
 								<small> <?php echo $produto['cod'] ?> </small>
 								<strong>

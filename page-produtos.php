@@ -62,7 +62,7 @@ $response_prod = json_decode($response_prod, true);
 
 			<div>
 				<div class="produtos">
-					<div class="grid c-1 sm-c-2 sm-c-3">
+					<div class="grid c-1 sm-c-2 md-c-2 lg-c-3">
 						<?php foreach ($response_prod as $produto) { ?>
 							<div class="produto">
 								<a href="produto?id=<?php echo $produto['id'] ?>">

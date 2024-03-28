@@ -865,10 +865,15 @@ body {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   border-radius: 16px;
-  padding: 46px;
+  padding: 22px;
   background: #ffffff;
-  margin: 46px 0;
+  margin: 0 auto;
   border-radius: 16px;
+  max-width: 90vw;
+  @media (min-width: 640px) {
+    margin: 46px 0;
+    padding: 46px;
+  }
 }
 
 .feature__header {
@@ -881,7 +886,6 @@ body {
   overflow: hidden;
   width: 100%;
   max-width: 100vw;
-  background-color: #ccc;
   display: block;
 }
 
@@ -903,7 +907,6 @@ body {
   width: 400px;
   overflow: hidden;
   margin: 0 auto;
-  background-color: #000000;
 }
 
 #featured {

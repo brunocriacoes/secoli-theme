@@ -65,6 +65,11 @@ $response_prod = json_decode($response_prod, true);
 
 			<div>
 				<div class="produtos">
+					<div class="msg__prod__not__found">
+						<span class="title">Nenhum Produto Encontrado</span>
+						<span class="text"> que ainda não temos produtos disponíveis nesta categoria. Estamos trabalhando constantemente para expandir nossa seleção e trazer novidades. Enquanto isso, convidamos você a explorar outras categorias ou voltar para a nossa página inicial para descobrir tudo o que oferecemos.
+							Clique aqui para voltar à página inicial</span>
+					</div>
 					<div class="grid c-1 sm-c-2 md-c-2 lg-c-3">
 						<?php foreach ($response_prod as $produto) { ?>
 							<div class="produto">

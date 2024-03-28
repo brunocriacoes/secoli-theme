@@ -97,7 +97,7 @@ $relacionados = $response_prod['relacionado'];
         </div>
     </div>
 </div>
-
+<div class="space"></div>
 <div class="single__produto__bg">
     <div class="single__produto">
         <img src="<?php __F('media/paginas/produto/single-1.png') ?>">

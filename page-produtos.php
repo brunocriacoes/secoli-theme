@@ -95,7 +95,7 @@ $response_prod = json_decode($response_prod, true);
 <div class="full">
 	<div class="container">
 		<div class="expand__produtos">
-			<a class="text" href=""><i class="fa-regular fa-circle-down"></i><span>Expandir para mais
+			<a class="text" href=""><i class="fa-regular fa-circle-down"></i>&nbsp;<span>Expandir para mais
 					produtos</span></a>
 			<span class="text">Não está encontrando o que procura?</span>
 			<a class="btn gradient-1 " href="./media/catalogo.pdf">BAIXE O CATÁLOGO DIGITAL</a>

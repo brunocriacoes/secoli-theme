@@ -779,9 +779,6 @@ body {
 .produto a {
   text-decoration: none;
 }
-.produto__nome {
-  height: 16px;
-}
 
 .btn__orcamento {
   min-width: 50px;
@@ -809,6 +806,8 @@ body {
   color: var(--cor-6);
   font-size: var(--fs-3);
   margin-bottom: 8px;
+  height: 38px;
+  display: block;
 }
 
 .container title {

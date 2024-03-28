@@ -782,7 +782,7 @@ body {
 
 .btn__orcamento {
   min-width: 50px;
-  width: 100%;
+  width: 200px;
   font-size: 10px;
   display: flex;
   gap: 8px;

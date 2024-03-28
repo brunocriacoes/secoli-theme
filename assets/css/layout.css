@@ -779,8 +779,8 @@ body {
 .produto a {
   text-decoration: none;
 }
-.produto a strong {
-  min-height: 16px;
+.produto__nome {
+  height: 16px;
 }
 
 .btn__orcamento {

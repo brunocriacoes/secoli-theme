@@ -72,7 +72,7 @@ $response_prod = json_decode($response_prod, true);
 									<small> <?php echo $produto['cod'] ?> </small>
 								</a>
 								<a href="produto?id=<?php echo $produto['id'] ?>">
-									<strong>
+									<strong class="produto__nome">
 										<?php echo $produto['name'] ?>
 									</strong>
 								</a>

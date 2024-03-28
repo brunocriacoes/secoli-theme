@@ -13,6 +13,7 @@ $response_prod = file_get_contents($url_prod);
 
 $response_prod = json_decode($response_prod, true);
 $relacionados = ['', '', '', ''];
+var_dump($response_prod);
 ?>
 <span class="long-space"></span>
 <div class="full">

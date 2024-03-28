@@ -889,8 +889,11 @@ body {
 
 .grid__prod {
   display: grid;
-  grid-template-columns: 40% 1fr;
+  grid-template-columns: 1fr;
   gap: 16px;
+  @media (min-width: 640px) {
+    grid-template-columns: 40% 1fr;
+  }
 }
 
 #img-container {

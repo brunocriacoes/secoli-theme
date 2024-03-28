@@ -880,6 +880,8 @@ body {
 .slide__prod {
   overflow: hidden;
   width: 100%;
+  max-width: 100vw;
+  background-color: #ccc;
   display: block;
 }
 
@@ -901,6 +903,7 @@ body {
   width: 400px;
   overflow: hidden;
   margin: 0 auto;
+  background-color: #000000;
 }
 
 #featured {

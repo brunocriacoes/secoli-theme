@@ -1084,3 +1084,8 @@ body {
     background-color: #f2dede;
   }
 }
+
+.msg__prod__not__found {
+  display: grid;
+  grid-template-columns: 1fr;
+}

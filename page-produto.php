@@ -12,8 +12,8 @@ $url_prod = API_SMARTLEAD . '/wp-json/smartlead-api/v1/produto/?produto_id=' . $
 $response_prod = file_get_contents($url_prod);
 
 $response_prod = json_decode($response_prod, true);
-$relacionados = ['', '', '', ''];
-var_dump($response_prod);
+$relacionados = $response_prod['relacionados'];
+
 ?>
 <span class="long-space"></span>
 <div class="full">
@@ -122,19 +122,20 @@ var_dump($response_prod);
         </a>
     </div>
 </div>
-
+<div class="space"></div>
 <div class="full">
     <div class="container">
         <h2 class="title">
             Produtos relacionados
         </h2>
+        <div class="space"></div>
         <div class="slide__destaque">
             <div class="slide__destaque__inner swiper-wrapper ">
 
                 <?php foreach ($relacionados as $r) { ?>
                     <div class="slide__destaque__iten swiper-slide">
-                        <img src="https://app.secolibrindes.com.br/<?php echo '' ?>" onerror="this.src='<?php __F('/assets/images/img-default.png') ?>'" />
-                        <a class="slide__destaque__btn" href="http://">Saiba mais</a>
+                        <img src="https://app.secolibrindes.com.br/<?php echo $r['photos'][0]['path'] ?>" onerror="this.src='<?php __F('/assets/images/img-default.png') ?>'" />
+                        <a class="slide__destaque__btn" href="<?php __L('/produto/?id=' . $r['id']) ?>">Saiba mais</a>
                     </div>
                 <?php } ?>
 
@@ -144,5 +145,5 @@ var_dump($response_prod);
         </div>
     </div>
 </div>
-
+<div class="space"></div>
 <?php get_footer() ?>

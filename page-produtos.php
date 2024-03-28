@@ -12,6 +12,9 @@ $response = file_get_contents($url);
 $response = json_decode($response, true);
 $id = $_GET['cat'];
 $url_prod = API_SMARTLEAD . '/wp-json/smartlead-api/v1/produtos-categoria-id/?categoria_id=' . $id;
+if ($id == 0) {
+	$url_prod = API_SMARTLEAD . '/wp-json/smartlead-api/v1/produtos/';
+}
 $categoriaAtual = 'Categoria atual';
 foreach ($response as $c) {
 	if ($id == $c['id']) {

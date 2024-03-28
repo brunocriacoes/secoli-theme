@@ -12,7 +12,7 @@ $url_prod = API_SMARTLEAD . '/wp-json/smartlead-api/v1/produto/?produto_id=' . $
 $response_prod = file_get_contents($url_prod);
 
 $response_prod = json_decode($response_prod, true);
-$relacionados = $response_prod['relacionados'];
+$relacionados = $response_prod['relacionado'];
 
 ?>
 <span class="long-space"></span>

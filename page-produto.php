@@ -12,7 +12,7 @@ $url_prod = API_SMARTLEAD . '/wp-json/smartlead-api/v1/produto/?produto_id=' . $
 $response_prod = file_get_contents($url_prod);
 
 $response_prod = json_decode($response_prod, true);
-
+$relacionados = ['', '', '', ''];
 ?>
 <span class="long-space"></span>
 <div class="full">
@@ -129,10 +129,14 @@ $response_prod = json_decode($response_prod, true);
         </h2>
         <div class="slide__destaque">
             <div class="slide__destaque__inner swiper-wrapper ">
-                <div class="slide__destaque__iten swiper-slide" app-repeat="destaques">
-                    <img src="<?php __F('assets/images/destaque1.png') ?>" alt="destaque">
-                    <a class="slide__destaque__btn" href="http://">Saiba mais</a>
-                </div>
+
+                <?php foreach ($relacionados as $r) { ?>
+                    <div class="slide__destaque__iten swiper-slide">
+                        <img src="https://app.secolibrindes.com.br/<?php echo '' ?>" onerror="this.src='<?php __F('/assets/images/img-default.png') ?>'" />
+                        <a class="slide__destaque__btn" href="http://">Saiba mais</a>
+                    </div>
+                <?php } ?>
+
             </div>
             <div class="slide__destaque__next"><i class="fa-solid fa-chevron-right"></i></div>
             <div class="slide__destaque__prev"><i class="fa-solid fa-chevron-left"></i></div>

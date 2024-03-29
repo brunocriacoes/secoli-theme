@@ -7,20 +7,7 @@
 
 <?php
 
-$page = [
-    "title" => "Em Breve",
-    "content" => "em breve"
-];
 
-$post_id = get_the_ID();
-$post = get_post($post_id);
-
-if ($post) {
-    $page['title'] =  $post->post_title;
-    $page['content'] =  $post->post_content;
-}
-
-var_dump($page);
 
 function get_blog_posts($post_type = 'post', $posts_per_page = 10)
 {
@@ -110,6 +97,22 @@ $blog = get_blog_posts();
         </div>
     </div>
 <?php } ?>
+
+<?php
+
+$page = [
+    "title" => "Em Breve",
+    "content" => "em breve"
+];
+$post_id = get_the_ID();
+$post = get_post($post_id);
+
+if ($post) {
+    $page['title'] =  $post->post_title;
+    $page['content'] =  $post->post_content;
+}
+
+?>
 
 <div class="full">
     <div class="container">

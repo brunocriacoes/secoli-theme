@@ -2,12 +2,17 @@ var _app_data = {}
 
 async function load_data_app() {
     const _load = document.querySelector('[app-data]')
-    if (_load) {
-        const file_name = _load.getAttribute("app-data")
-        const get_data = await (await fetch(file_name)).json()
-        return get_data
+    try {
+        if (_load) {
+            const file_name = _load.getAttribute("app-data")
+            const get_data = await (await fetch(file_name)).json()
+            return get_data
+        }
+        
+    } catch (error) {
+        return {}
+        
     }
-    return {}
 }
 
 function navigationString(stringNavigation) {

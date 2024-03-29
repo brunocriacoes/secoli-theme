@@ -7,21 +7,17 @@
 
 <?php
 
-function get_post_data_page()
-{
-    $page = [
-        "title" => "",
-        "content" => ""
-    ];
-    $post_id = get_the_ID();
-    $post = get_post($post_id);
-    if ($post) {
-        $page['title'] =  $post->post_title;
-        $page['content'] =  $post->post_content;
-    }
-    return $page;
+$page = [
+    "title" => "",
+    "content" => ""
+];
+$post_id = get_the_ID();
+$post = get_post($post_id);
+if ($post) {
+    $page['title'] =  $post->post_title;
+    $page['content'] =  $post->post_content;
 }
-$page = get_post_data_page();
+
 
 function get_blog_posts($post_type = 'post', $posts_per_page = 10)
 {

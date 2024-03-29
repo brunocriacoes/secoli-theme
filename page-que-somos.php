@@ -48,6 +48,8 @@ function get_blog_posts($post_type = 'post', $posts_per_page = 10)
 }
 $blog = get_blog_posts();
 
+$post_id = get_the_ID();
+var_dump($post_id);
 
 
 ?>

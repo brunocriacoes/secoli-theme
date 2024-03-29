@@ -46,7 +46,7 @@ function get_blog_posts($post_type = 'post', $posts_per_page = 10)
     wp_reset_postdata();
     return $blog;
 }
-$posts = get_blog_posts();
+$blog = get_blog_posts();
 
 
 

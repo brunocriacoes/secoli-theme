@@ -93,7 +93,7 @@ $response_prod = json_decode($response_prod, true);
 									</strong>
 								</a>
 								<span class="space"></span>
-								<a class="btn gradient-1" onclick="return cart.add('<?php echo $produto['id'] ?> ',
+								<a class="btn gradient-1" onclick="return cart.add('<?php echo $produto['id'] ?>',
 												'<?php echo $produto['name'] ?>',
 												'https:\/\/app.secolibrindes.com.br\/<?php echo $produto['photos'][0]['path'] ?>', '<?php echo $produto['cod'] ?>', '', 'color', '<?php echo $_GET['cat'] ?>')" href="<?php __L('/') ?>carrinho">
 									<i class="fa-solid fa-cart-plus"></i>

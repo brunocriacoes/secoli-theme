@@ -83,7 +83,7 @@ $blog = get_blog_posts();
                 <div class="slider__blog__inner swiper-wrapper">
                     <?php foreach ($blog as $b) { ?>
                         <div class="slide__blog__iten swiper-slide">
-                            <img src="<?php echo $b['image'] ?>" alt="<?php echo $b['title'] ?>">
+                            <img src="<?php echo $b['image'] ?>" alt="<?php echo $b['title'] ?>" onerror="this.src='<?php __F('/assets/images/img-default.png') ?>'">
                             <div class="space"></div>
                             <h2 class="title">
                                 <?php echo $b['title'] ?>

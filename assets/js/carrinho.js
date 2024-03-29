@@ -31,8 +31,8 @@ class Cart {
         globalThis.__cart = this.products;
 
         this.save();
-        
-        return false
+
+        return true
     }
 
     addQuantity(id) {

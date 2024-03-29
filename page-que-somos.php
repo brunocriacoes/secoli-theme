@@ -116,11 +116,11 @@ $blog = get_blog_posts();
         </div>
         <div class="space"></div>
         <h2 class="title text-center">
-            <?php $page['title'] ?? '' ?>
+            <?php echo $page['title'] ?? '' ?>
         </h2>
         <div class="space"></div>
         <div class="w-2">
-            <?php $page['content'] ?? '' ?>
+            <?php echo $page['content'] ?? '' ?>
         </div>
     </div>
 </div>

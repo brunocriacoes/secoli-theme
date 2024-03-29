@@ -313,3 +313,5 @@ new Swiper('.slider__blog', {
 		}
 	}
 });
+
+Vu(globalThis.__cart);

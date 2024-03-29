@@ -19,10 +19,10 @@ Template Name: Página CARRINHO
     </div>
     <div class="space"></div>
 
-    <div class="full">
+    <div class="full" app-include='data'>
         <div class="container">
             <div>
-                <div class="item__in__cart" app-repeat="cart">
+                <div class="item__in__cart" app-repeat-cart="cart">
                     <img class="item__in__cart__img" src="./media/catalogo/{{image}}" alt="">
                     <div>
                         <small>
@@ -40,7 +40,7 @@ Template Name: Página CARRINHO
                         </p>
                     </div>
                     <div class="grid c-1 lg-c-2 jsQuantity">
-                        <label class="item__in__cart__input" app-repeat="cart[{{index}}].quantity">
+                        <label class="item__in__cart__input" app-repeat-cart="cart[{{index}}].quantity">
                             <b>QTA-{{index}}</b>
                             <input type="number" min="1" value="{{value}}">
                         </label>

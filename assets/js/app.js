@@ -18,7 +18,6 @@ function navigationString(stringNavigation) {
     }
 }
 
-
 function repeat(obj) {
     const _repeats = document.querySelectorAll('[app-repeat]')
     Array.from(_repeats).forEach(function ($e) {
@@ -88,11 +87,3 @@ function blade(string, dados) {
     values(_app_data)
     includes()
 })()
-
-function Vu( data ) {
-    repeat(data)
-    repeat(data)
-    values(data)
-}
-
-

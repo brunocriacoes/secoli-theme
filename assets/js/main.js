@@ -173,19 +173,21 @@ document.querySelectorAll(".img-container").forEach((elem) => {
 
 const img_container = document.getElementById("img-container");
 const img = document.getElementById("featured");
+if(img_container && img ) {
 
-img_container.addEventListener("mousemove", (e) => {
-	const x = e.clientX - e.target.offsetLeft;
-	const y = e.clientY - e.target.offsetTop;
-
-	img.style.transformOrigin = `${x}px ${y}px`;
-	img.style.transform = "scale(2)";
-
-	img_container.addEventListener("mouseleave", () => {
-		img.style.transformOrigin = "center";
-		img.style.transform = "scale(1)";
+	img_container.addEventListener("mousemove", (e) => {
+		const x = e.clientX - e.target.offsetLeft;
+		const y = e.clientY - e.target.offsetTop;
+	
+		img.style.transformOrigin = `${x}px ${y}px`;
+		img.style.transform = "scale(2)";
+	
+		img_container.addEventListener("mouseleave", () => {
+			img.style.transformOrigin = "center";
+			img.style.transform = "scale(1)";
+		});
 	});
-});
+}
 
 async function buscarDadosAPI(urlBase, parametros) {
 	function construirParametrosConsulta(params) {

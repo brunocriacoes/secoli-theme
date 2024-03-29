@@ -41,7 +41,7 @@ if (have_posts()) {
         $page['content'] =  get_the_content();
     endwhile;
 }
-return $page;
+// return $page;
 // function get_post_data()
 // {
 // }

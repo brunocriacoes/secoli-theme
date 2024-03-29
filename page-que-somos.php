@@ -121,7 +121,7 @@ if ($post) {
             Pioneirismo e comprometimento
         </div>
         <div class="space"></div>
-        <h2 class="title text-center">
+        <h2 class="title about-title">
             <?php echo $page['title'] ?? '' ?>
         </h2>
         <div class="space"></div>

@@ -1098,3 +1098,8 @@ body {
 div#hostinger-preview-banner {
   display: none !important;
 }
+
+.about-title {
+  display: block;
+  text-align: center;
+}

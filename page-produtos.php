@@ -5,6 +5,7 @@ Template Name: Smartlead lista de produtos
 ?>
 
 <?php get_header(); ?>
+
 <?php
 $url = API_SMARTLEAD . '/wp-json/smartlead-api/v1/categorias';
 
@@ -15,7 +16,9 @@ $url_prod = API_SMARTLEAD . '/wp-json/smartlead-api/v1/produtos-categoria-id/?ca
 if ($id == 0) {
 	$url_prod = API_SMARTLEAD . '/wp-json/smartlead-api/v1/produtos/';
 }
+
 $categoriaAtual = 'Categoria atual';
+
 foreach ($response as $c) {
 	if ($id == $c['id']) {
 		$categoriaAtual = $c['name'];
@@ -55,7 +58,7 @@ $response_prod = json_decode($response_prod, true);
 							</span>
 							<ul class="subcategorias">
 								<?php foreach ($cat["subcategories"] as $sub) { ?>
-									<li><a href="produtos/?cat=<?php echo $sub['id'] ?>"><span><?php echo $sub['name'] ?></span></a></li>
+									<li><a href="<?php __L('/') ?>produtos/?cat=<?php echo $sub['id'] ?>"><span><?php echo $sub['name'] ?></span></a></li>
 								<?php } ?>
 							</ul>
 						</li>
@@ -92,7 +95,7 @@ $response_prod = json_decode($response_prod, true);
 								<span class="space"></span>
 								<a class="btn gradient-1" onclick="return cart.add('<?php echo $produto['id'] ?> ',
 												'<?php echo $produto['name'] ?>',
-												'https:\/\/app.secolibrindes.com.br\/<?php echo $produto['photos'][0]['path'] ?>', '<?php echo $produto['cod'] ?>', '', 'color', '<?php echo $_GET['cat'] ?>')" href="carrinho">
+												'https:\/\/app.secolibrindes.com.br\/<?php echo $produto['photos'][0]['path'] ?>', '<?php echo $produto['cod'] ?>', '', 'color', '<?php echo $_GET['cat'] ?>')" href="<?php __L('/') ?>carrinho">
 									<i class="fa-solid fa-cart-plus"></i>
 									<span>ORÇAR ESTE PRODUTO</span>
 								</a>
@@ -104,18 +107,22 @@ $response_prod = json_decode($response_prod, true);
 		</div>
 	</div>
 </div>
+
 <span class="long-space"></span>
+
 <div class="full">
 	<div class="container">
 		<div class="expand__produtos">
-			<a class="text" href=""><i class="fa-regular fa-circle-down"></i>&nbsp;<span>Expandir para mais
+			<a class="text" href="#"><i class="fa-regular fa-circle-down"></i>&nbsp;<span>Expandir para mais
 					produtos</span></a>
 			<span class="text">Não está encontrando o que procura?</span>
-			<a class="btn gradient-1 " href="./media/catalogo.pdf">BAIXE O CATÁLOGO DIGITAL</a>
+			<a class="btn gradient-1 " href="<?php __F('/media/catalogo.pdf') ?>">BAIXE O CATÁLOGO DIGITAL</a>
 		</div>
 	</div>
 </div>
+
 <span class="long-space"></span>
+
 <div class="full idealize__bg">
 	<div class="container">
 		<div class="grid c-1 lg-c-2">
@@ -136,7 +143,7 @@ $response_prod = json_decode($response_prod, true);
 				</p>
 				<span class="long-space"></span>
 				<span class="long-space"></span>
-				<a class="btn gradient-1" href="./contato.html">
+				<a class="btn gradient-1" href="<?php __L('contato') ?>">
 					AGENDAR CONTATO
 				</a>
 			</div>
@@ -163,7 +170,7 @@ $response_prod = json_decode($response_prod, true);
 				</p>
 				<span class="long-space"></span>
 				<span class="long-space"></span>
-				<a class="btn gradient-1" href="./que-somos.html">
+				<a class="btn gradient-1" href="<?php __L('/a-secoli') ?>">
 					CONHEÇA A SECOLI
 				</a>
 			</div>

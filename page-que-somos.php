@@ -120,11 +120,11 @@ var_dump($page);
         </div>
         <div class="space"></div>
         <h2 class="title text-center">
-            <?php $page['title'] ?>
+            <?php $page['title'] ?? '' ?>
         </h2>
         <div class="space"></div>
         <div class="w-2">
-            <?php $page['content'] ?>
+            <?php $page['content'] ?? '' ?>
         </div>
     </div>
 </div>

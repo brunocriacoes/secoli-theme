@@ -21,6 +21,7 @@ function get_post_data_page()
     }
     return $page;
 }
+$page = get_post_data_page();
 
 function get_blog_posts($post_type = 'post', $posts_per_page = 10)
 {
@@ -45,13 +46,9 @@ function get_blog_posts($post_type = 'post', $posts_per_page = 10)
     wp_reset_postdata();
     return $blog;
 }
-
-
-
-$page = get_post_data_page();
 $posts = get_blog_posts();
 
-var_dump(the_post());
+
 
 ?>
 

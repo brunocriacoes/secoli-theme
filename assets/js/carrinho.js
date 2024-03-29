@@ -28,7 +28,7 @@ class Cart {
         }
 
         this.save();
-        return true
+        return false
     }
 
     addQuantity(id){

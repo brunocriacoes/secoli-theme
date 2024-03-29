@@ -51,7 +51,7 @@ function get_blog_posts($post_type = 'post', $posts_per_page = 10)
 $page = get_post_data_page();
 $posts = get_blog_posts();
 
-
+var_dump(the_post());
 
 ?>
 
@@ -78,7 +78,41 @@ $posts = get_blog_posts();
     </div>
 </div>
 
-
+<?php if (count($blog) > 0) { ?>
+    <div class="full">
+        <div class="container">
+            <div class="long-space"></div>
+            <div class="slider__blog">
+                <div class="slider__blog__inner swiper-wrapper">
+                    <?php foreach ($blog as $b) { ?>
+                        <div class="slide__blog__iten swiper-slide">
+                            <img src="<?php echo $b['image'] ?>" alt="<?php echo $b['title'] ?>">
+                            <div class="space"></div>
+                            <h2 class="title">
+                                <?php echo $b['title'] ?>
+                            </h2>
+                            <p class="text">
+                                <?php echo $b['description'] ?>
+                            </p>
+                            <div class="space"></div>
+                            <a href="<?php echo $b['link'] ?>" class="btn gradient-1">
+                                VEJA MAIS
+                            </a>
+                            <div class="space"></div>
+                        </div>
+                    <?php } ?>
+                </div>
+                <div class="slider__blog__pev">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="slider__blog__next">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="long-space"></div>
+        </div>
+    </div>
+<?php } ?>
 
 <div class="full">
     <div class="container">

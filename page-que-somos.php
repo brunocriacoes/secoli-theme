@@ -31,22 +31,22 @@ function get_blog_posts($post_type = 'post', $posts_per_page = 10)
     return $blog;
 }
 
-function get_post_data()
-{
-    $page = [
-        "title" => "",
-        "content" => ""
-    ];
-    if (have_posts()) {
-        while (have_posts()) : the_post();
-            $page['title'] =  get_the_title();
-            $page['content'] =  get_the_content();
-        endwhile;
-    }
-    return $page;
+$page = [
+    "title" => "",
+    "content" => ""
+];
+if (have_posts()) {
+    while (have_posts()) : the_post();
+        $page['title'] =  get_the_title();
+        $page['content'] =  get_the_content();
+    endwhile;
 }
+return $page;
+// function get_post_data()
+// {
+// }
 
-$page = get_post_data();
+// $page = get_post_data();
 $posts = get_blog_posts();
 
 var_dump($page);

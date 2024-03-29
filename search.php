@@ -185,67 +185,6 @@ $response_prod = array_values($response_prod);
 
 <span class="long-space"></span>
 
-<div class="full gradient-1 contact__bg">
-    <div class="container">
-        <div class="grid c-1 lg-c-2 v-center">
-            <div>
-                <h3 class="title">Ainda tem dúvidas?</h3>
-                <p class="text">
-                    Clique no botão e agende uma conversa com um de
-                    nossos consultores especialistas em brindes
-                    personalizados.
-                </p>
-            </div>
-            <div class="contact__btn">
-                <a class="btn btn__black" href="javascript:void(0)" onclick="agendar_contato()">
-                    <b>AGENDAR CONTATO</b>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<dialog class="dialog__bg" close id="favDialog">
-    <form action="javascript:void(0)" method="post">
-        <h3 class="title">Você tem um projeto especial?</h3>
-        <span class="space"></span>
-        <p class="text">
-            Preencha o formulário para solicitar um atendimento de
-            um de nossos especialistas. Retornaremos o mais rápido
-            possível.
-        </p>
-        <span class="space"></span>
-        <label class="dialog__lb">
-            <i class="fa-solid fa-user"></i>
-            <input type="text" name="name" placeholder="Nome completo" />
-        </label>
-        <label class="dialog__lb">
-            <i class="fa-solid fa-phone"></i>
-            <input type="tel" name="tel" placeholder="Telefone" />
-        </label>
-        <label class="dialog__lb">
-            <i class="fa-solid fa-envelope"></i>
-            <input type="email" name="email" placeholder="error@mail.com" />
-        </label>
-        <label class="dialog__lb">
-            <i class="fa-solid fa-building"></i>
-            <input type="text" name="empresa" placeholder="Nome da empresa" />
-        </label>
-        <label class="dialog__lb">
-            <i class="fa-solid fa-wallet"></i>
-            <input type="text" name="cnpj" placeholder="CNPJ" />
-        </label>
-        <label class="dialog__lb">
-            <i></i>
-            <textarea name="desc" rows="3" placeholder="Descreva brevemente sobre seu projeto...."></textarea>
-        </label>
-        <div class="text__right">
-            <span class="long-space"></span>
-            <button class="btn gradient-1" onclick="close_contato()" type="submit">
-                SOLICITAR AGORA
-            </button>
-        </div>
-    </form>
-</dialog>
+<?php include __DIR__ . '/parts/agendar-contato.php' ?>
 
 <?php get_footer(); ?>

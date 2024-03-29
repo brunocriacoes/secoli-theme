@@ -18,12 +18,15 @@ Template Name: Página CARRINHO
         </div>
     </div>
     <div class="space"></div>
+    <script>
+       globalThis._app_data = globalThis.__cart
+    </script>
 
     <div class="full" app-include='data'>
         <div class="container">
             <div>
-                <div class="item__in__cart" app-repeat-cart="cart">
-                    <img class="item__in__cart__img" src="./media/catalogo/{{image}}" alt="">
+                <div class="item__in__cart">
+                    <img class="item__in__cart__img" src="./media/catalogo/{{image}}" onerror="this.src='<?php __F('/assets/images/img-default.png') ?>'">
                     <div>
                         <small>
                             <b>Categoria</b> - <span>{{category}}</span>

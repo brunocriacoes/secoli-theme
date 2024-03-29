@@ -49,6 +49,8 @@ function get_post_data()
 $page = get_post_data();
 $posts = get_blog_posts();
 
+var_dump($posts);
+
 ?>
 
 <div class="full about__banner">

@@ -76,7 +76,7 @@ var_dump($page);
     </div>
 </div>
 
-<?php if (count($blog) > 1) { ?>
+<?php if (count($blog) > 0) { ?>
     <div class="full">
         <div class="container">
             <div class="long-space"></div>

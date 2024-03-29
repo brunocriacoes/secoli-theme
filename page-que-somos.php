@@ -8,8 +8,8 @@
 <?php
 
 $page = [
-    "title" => "",
-    "content" => ""
+    "title" => "Em Breve",
+    "content" => "em breve"
 ];
 $post_id = get_the_ID();
 $post = get_post($post_id);

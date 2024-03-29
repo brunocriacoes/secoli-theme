@@ -119,4 +119,8 @@ Template Name: Página CARRINHO
     <div class="long-space"></div>
 </div>
 
+<script>
+    Vu(globalThis.__cart)
+</script>
+
 <?php get_footer() ?>

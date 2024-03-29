@@ -89,4 +89,10 @@ function blade(string, dados) {
     includes()
 })()
 
+function Vu( data ) {
+    repeat(_app_data)
+    repeat(_app_data)
+    values(_app_data)
+}
+
 

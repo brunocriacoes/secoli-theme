@@ -149,8 +149,6 @@ function troca_image($e) {
 	image.src = $e.src;
 }
 
-// #####################################
-
 document.querySelectorAll(".img-container").forEach((elem) => {
 	let x, y, width, height;
 	elem.onmouseenter = () => {
@@ -173,15 +171,15 @@ document.querySelectorAll(".img-container").forEach((elem) => {
 
 const img_container = document.getElementById("img-container");
 const img = document.getElementById("featured");
-if(img_container && img ) {
+if (img_container && img) {
 
 	img_container.addEventListener("mousemove", (e) => {
 		const x = e.clientX - e.target.offsetLeft;
 		const y = e.clientY - e.target.offsetTop;
-	
+
 		img.style.transformOrigin = `${x}px ${y}px`;
 		img.style.transform = "scale(2)";
-	
+
 		img_container.addEventListener("mouseleave", () => {
 			img.style.transformOrigin = "center";
 			img.style.transform = "scale(1)";
@@ -190,6 +188,7 @@ if(img_container && img ) {
 }
 
 async function buscarDadosAPI(urlBase, parametros) {
+
 	function construirParametrosConsulta(params) {
 		return Object.keys(params)
 			.map(
@@ -199,9 +198,7 @@ async function buscarDadosAPI(urlBase, parametros) {
 			.join("&");
 	}
 
-	const urlComParametros =
-		urlBase + "?" + construirParametrosConsulta(parametros);
-
+	const urlComParametros = urlBase + "?" + construirParametrosConsulta(parametros);
 	try {
 		const response = await fetch(urlComParametros);
 
@@ -219,7 +216,6 @@ async function buscarDadosAPI(urlBase, parametros) {
 
 async function addLead(event, $e) {
 	event.preventDefault();
-
 	let payload = {
 		nome: document.querySelector(".js_lead_name").value,
 		email: document.querySelector(".js_lead_email").value,
@@ -242,7 +238,6 @@ async function addLead(event, $e) {
 
 async function addContact(event, $e) {
 	event.preventDefault();
-
 	let payload = {
 		nome: document.querySelector(".js_dialog_name").value,
 		telefone: document.querySelector(".js_dialog_phone").value,
@@ -298,7 +293,6 @@ function toggleClass($e, className = "ativo") {
 		$e.classList.toggle(className);
 	}
 }
-
 
 new Swiper('.slider__blog', {
 	direction: 'horizontal',

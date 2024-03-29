@@ -13,11 +13,11 @@ function get_post_data_page()
         "title" => "",
         "content" => ""
     ];
-    if (have_posts()) {
-        while (have_posts()) : the_post();
-            $page['title'] =  get_the_title();
-            $page['content'] =  get_the_content();
-        endwhile;
+    $post_id = get_the_ID();
+    $post = get_post($post_id);
+    if ($post) {
+        $page['title'] =  $post->post_title;
+        $page['content'] =  $post->post_content;
     }
     return $page;
 }
@@ -48,8 +48,7 @@ function get_blog_posts($post_type = 'post', $posts_per_page = 10)
 }
 $blog = get_blog_posts();
 
-$post_id = get_the_ID();
-var_dump($post_id);
+
 
 
 ?>

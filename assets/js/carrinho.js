@@ -2,6 +2,7 @@ class Cart {
     products = [];
     constructor() {
         this.products = JSON.parse(localStorage.getItem("cart")) || [];
+        globalThis.__cart = this.products;
     }
 
     add(id, name, image, ref, description, color, category) {
@@ -13,7 +14,7 @@ class Cart {
             description,
             color,
             category,
-            quantity:[
+            quantity: [
                 {
                     qtaId: 1,
                     value: 1
@@ -27,31 +28,33 @@ class Cart {
             this.products.push(payload)
         }
 
+        globalThis.__cart = this.products;
+
         this.save();
+        
         return false
     }
 
-    addQuantity(id){
+    addQuantity(id) {
         // document.querySelector('.jsQuantity').innerHTML += '<div>Presunto</div>'
-        this.products = this.products.map(p=>{
-            if(p.id == id){
-                console.log(p.quantity.reverse()[0].qtaId+1)
+        this.products = this.products.map(p => {
+            if (p.id == id) {
+                console.log(p.quantity.reverse()[0].qtaId + 1)
                 p.quantity.push({
-                    qtaId:p.quantity.reverse()[0].qtaId+1,
+                    qtaId: p.quantity.reverse()[0].qtaId + 1,
                     value: 1
                 })
                 this.save()
             }
             return p;
         })
+        globalThis.__cart = this.products;
     }
 
-    
-
     remove(id) {
-      
-      this.products = this.products.filter(product => product.id !== id);
-      this.save();
+        this.products = this.products.filter(product => product.id !== id);
+        globalThis.__cart = this.products;
+        this.save();
     }
 
     // atualizarQuantidade(idProduto, quantidade) {
@@ -62,16 +65,18 @@ class Cart {
     //   }
     // }
 
-
-
     save() {
-      localStorage.setItem('cart', JSON.stringify(this.products));
+        globalThis.__cart = this.products;
+        localStorage.setItem('cart', JSON.stringify(this.products));
     }
-    clear(){
-        localStorage.setItem('cart', '[]'); 
+    clear() {
+        globalThis.__cart = [];
+        localStorage.setItem('cart', '[]');
     }
 
     allProducts() {
-      return this.products;
+        globalThis.__cart = this.products;
+        return this.products;
     }
+
 }

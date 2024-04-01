@@ -4,6 +4,8 @@ Template Name: Página CARRINHO
 */
 ?>
 
+<?php get_header() ?>
+
 <?php
 
 $send = 0;
@@ -13,8 +15,6 @@ if(isset($_POST['email'])) {
 }
 
 ?>
-
-<?php get_header() ?>
 
 <div class="bg__card">
     <div class="long-space"></div>
@@ -40,7 +40,7 @@ if(isset($_POST['email'])) {
 
     <?php if (!$send) { ?>
 
-        <form action="" method="GET" class="full">
+        <form action="" method="POS" class="full">
             <div class="container box__invoice">
                 <div class="long-space"></div>
                 <h2 class="text-center">

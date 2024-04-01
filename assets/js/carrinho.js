@@ -62,7 +62,7 @@ class Cart {
     atualizarQuantidade(id, i, quantidade) {
         this.products = this.products.map(p => {
             if( p.id == id) {
-                p.quantity[i] = quantidade
+                p.quantity[i].value = quantidade
             }
             return p;
         });

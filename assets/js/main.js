@@ -313,3 +313,9 @@ new Swiper('.slider__blog', {
 		}
 	}
 });
+
+
+function send_orcamento( $f ) {
+	let form = new FormData($f)
+	console.log(form)
+}

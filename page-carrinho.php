@@ -6,15 +6,6 @@ Template Name: Página CARRINHO
 
 <?php get_header() ?>
 
-<?php
-
-$send = 0;
-
-// if(isset($_POST['email'])) {
-//     $send = 1;
-// }
-
-?>
 
 <div class="bg__card">
     <div class="long-space"></div>
@@ -40,7 +31,7 @@ $send = 0;
 
     <?php if (!$send) { ?>
 
-        <form action="<?php __L('/carrinho/')?>" method="POST" class="full">
+        <form action="javascript:void(0)" method="POST" onsubmit="send_orcamento(this)" class="full">
             <div class="container box__invoice">
                 <div class="long-space"></div>
                 <h2 class="text-center">

@@ -113,7 +113,7 @@ class Cart {
             </div>
             <div class="grid c-1 lg-c-2 jsQuantity">
                 ${values}
-                <button class="item__in__cart__add" onclick="cart.addQuantity('{{ref}}')">
+                <button class="item__in__cart__add" onclick="cart.addQuantity('${payload.id}')">
                     <i class="fa-solid fa-circle-plus"></i>
                     <span>Adicionar QTA</span>
                 </button>

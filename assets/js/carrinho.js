@@ -60,7 +60,6 @@ class Cart {
     }
 
     atualizarQuantidade(id, i, quantidade) {
-        console.log(quantidade)
         this.products = this.products.map(p => {
             if( p.id == id) {
                 p.quantity[i].value = quantidade

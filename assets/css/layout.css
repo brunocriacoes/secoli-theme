@@ -386,7 +386,7 @@ body {
   list-style: none;
   color: #000000;
   &:hover {
-    background-color: var(--cor-2);
+    color: var(--cor-2);
   }
 }
 

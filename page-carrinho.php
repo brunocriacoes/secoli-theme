@@ -22,7 +22,7 @@ Template Name: Página CARRINHO
        globalThis._app_data = globalThis.__cart
     </script>
 
-    <div class="full" app-include='data'>
+    <div class="full">
         <div class="container">
             <div class="js-loop-itens-card"></div>
         </div>

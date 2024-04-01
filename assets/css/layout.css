@@ -309,6 +309,7 @@ body {
 
 .category__list > li {
   height: 80px;
+  padding: 0 4px;
   &:hover {
     background-color: var(--cor-8);
   }

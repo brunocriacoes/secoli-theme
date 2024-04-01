@@ -83,9 +83,9 @@ Template Name: Página CARRINHO
             </div>
             <div class="long-space"></div>
         </div>
-        </for>
+    </form>
 
-        <div class="long-space"></div>
+    <div class="long-space"></div>
 </div>
 
 <?php get_footer() ?>

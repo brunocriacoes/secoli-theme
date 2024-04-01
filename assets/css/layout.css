@@ -72,7 +72,7 @@ body {
   @media (min-width: 640px) {
     margin: 0;
     display: inline-flex;
-    min-width: 327px;
+    min-width: 200px;
     width: auto;
   }
 }

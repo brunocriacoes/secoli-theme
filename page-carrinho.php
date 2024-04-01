@@ -25,39 +25,7 @@ Template Name: Página CARRINHO
     <div class="full" app-include='data'>
         <div class="container">
             <div class="js-loop-itens-card">
-                <div class="item__in__cart">
-                    <img class="item__in__cart__img" src="./media/catalogo/{{image}}" onerror="this.src='<?php __F('/assets/images/img-default.png') ?>'">
-                    <div>
-                        <small>
-                            <b>Categoria</b> - <span>{{category}}</span>
-                        </small>
-                        <h3>
-                            {{name}}
-                        </h3>
-                        <p class="text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde officia culpa at?
-                        </p>
-                        <p>
-                            <b>REF</b> - <span>{{ref}}</span>
-                            <b>COR</b> - <span>preta</span>
-                        </p>
-                    </div>
-                    <div class="grid c-1 lg-c-2 jsQuantity">
-                        <label class="item__in__cart__input" app-repeat-cart="cart[{{index}}].quantity">
-                            <b>QTA-{{index}}</b>
-                            <input type="number" min="1" value="{{value}}">
-                        </label>
-                        <button class="item__in__cart__add" onclick="cart.addQuantity('{{ref}}')">
-                            <i class="fa-solid fa-circle-plus"></i>
-                            <span>Adicionar QTA</span>
-                        </button>
-                    </div>
-                    <div>
-                        <button class="item__in__cart__trash" onclick="cart.remove('{{ref}}')">
-                            <i class="fa-regular fa-trash-can"></i>
-                        </button>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

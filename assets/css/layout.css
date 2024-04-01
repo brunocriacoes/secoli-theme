@@ -15,7 +15,6 @@
   display: block;
   font-family: var(--font);
   padding: 0 16px;
-  text-align: center;
 
   @media (min-width: 640px) {
     padding: 0;

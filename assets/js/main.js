@@ -323,7 +323,7 @@ async function send_orcamento($f) {
 
 	try {		
 		let req = await fetch(
-			_domain + "/smart/wp-json/smartlead-api/v1/orcamento",
+			_domain + "/wp-json/smartlead-api/v1/orcamento",
 			{
 				method: 'POST',
 				body: formData

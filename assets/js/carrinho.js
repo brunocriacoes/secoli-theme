@@ -123,7 +123,7 @@ class Cart {
     render() {
         let $loop_itens = document.querySelector(".js-loop-itens-card")
         if ($loop_itens) {
-            $loop_itens.innerHTML =  this.products.map(data => tpl_item).join('')
+            $loop_itens.innerHTML =  this.products.map(data => this.tpl_item).join('')
         }
     }
 

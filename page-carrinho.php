@@ -10,9 +10,9 @@ Template Name: Página CARRINHO
 
 $send = 0;
 
-if(isset($_POST['email'])) {
-    $send = 1;
-}
+// if(isset($_POST['email'])) {
+//     $send = 1;
+// }
 
 ?>
 

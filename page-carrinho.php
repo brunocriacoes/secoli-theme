@@ -24,7 +24,7 @@ Template Name: Página CARRINHO
 
     <div class="full" app-include='data'>
         <div class="container">
-            <div>
+            <div class="js-loop-itens-card">
                 <div class="item__in__cart">
                     <img class="item__in__cart__img" src="./media/catalogo/{{image}}" onerror="this.src='<?php __F('/assets/images/img-default.png') ?>'">
                     <div>

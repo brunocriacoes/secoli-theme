@@ -52,27 +52,27 @@ if(isset($_POST['email'])) {
                         <div>
                             <label class="input__theme">
                                 <span>NOME</span>
-                                <input type="text" name="name" placeholder="digite" required>
+                                <input type="text" name="name" value="Bruno" placeholder="digite" required>
                             </label>
                             <div class="space"></div>
                             <label class="input__theme">
                                 <span>TELEFONE</span>
-                                <input type="text" name="phone" placeholder="digite" required>
+                                <input type="text" name="phone" value="+55 (11) 9 4949-9944" placeholder="digite" required>
                             </label>
                             <div class="space"></div>
                             <label class="input__theme">
                                 <span>EMAIL</span>
-                                <input type="text" name="email" placeholder="digite" required>
+                                <input type="text" name="email" value="br.rafael@outlook.com" placeholder="digite" required>
                             </label>
                             <div class="space"></div>
                             <label class="input__theme">
                                 <span>CNPJ</span>
-                                <input type="text" placeholder="digite" name="cnpj" required>
+                                <input type="text" placeholder="digite" value="11.111.0001-11" name="cnpj" required>
                             </label>
                             <div class="space"></div>
                             <label class="input__theme">
                                 <span>EMPRESA</span>
-                                <input type="text" placeholder="digite" name="company" required>
+                                <input type="text" placeholder="digite" name="company" value="brc" required>
                             </label>
                         </div>
                         <label class="input__theme">

@@ -317,12 +317,24 @@ new Swiper('.slider__blog', {
 
 async function send_orcamento($f) {
 	let formData = new FormData($f)
-	let req = await fetch(
-		_domain + "/smar/wp-json/smartlead-api/v1/orcamento",
-		{
-			method: 'POST',
-			body: formData
-		})
-	let res = await req.json()
+
+	let thank_you = document.querySelector(".js-thank-you")
+	let form = document.querySelector(".js-form")
+
+	try {		
+		let req = await fetch(
+			_domain + "/smart/wp-json/smartlead-api/v1/orcamento",
+			{
+				method: 'POST',
+				body: formData
+			})
+		let res = await req.json()
+	} catch (error) {
+		if( thank_you && form ) {
+			form.setAttribute('hidden', 'hidden')
+			thank_you.removeAttribute('hidden',)
+		}
+	}
+
 
 }

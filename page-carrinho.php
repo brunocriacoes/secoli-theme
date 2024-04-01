@@ -76,7 +76,9 @@ if(isset($_POST['email'])) {
                             </label>
                         </div>
                         <label class="input__theme">
-                            <textarea name="description" required placeholder="Conte-nos um pouco mais sobre seu projeto..."></textarea>
+                            <textarea name="description" required placeholder="Conte-nos um pouco mais sobre seu projeto...">
+                                teste
+                            </textarea>
                         </label>
                     </div>
                     <div class="space"></div>

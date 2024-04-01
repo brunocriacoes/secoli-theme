@@ -50,6 +50,7 @@ class Cart {
             return p;
         })
         globalThis.__cart = this.products;
+        this.render()
     }
 
     remove(id) {

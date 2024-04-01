@@ -59,12 +59,14 @@ class Cart {
         this.render()
     }
 
-    atualizarQuantidade(idProduto, quantidade) {
-      const produto = this.produtos.find(produto => produto.id === idProduto);
-      if (produto) {
-        produto.quantidade = quantidade;
-        this.salvarCarrinho();
-      }
+    atualizarQuantidade(id, i, quantidade) {
+        this.produtos = this.produtos.map(p => {
+            if( p.id == id) {
+                p.quantity[i] = quantidade
+            }
+            return p;
+        });
+      this.save();
     }
 
     save() {
@@ -86,7 +88,7 @@ class Cart {
         return `
         <label class="item__in__cart__input">
             <b>QTA-${i + 1}</b>
-            <input type="number" oninput="alert(this.value)" name="quant[${id}][]"  min="1" value="${payload.value}">
+            <input type="number" oninput="cart.atualizarQuantidade('${id}', '${i}', ${this.value})" name="quant[${id}][]"  min="1" value="${payload.value}">
         </label>
         `
     }

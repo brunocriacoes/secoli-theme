@@ -4,6 +4,16 @@ Template Name: Página CARRINHO
 */
 ?>
 
+<?php
+
+$send = 0;
+
+if(isset($_POST['email'])) {
+    $send = 1;
+}
+
+?>
+
 <?php get_header() ?>
 
 <div class="bg__card">
@@ -28,62 +38,93 @@ Template Name: Página CARRINHO
         </div>
     </div>
 
-    <form action="javascript:void(0)" method="post" class="full">
-        <div class="container box__invoice">
-            <div class="long-space"></div>
-            <h2 class="text-center">
-                Preencha com seus dados para solicitar um orçamento
-            </h2>
-            <div class="space"></div>
-            <div>
-                <div class="grid c-1 lg-c-2">
-                    <div>
+    <?php if (!$send) { ?>
+
+        <form action="javascript:void(0)" method="post" class="full">
+            <div class="container box__invoice">
+                <div class="long-space"></div>
+                <h2 class="text-center">
+                    Preencha com seus dados para solicitar um orçamento
+                </h2>
+                <div class="space"></div>
+                <div>
+                    <div class="grid c-1 lg-c-2">
+                        <div>
+                            <label class="input__theme">
+                                <span>NOME</span>
+                                <input type="text" name="name" placeholder="digite" required>
+                            </label>
+                            <div class="space"></div>
+                            <label class="input__theme">
+                                <span>TELEFONE</span>
+                                <input type="text" name="phone" placeholder="digite" required>
+                            </label>
+                            <div class="space"></div>
+                            <label class="input__theme">
+                                <span>EMAIL</span>
+                                <input type="text" name="email" placeholder="digite" required>
+                            </label>
+                            <div class="space"></div>
+                            <label class="input__theme">
+                                <span>CNPJ</span>
+                                <input type="text" placeholder="digite" name="cnpj" required>
+                            </label>
+                            <div class="space"></div>
+                            <label class="input__theme">
+                                <span>EMPRESA</span>
+                                <input type="text" placeholder="digite" name="company" required>
+                            </label>
+                        </div>
                         <label class="input__theme">
-                            <span>NOME</span>
-                            <input type="text" placeholder="digite">
-                        </label>
-                        <div class="space"></div>
-                        <label class="input__theme">
-                            <span>TELEFONE</span>
-                            <input type="text" placeholder="digite">
-                        </label>
-                        <div class="space"></div>
-                        <label class="input__theme">
-                            <span>EMAIL</span>
-                            <input type="text" placeholder="digite">
-                        </label>
-                        <div class="space"></div>
-                        <label class="input__theme">
-                            <span>CNPJ</span>
-                            <input type="text" placeholder="digite">
-                        </label>
-                        <div class="space"></div>
-                        <label class="input__theme">
-                            <span>EMPRESA</span>
-                            <input type="text" placeholder="digite">
+                            <textarea name="description" required placeholder="Conte-nos um pouco mais sobre seu projeto..."></textarea>
                         </label>
                     </div>
-                    <label class="input__theme">
-                        <textarea name="descricao" placeholder="Conte-nos um pouco mais sobre seu projeto..."></textarea>
-                    </label>
+                    <div class="space"></div>
+                    <div class="grid c-1 lg-c-3">
+                        <button type="reset" class="btn btn__or" onclick="cart.clear()">
+                            LIMPAR CARRINHO
+                        </button>
+                        <a href="./produtos.html" class="btn gradient-1 ">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>ESCOLHER MAIS PRODUTOS</span>
+                        </a>
+                        <button type="submit" class="btn gradient-1 btn__opaco">
+                            SOLICITAR ORÇAMENTO
+                        </button>
+                    </div>
                 </div>
-                <div class="space"></div>
-                <div class="grid c-1 lg-c-3">
-                    <button type="reset" class="btn btn__or" onclick="cart.clear()">
-                        LIMPAR CARRINHO
-                    </button>
-                    <a href="./produtos.html" class="btn gradient-1 ">
-                        <i class="fa-solid fa-plus"></i>
-                        <span>ESCOLHER MAIS PRODUTOS</span>
-                    </a>
-                    <button type="submit" class="btn gradient-1 btn__opaco">
-                        SOLICITAR ORÇAMENTO
-                    </button>
-                </div>
+                <div class="long-space"></div>
             </div>
-            <div class="long-space"></div>
+        </form>
+
+    <?php } ?>
+
+    <?php if ($send) { ?>
+        <div class="full">
+            <div class="container">
+                <h1 class="title">Obrigado pelo Seu Interesse!</h1>
+                <p class="text">
+                    Agradecemos sinceramente por nos contatar para solicitar um orçamento. 
+                    Sua confiança em nossos serviços é muito apreciada.
+                </p>
+                <p class="text">
+                    Nossa equipe está agora a rever as informações que nos forneceu e 
+                    a preparar uma resposta completa para atender às suas necessidades.
+                </p>
+                <p class="text">
+                    Entraremos em contacto assim que possível para discutir os detalhes e 
+                    apresentar a melhor solução para si.
+                </p>
+                <p class="text">
+                    Mais uma vez, obrigado por considerar os nossos serviços. Estamos 
+                    ansiosos para trabalhar consigo!
+                </p>
+                <p class="text">
+                    Atenciosamente,<br>Secoli
+                </p>
+            </div>
         </div>
-    </form>
+    <?php } ?>
 
     <div class="long-space"></div>
 </div>

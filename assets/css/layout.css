@@ -261,14 +261,14 @@ body {
   align-items: center;
 }
 
-.grid.grid__menu {
+/* .grid.grid__menu {
   display: grid;
   grid-template-columns: 170px 1fr 200px;
   place-items: center;
-}
+} */
 
 .grid__menu {
-  --c: 160px 1fr 300px;
+  --c: 170px 1fr 200px;
   align-items: center;
   padding: var(--long-space) 0;
 }

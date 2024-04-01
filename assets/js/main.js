@@ -315,7 +315,14 @@ new Swiper('.slider__blog', {
 });
 
 
-function send_orcamento( $f ) {
-	let form = new FormData($f)
-	console.log(form)
+async function send_orcamento($f) {
+	let formData = new FormData($f)
+	let req = await fetch(
+		_domain + "/smar/wp-json/smartlead-api/v1/orcamento",
+		{
+			method: 'POST',
+			body: formData
+		})
+	let res = await req.json()
+
 }

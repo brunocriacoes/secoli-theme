@@ -315,6 +315,9 @@ body {
   text-decoration: none;
   color: #ffffff;
   font-size: 12px;
+  &:hover {
+    background-color: var(--cor-8);
+  }
 }
 
 .category__list > li > ul {

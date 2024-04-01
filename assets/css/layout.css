@@ -148,10 +148,10 @@ body {
 .header__bg {
   background-color: var(--cor-5);
   display: none;
-  border-bottom: 3px solid #fff;
 
   @media (min-width: 1024px) {
     display: block;
+    border-bottom: 3px solid #fff;
   }
 }
 

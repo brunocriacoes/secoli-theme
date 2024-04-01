@@ -263,7 +263,7 @@ body {
 
 .grid.grid__menu {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 170px 1fr 200px;
   place-items: center;
 }
 

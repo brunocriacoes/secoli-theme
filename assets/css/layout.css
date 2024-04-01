@@ -62,10 +62,10 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0 16px;
-  height: 48px;
+  height: 40px;
   width: 200px;
   min-width: 200px;
-  border-radius: 48px;
+  border-radius: 40px;
   margin: 0 auto;
   gap: 8px;
 

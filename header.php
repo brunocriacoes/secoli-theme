@@ -194,6 +194,12 @@ $opcoes = get_option('secoli_theme_info');
                                     <?php echo $cat["name"] ?>
                                 </a>
                                 <ul>
+                                    <div>
+                                        <span>
+                                            <?php echo $cat["name"] ?>
+                                        </span>
+                                        <hr>
+                                    </div>
                                     <?php foreach ($cat["subcategories"] as $sub) { ?>
                                         <li>
                                             <a href="produtos?cat=<?php echo $sub['id'] ?>">

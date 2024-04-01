@@ -40,7 +40,7 @@ if(isset($_POST['email'])) {
 
     <?php if (!$send) { ?>
 
-        <form action="<?php __L('/carrinho/')?>" method="post" class="full">
+        <form action="<?php __L('/carrinho')?>" method="post" class="full">
             <div class="container box__invoice">
                 <div class="long-space"></div>
                 <h2 class="text-center">

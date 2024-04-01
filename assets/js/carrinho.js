@@ -37,7 +37,6 @@ class Cart {
     }
 
     addQuantity(id) {
-        // document.querySelector('.jsQuantity').innerHTML += '<div>Presunto</div>'
         this.products = this.products.map(p => {
             if (p.id == id) {
                 console.log(p.quantity.reverse()[0].qtaId + 1)
@@ -60,13 +59,13 @@ class Cart {
         this.render()
     }
 
-    // atualizarQuantidade(idProduto, quantidade) {
-    //   const produto = this.produtos.find(produto => produto.id === idProduto);
-    //   if (produto) {
-    //     produto.quantidade = quantidade;
-    //     this.salvarCarrinho();
-    //   }
-    // }
+    atualizarQuantidade(idProduto, quantidade) {
+      const produto = this.produtos.find(produto => produto.id === idProduto);
+      if (produto) {
+        produto.quantidade = quantidade;
+        this.salvarCarrinho();
+      }
+    }
 
     save() {
         globalThis.__cart = this.products;

@@ -19,7 +19,7 @@ Template Name: Página CARRINHO
     </div>
     <div class="space"></div>
     <script>
-       globalThis._app_data = globalThis.__cart
+        globalThis._app_data = globalThis.__cart
     </script>
 
     <div class="full">
@@ -28,14 +28,14 @@ Template Name: Página CARRINHO
         </div>
     </div>
 
-    <div class="full">
+    <form action="javascript:void(0)" method="post" class="full">
         <div class="container box__invoice">
             <div class="long-space"></div>
             <h2 class="text-center">
                 Preencha com seus dados para solicitar um orçamento
             </h2>
             <div class="space"></div>
-            <form action="javascript:void(0)" method="post">
+            <div>
                 <div class="grid c-1 lg-c-2">
                     <div>
                         <label class="input__theme">
@@ -80,12 +80,12 @@ Template Name: Página CARRINHO
                         SOLICITAR ORÇAMENTO
                     </button>
                 </div>
-            </form>
+            </div>
             <div class="long-space"></div>
         </div>
-    </div>
+        </for>
 
-    <div class="long-space"></div>
+        <div class="long-space"></div>
 </div>
 
 <?php get_footer() ?>

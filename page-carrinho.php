@@ -24,9 +24,7 @@ Template Name: Página CARRINHO
 
     <div class="full" app-include='data'>
         <div class="container">
-            <div class="js-loop-itens-card">
-
-            </div>
+            <div class="js-loop-itens-card"></div>
         </div>
     </div>
 

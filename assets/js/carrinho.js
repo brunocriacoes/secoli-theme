@@ -82,7 +82,17 @@ class Cart {
         return this.products;
     }
 
+    tpl_quantity(payload, i, id) {
+        return `
+        <label class="item__in__cart__input">
+            <b>QTA-${i}</b>
+            <input type="number" name="quant[${id}][]"  min="1" value="${payload.value}">
+        </label>
+        `
+    }
+
     tpl_item(payload, i) {
+        let values =  payload.quantity.map((p,i) => this.tpl_quantity(p,i, payload.id)).join('')
         return `
         <div class="item__in__cart">
             <img class="item__in__cart__img" src="${payload.image}">
@@ -102,10 +112,7 @@ class Cart {
                 </p>
             </div>
             <div class="grid c-1 lg-c-2 jsQuantity">
-                <label class="item__in__cart__input" app-repeat-cart="cart[{{index}}].quantity">
-                    <b>QTA-{{index}}</b>
-                    <input type="number" min="1" value="{{value}}">
-                </label>
+                ${values}
                 <button class="item__in__cart__add" onclick="cart.addQuantity('{{ref}}')">
                     <i class="fa-solid fa-circle-plus"></i>
                     <span>Adicionar QTA</span>

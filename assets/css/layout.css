@@ -385,6 +385,9 @@ body {
   text-decoration: none;
   list-style: none;
   color: #000000;
+  &:hover {
+    background-color: var(--cor-2);
+  }
 }
 
 .banner {

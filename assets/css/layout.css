@@ -76,6 +76,10 @@ body {
     width: auto;
   }
 }
+.btn__header {
+  width: 200px;
+  height: 40px;
+}
 
 .video-mask {
   width: 100mm;

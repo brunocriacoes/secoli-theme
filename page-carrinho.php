@@ -84,7 +84,7 @@ if(isset($_POST['email'])) {
                         <button type="reset" class="btn btn__or" onclick="cart.clear()">
                             LIMPAR CARRINHO
                         </button>
-                        <a href="./produtos.html" class="btn gradient-1 ">
+                        <a href="<?php __L('/produtos/?cat=0')?>" class="btn gradient-1 ">
                             <i class="fa-solid fa-plus"></i>
                             <span>ESCOLHER MAIS PRODUTOS</span>
                         </a>

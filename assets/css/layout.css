@@ -1107,7 +1107,7 @@ body {
 }
 
 .category__list__mobile li.ativo i {
-  transform: rotate(-45deg);
+  transform: rotate(-90deg);
 }
 
 .category__list__mobile li ul li {

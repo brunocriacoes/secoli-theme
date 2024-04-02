@@ -294,6 +294,7 @@ body {
   align-items: center;
   min-height: 48px;
   text-align: center;
+  background-color: #fff;
 
   @media (min-width: 1024px) {
     display: none;

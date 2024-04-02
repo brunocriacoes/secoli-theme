@@ -1216,3 +1216,10 @@ div#hostinger-preview-banner {
     color: var(--cor-3);
   }
 }
+
+.btn__fale__conosco {
+  width: 200px;
+  @media (min-width: 640px) {
+    width: 220px;
+  }
+}

@@ -71,7 +71,7 @@ $opcoes = get_option('secoli_theme_info');
 				</p>
 				<span class="long-space"></span>
 				<span class="long-space"></span>
-				<a class="btn gradient-1">
+				<a class="btn gradient-1 btn__fale__conosco">
 					FALE COM UM DOS NOSSOS ESPECIALISTAS
 				</a>
 			</div>

@@ -1203,6 +1203,6 @@ div#hostinger-preview-banner {
   position: absolute;
   right: 16px;
   top: 16px;
-  color: #ccc;
+  color: var(--cor-2);
   font-size: 18px;
 }

@@ -235,8 +235,10 @@ async function addLead(event, $e) {
   }, 6000);
 }
 function closeAlert() {
-  let form = document.querySelector(".fechar__form");
-  dialog.close();
+  let form = document.querySelector("#favDialog");
+  if (form) {
+    form.close();
+  }
 }
 
 async function addContact(event, $e) {

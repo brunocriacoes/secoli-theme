@@ -1181,3 +1181,8 @@ div#hostinger-preview-banner {
   display: block;
   margin: 0 auto;
 }
+
+.text__right {
+  display: flex;
+  justify-content: flex-end;
+}

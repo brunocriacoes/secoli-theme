@@ -1232,3 +1232,8 @@ div#hostinger-preview-banner {
     display: block;
   }
 }
+
+.container__contact {
+  width: 830px;
+  max-width: 95vw;
+}

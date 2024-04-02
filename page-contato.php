@@ -44,13 +44,13 @@ if (isset($_POST['email'])) {
 </div>
 
 <div class="full">
-    <div class="container">
+    <div class="container container__contact">
         <div class="long-space"></div>
         <h2 class=" text-center">
             Envie uma mensagem e retornaremos em breve
         </h2>
         <div class="long-space"></div>
-        <form action="<?php __L('/contato')?>" method="POST">
+        <form action="<?php __L('/contato') ?>" method="POST">
             <div class=" grid c-1 lg-c-2">
                 <label class="input__theme">
                     <span>NOME</span>
@@ -106,7 +106,7 @@ if (isset($_POST['email'])) {
                     </div>
                 ';
             }
-            
+
             ?>
         </form>
         <div class="long-space"></div>

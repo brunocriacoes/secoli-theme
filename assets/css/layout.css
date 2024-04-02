@@ -1222,5 +1222,6 @@ div#hostinger-preview-banner {
   text-align: center;
   @media (min-width: 640px) {
     width: 340px;
+    font-size: 14px;
   }
 }

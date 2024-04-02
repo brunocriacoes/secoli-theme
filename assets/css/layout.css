@@ -998,6 +998,9 @@ body {
 }
 .bg__menu__mobile {
   background-color: #fff;
+  & a {
+    border-top: 1px solid #eee;
+  }
 }
 
 .menu__mobile {

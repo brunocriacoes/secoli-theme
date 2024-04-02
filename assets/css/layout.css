@@ -116,6 +116,15 @@ body {
   border: 1px solid #e0e0e0;
 }
 
+.grid__news {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  @media (min-width: 640px) {
+    grid-template-columns: 1fr 1fr 200px;
+  }
+}
+
 .footer {
   padding: var(--long-space) 16px;
 }

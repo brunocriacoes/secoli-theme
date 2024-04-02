@@ -142,7 +142,7 @@ if (isset($_POST['email'])) {
                 </div>
             </div>
             <div>
-                <h4 class="title">Outros contatos</h4>
+                <h4 class="title text__mobile__center">Outros contatos</h4>
                 <h5 class="sub-title">Telefones</h5>
                 <small>Compras</small>
                 <a class="contact__link " href="tel:+55<?php echo $opcoes['telefone_header'] ?>">

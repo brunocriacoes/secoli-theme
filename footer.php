@@ -5,7 +5,7 @@ $opcoes = get_option('secoli_theme_info');
 ?>
 <div class="full news__bg">
     <div class="container">
-        <h4 class="title">
+        <h4 class="title text__mobile__center">
             Cadastre-se e receba novidades!
         </h4>
         <p class="text">
@@ -33,7 +33,7 @@ $opcoes = get_option('secoli_theme_info');
 <div class="full gradient-1 footer">
     <div class="container">
         <div class="long-space"></div>
-        <div class="grid c-1 md-c-5">
+        <div class="grid c-2 md-c-5 ">
             <div>
                 <h5 class="footer__tittle">
                     INSTITUCIONAL

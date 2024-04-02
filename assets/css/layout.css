@@ -1,6 +1,11 @@
 * {
   font-family: var(--font);
 }
+
+hr {
+  color: #343a40;
+}
+
 .header__fix {
   position: sticky;
   top: 0;

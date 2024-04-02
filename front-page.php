@@ -59,6 +59,8 @@ $opcoes = get_option('secoli_theme_info');
 		</h3>
 		<span class="long-space"></span>
 		<span class="long-space"></span>
+		<span class="long-space"></span>
+		<span class="long-space"></span>
 		<div class="grid c-1 lg-c-2">
 			<div></div>
 			<div>

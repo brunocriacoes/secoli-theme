@@ -537,7 +537,7 @@ body {
   background-image: url(../images/idealize-bg.png);
   background-repeat: no-repeat;
   background-position: left bottom;
-  background-size: auto 70%;
+  background-size: 45% auto;
   padding: var(--long-space) 0;
 }
 

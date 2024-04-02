@@ -1,4 +1,3 @@
-
 <div class="full gradient-1 contact__bg">
 	<div class="container">
 		<div class="grid c-1 lg-c-2 v-center">
@@ -25,7 +24,7 @@
 <dialog class="dialog__bg" close id="favDialog">
 	<form onsubmit="addContact(event, this)" action="javascript:void(0)">
 		<h3 class="title">
-			Você tem um projeto especial?
+			Você tem um projeto<br> especial?
 		</h3>
 		<span class="space"></span>
 		<p class="text">

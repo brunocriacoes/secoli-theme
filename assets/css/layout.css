@@ -1173,5 +1173,6 @@ div#hostinger-preview-banner {
 }
 
 .slide__feedback__inner img {
-  margin: center;
+  display: block;
+  margin: 0 auto;
 }

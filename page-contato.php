@@ -118,7 +118,7 @@ if (isset($_POST['email'])) {
         <div class="long-space"></div>
         <div class="grid c-1 lg-c-2">
 
-            <div>
+            <div class="contatos__sociais">
                 <h4 class="title">Nas redes sociais</h4>
                 <div class="space"></div>
                 <div>

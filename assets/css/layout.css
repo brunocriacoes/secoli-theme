@@ -1237,3 +1237,7 @@ div#hostinger-preview-banner {
   width: 830px;
   max-width: 95vw;
 }
+
+.contatos__sociais {
+  align-items: center;
+}

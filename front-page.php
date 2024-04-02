@@ -52,9 +52,9 @@ $opcoes = get_option('secoli_theme_info');
 
 <?php include __DIR__ . '/parts/destaque.php' ?>
 
-<div class="full idealize__bg title__idealize">
+<div class="full idealize__bg ">
 	<div class="container">
-		<h3 class="title text-center ">
+		<h3 class="title text-center title__idealize">
 			Procurando algo mais específico?
 		</h3>
 		<div class="grid c-1 lg-c-2">

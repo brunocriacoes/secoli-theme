@@ -534,11 +534,13 @@ body {
 }
 
 .idealize__bg {
-  background-image: url(../images/idealize-bg.png);
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: 45% auto;
   padding: var(--long-space) 0;
+  @media (min-width: 640px) {
+    background-image: url(../images/idealize-bg.png);
+  }
 }
 
 .feedback__bgb > .container > .title {
@@ -1164,5 +1166,8 @@ div#hostinger-preview-banner {
 }
 
 .title__idealize {
-  margin-bottom: 180px;
+  margin-bottom: 40px;
+  @media (min-width: 640px) {
+    margin-bottom: 180px;
+  }
 }

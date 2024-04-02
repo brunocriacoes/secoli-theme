@@ -114,7 +114,7 @@ if (isset($_POST['email'])) {
 </div>
 
 <div class="full">
-    <div class="container">
+    <div class="container container__contact">
         <div class="long-space"></div>
         <div class="grid c-1 lg-c-2">
 

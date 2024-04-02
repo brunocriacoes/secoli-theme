@@ -34,7 +34,7 @@ $opcoes = get_option('secoli_theme_info');
     <div class="container">
         <div class="long-space"></div>
         <div class="grid c-2 md-c-5 ">
-            <div>
+            <div class="footer__institucional">
                 <h5 class="footer__tittle">
                     INSTITUCIONAL
                 </h5>

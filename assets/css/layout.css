@@ -1225,3 +1225,10 @@ div#hostinger-preview-banner {
     font-size: 14px;
   }
 }
+
+.footer__institucional {
+  display: none;
+  @media (min-width: 640px) {
+    display: block;
+  }
+}

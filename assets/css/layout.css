@@ -1171,3 +1171,7 @@ div#hostinger-preview-banner {
     margin-bottom: 180px;
   }
 }
+
+.slide__feedback__inner {
+  align-items: center;
+}

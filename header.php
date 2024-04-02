@@ -65,7 +65,7 @@ $opcoes = get_option('secoli_theme_info');
 
 
         <div class="header__fix">
-            <div class="full">
+            <div class="full bg__menu__mobile">
                 <div class="container">
                     <div class="menu__mobile">
                         <div class="grid grid__menu__mobile">

@@ -22,6 +22,7 @@
 </div>
 
 <dialog class="dialog__bg" close id="favDialog">
+	<span><i class="fa-solid fa-xmark"></i></span>
 	<form onsubmit="addContact(event, this)" action="javascript:void(0)">
 		<h3 class="title">
 			Você tem um projeto<br> especial?

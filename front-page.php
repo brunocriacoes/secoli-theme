@@ -135,7 +135,7 @@ $opcoes = get_option('secoli_theme_info');
 		</div>
 		<div class="grid c-1 lg-c-2">
 			<div>
-				<h3 class="title">
+				<h3 class="title text__mobile__center">
 					Siga a Secoli nas redes.
 				</h3>
 				<p class="text text__mobile__center">

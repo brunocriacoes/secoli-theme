@@ -1240,6 +1240,9 @@ div#hostinger-preview-banner {
 
 .btn__contact {
   width: 270px;
+  & span {
+    font-size: 10px;
+  }
 }
 
 .btn_mobile_cart {

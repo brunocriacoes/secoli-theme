@@ -258,6 +258,7 @@ h6 {
     line-height: 22px;
     width: 100%;
     margin: 0 auto;
+    max-width: 94vw;
 
     @media (min-width: 768px) {
         width: 50%;

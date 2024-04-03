@@ -1265,3 +1265,7 @@ div#hostinger-preview-banner {
   display: flex;
   width: 200px;
 }
+
+.btn__produto__orcamento {
+  width: 100%;
+}

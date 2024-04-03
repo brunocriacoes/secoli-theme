@@ -92,7 +92,7 @@ $relacionados = $response_prod['relacionado'];
 
                     </div>
                 </div>
-                <a class="btn gradient-1" href="<?php __L('/') ?>carrinho" onclick="return cart.add('<?php echo $response_prod[0]['id'] ?>','<?php echo $response_prod[0]['name'] ?>','https:\/\/app.secolibrindes.com.br\/<?php echo $response_prod[0]['photos'][0]['path'] ?>', '<?php echo $response_prod[0]['cod'] ?>', '', 'color', '<?php echo $_GET['id'] ?>')">
+                <a class="btn gradient-1 btn__produto__orcamento" href="<?php __L('/') ?>carrinho" onclick="return cart.add('<?php echo $response_prod[0]['id'] ?>','<?php echo $response_prod[0]['name'] ?>','https:\/\/app.secolibrindes.com.br\/<?php echo $response_prod[0]['photos'][0]['path'] ?>', '<?php echo $response_prod[0]['cod'] ?>', '', 'color', '<?php echo $_GET['id'] ?>')">
                     <i class="fa-solid fa-cart-plus"></i>
                     <span>ORÇAR ESTE PRODUTO</span>
                 </a>

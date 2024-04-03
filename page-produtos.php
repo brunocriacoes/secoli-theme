@@ -48,13 +48,14 @@ $response_prod = json_decode($response_prod, true);
 				<div class="space"></div>
 				<ul id="listaCategorias">
 					<?php foreach ($response as $cat) { ?>
-						<li id="categoriaMae">
+						<li onclick="toggleClass(this)">
 							<span style="cursor:pointer;">
 								<b>
 									<a href="produtos/?cat=<?php echo $cat['id'] ?>">
 										<?php echo $cat['name'] ?>
 									</a>
 								</b>
+								<i class="fa-solid fa-chevron-down"></i>
 							</span>
 							<ul class="subcategorias">
 								<?php foreach ($cat["subcategories"] as $sub) { ?>

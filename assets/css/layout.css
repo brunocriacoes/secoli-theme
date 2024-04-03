@@ -333,7 +333,7 @@ body {
 .name_category {
   position: absolute;
   top: 10px;
-  left: 10px;
+  left: 30px;
   width: 80%;
   border-bottom: 1px solid #e2e2e2;
   line-height: 40px;

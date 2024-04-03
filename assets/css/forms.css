@@ -313,9 +313,8 @@ h6 {
 }
 
 .slide__blog__iten h2,
-.slide__blog__iten p,
-.slide__blog__iten a {
-    margin: 0 auto;
+.slide__blog__iten p {
+    margin: 0 48px;
 }
 
 .title__commnet {

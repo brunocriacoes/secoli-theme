@@ -8,6 +8,7 @@ Template Name: Página CARRINHO
 
 
 <div class="bg__card">
+    
     <div class="long-space"></div>
 
     <div class="full">
@@ -18,7 +19,9 @@ Template Name: Página CARRINHO
             </p>
         </div>
     </div>
+    
     <div class="space"></div>
+
     <script>
         globalThis._app_data = globalThis.__cart
     </script>
@@ -89,12 +92,7 @@ Template Name: Página CARRINHO
                 <div class="long-space"></div>
             </div>
         </div>
-
-
-
     </form>
-
-
 
     <div class="full js-thank-you" hidden>
         <div class="container">
@@ -120,7 +118,6 @@ Template Name: Página CARRINHO
             </p>
         </div>
     </div>
-
 
     <div class="long-space"></div>
 </div>

@@ -297,6 +297,7 @@ h6 {
     border-radius: 16px;
     box-shadow: 0 0 6px #0001;
     height: 100%;
+    max-width: 94vw;
 
 }
 

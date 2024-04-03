@@ -7,7 +7,7 @@ function custom_rewrite_rule() {
         'top'
     );
     add_rewrite_tag('%prodSlug%','([^/]+)');
-    // flush_rewrite_rules();
+    flush_rewrite_rules();
 }
 
 add_action('init', 'custom_rewrite_rule', 10, 0);

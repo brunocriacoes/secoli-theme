@@ -315,7 +315,7 @@ h6 {
 .slide__blog__iten h2,
 .slide__blog__iten p,
 .slide__blog__iten a {
-    margin: 0 48px;
+    margin: 0 auto;
 }
 
 .title__commnet {

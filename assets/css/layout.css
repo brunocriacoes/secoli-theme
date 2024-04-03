@@ -1251,4 +1251,6 @@ div#hostinger-preview-banner {
 
 .btn__blog {
   margin: 0 auto !important;
+  display: flex;
+  width: 200px;
 }

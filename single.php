@@ -1,28 +1,122 @@
 <?php get_header() ?>
 
-<div class="long-space"></div>
 
 <?php
 if (have_posts()) {
-    while (have_posts()) : the_post();
+    while (have_posts()) {
+        the_post();
+        $title = get_the_title();
+        $content = get_the_content();
+        $resumo = get_the_excerpt();
+        $url_imagem_destacada = get_the_post_thumbnail_url();
+
+        $secoli_page_foto_banner_title = get_post_meta(get_the_ID(), 'secoli_page_foto_banner_title', true);
+        $secoli_page_foto_banner_desc = get_post_meta(get_the_ID(), 'secoli_page_foto_banner_desc', true);
+        $secoli_page_foto_banner_img = get_post_meta(get_the_ID(), 'secoli_page_foto_banner_img', true);
+
+        $secoli_page_foto_bloco1_title = get_post_meta(get_the_ID(), 'secoli_page_foto_bloco1_title', true);
+        $secoli_page_foto_bloco1_desc = get_post_meta(get_the_ID(), 'secoli_page_foto_bloco1_desc', true);
+        $secoli_page_foto_bloco1_img = get_post_meta(get_the_ID(), 'secoli_page_foto_bloco1_img', true);
+
+        $secoli_page_foto_bloco2_title = get_post_meta(get_the_ID(), 'secoli_page_foto_bloco2_title', true);
+        $secoli_page_foto_bloco2_desc = get_post_meta(get_the_ID(), 'secoli_page_foto_bloco2_desc', true);
+        $secoli_page_foto_bloco2_img = get_post_meta(get_the_ID(), 'secoli_page_foto_bloco2_img', true);
+        
+        $secoli_page_foto_bloco3_title = get_post_meta(get_the_ID(), 'secoli_page_foto_bloco3_title', true);
+        $secoli_page_foto_bloco3_desc = get_post_meta(get_the_ID(), 'secoli_page_foto_bloco3_desc', true);
+        $secoli_page_foto_bloco3_img = get_post_meta(get_the_ID(), 'secoli_page_foto_bloco3_img', true);
+
+    }
+}
+
 ?>
-        <div class="full">
-            <div class="container">
-                <h1 class="title">
-                    <?php the_title() ?>
-                </h1>
+
+<div class="full page__banner" style="--bg: url('<?php echo $url_imagem_destacada ?>')">
+    <div class="container">
+        <h1 class="title">
+            <?php echo $title ?>
+        </h1>
+        <p class="text">
+            <?php echo $resumo ?>
+        </p>
+    </div>
+</div>
+
+<div class="full">
+    <div class="container">
+        <div class="long-space"></div>
+        <img src="https://picsum.photos/seed/destaque/1200/700" class="page__image_destaque">
+        <div class="long-space"></div>
+    </div>
+</div>
+
+<div class="full">
+    <div class="container">
+        <div class="text-central">
+            <h2 class="title">
+                <?php echo $title ?>
+            </h2>
+            <div class="space"></div>
+            <p class="text">
+                <?php echo $content ?>
+            </p>
+        </div>
+        <div class="long-space"></div>
+    </div>
+</div>
+
+<div class="full">
+    <div class="container">
+        <div class="A_B">
+            <img src="https://picsum.photos/seed/foto1/500/500">
+            <div>
+                <h2 class="title">
+                    Bloco de texto a direita com imagem a esquerda.
+                </h2>
                 <div class="space"></div>
-                <?php the_content(); ?>
+                <p class="text">
+                    Culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis
+                    iste natus error sit voluptartem accusantium doloremque laudantium, totam rem aperiam,
+                    eaque ipsa quae ab illo inventore veritatis et quasi ropeior architecto beatae vitae
+                    dicta sunt explicabo. Nemo eniem ipsam voluptatem quia voluptas sit aspernatur aut odit
+                    aut fugit, sed quia consequuntur magni dolores eosep quiklop ratione voluptatem sequi
+                    nesciunt. Neque porro quisquam est, quepi dolorem ipsum quia dolor srit amet, consectetur
+                    adipisci velit, seid quia non numquam eiuris modi tempora incidunt ut labore et
+                    dolore magnam aliquam quaerat iope voluptatem.
+                </p>
             </div>
         </div>
-<?php
-
-    endwhile;
-} else {
-    echo '<p>Nenhum conteúdo encontrado</p>';
-}
-?>
+    </div>
+</div>
 
 <div class="long-space"></div>
+
+<div class="full">
+    <div class="container">
+        <div class="B_A">
+            <img src="https://picsum.photos/seed/foto2/520/520">
+            <div>
+                <h2 class="title">
+                    Bloco de texto a direita com imagem a esquerda.
+                </h2>
+                <div class="space"></div>
+                <p class="text">
+                    Culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis
+                    iste natus error sit voluptartem accusantium doloremque laudantium, totam rem aperiam,
+                    eaque ipsa quae ab illo inventore veritatis et quasi ropeior architecto beatae vitae
+                    dicta sunt explicabo. Nemo eniem ipsam voluptatem quia voluptas sit aspernatur aut odit
+                    aut fugit, sed quia consequuntur magni dolores eosep quiklop ratione voluptatem sequi
+                    nesciunt. Neque porro quisquam est, quepi dolorem ipsum quia dolor srit amet, consectetur
+                    adipisci velit, seid quia non numquam eiuris modi tempora incidunt ut labore et
+                    dolore magnam aliquam quaerat iope voluptatem.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="long-space"></div>
+
+
 
 <?php get_footer() ?>

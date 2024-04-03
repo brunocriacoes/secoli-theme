@@ -1313,5 +1313,5 @@ div#hostinger-preview-banner {
   display: block;
 }
 .listar__categorias > li.ativo > span > i {
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
 }

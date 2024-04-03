@@ -334,6 +334,8 @@ h6 {
     box-shadow: 0 0 7px #0001;
     min-height: 300px;
     padding: 48px;
+    max-width: 95vw;
+    margin: 0 auto;
 }
 
 .page__banner {

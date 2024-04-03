@@ -26,13 +26,13 @@ Template Name: Página CARRINHO
     <form action="javascript:void(0)" method="POST" onsubmit="send_orcamento(this)" class="js-form">
 
         <div class="full">
-            <div class="container container__contact">
+            <div class="container">
                 <div class="js-loop-itens-card"></div>
             </div>
         </div>
 
         <div class="full">
-            <div class="container box__invoice container__contact">
+            <div class="container box__invoice">
                 <div class="long-space"></div>
                 <h2 class="text-center">
                     Preencha com seus dados para solicitar um orçamento

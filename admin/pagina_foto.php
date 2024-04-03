@@ -18,7 +18,7 @@ add_action('init', function() {
         array('nome' => 'secoli_page_foto_bloco1_img', 'tipo' => 'text'),
 
     );
-    adicionar_campos_personalizados($payload, 'page', 'secoli_page_foto_bloco1_metabox', 'Bloco Principal');
+    adicionar_campos_personalizados($payload, 'post', 'secoli_page_foto_bloco1_metabox', 'Bloco Principal');
 });
 
 add_action('init', function() {
@@ -28,7 +28,7 @@ add_action('init', function() {
         array('nome' => 'secoli_page_foto_bloco2_img', 'tipo' => 'text'),
 
     );
-    adicionar_campos_personalizados($payload, 'page', 'secoli_page_foto_bloco2_metabox', 'Bloco de imagem esquerda');
+    adicionar_campos_personalizados($payload, 'post', 'secoli_page_foto_bloco2_metabox', 'Bloco de imagem esquerda');
 });
 
 add_action('init', function() {
@@ -38,5 +38,5 @@ add_action('init', function() {
         array('nome' => 'secoli_page_foto_bloco3_img', 'tipo' => 'text'),
 
     );
-    adicionar_campos_personalizados($payload, 'page', 'secoli_page_foto_bloco3_metabox', 'Bloco de imagem direita');
+    adicionar_campos_personalizados($payload, 'post', 'secoli_page_foto_bloco3_metabox', 'Bloco de imagem direita');
 });

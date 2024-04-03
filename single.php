@@ -10,9 +10,9 @@ if (have_posts()) {
         $resumo = get_the_excerpt();
         $url_imagem_destacada = get_the_post_thumbnail_url();
 
-        $secoli_page_foto_banner_title = get_post_meta(get_the_ID(), 'secoli_page_foto_banner_title', true);
-        $secoli_page_foto_banner_desc = get_post_meta(get_the_ID(), 'secoli_page_foto_banner_desc', true);
-        $secoli_page_foto_banner_img = get_post_meta(get_the_ID(), 'secoli_page_foto_banner_img', true);
+        // $secoli_page_foto_banner_title = get_post_meta(get_the_ID(), 'secoli_page_foto_banner_title', true);
+        // $secoli_page_foto_banner_desc = get_post_meta(get_the_ID(), 'secoli_page_foto_banner_desc', true);
+        // $secoli_page_foto_banner_img = get_post_meta(get_the_ID(), 'secoli_page_foto_banner_img', true);
 
         $secoli_page_foto_bloco1_title = get_post_meta(get_the_ID(), 'secoli_page_foto_bloco1_title', true);
         $secoli_page_foto_bloco1_desc = get_post_meta(get_the_ID(), 'secoli_page_foto_bloco1_desc', true);
@@ -45,7 +45,7 @@ if (have_posts()) {
 <div class="full">
     <div class="container">
         <div class="long-space"></div>
-        <img src="https://picsum.photos/seed/destaque/1200/700" class="page__image_destaque">
+        <img src="<?php echo $secoli_page_foto_bloco1_img ?>" onerror="this.src='https://picsum.photos/seed/destaque/1200/700'" class="page__image_destaque">
         <div class="long-space"></div>
     </div>
 </div>
@@ -54,11 +54,11 @@ if (have_posts()) {
     <div class="container">
         <div class="text-central">
             <h2 class="title">
-                <?php echo $title ?>
+                <?php echo $secoli_page_foto_bloco1_title ?>
             </h2>
             <div class="space"></div>
             <p class="text">
-                <?php echo $content ?>
+                <?php echo $secoli_page_foto_bloco1_desc ?>
             </p>
         </div>
         <div class="long-space"></div>
@@ -68,21 +68,14 @@ if (have_posts()) {
 <div class="full">
     <div class="container">
         <div class="A_B">
-            <img src="https://picsum.photos/seed/foto1/500/500">
+            <img src="<?php echo $secoli_page_foto_bloco2_img ?>" onerror="this.src='https://picsum.photos/seed/foto1/500/500'">
             <div>
                 <h2 class="title">
-                    Bloco de texto a direita com imagem a esquerda.
+                    <?php echo $secoli_page_foto_bloco2_title ?>
                 </h2>
                 <div class="space"></div>
                 <p class="text">
-                    Culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis
-                    iste natus error sit voluptartem accusantium doloremque laudantium, totam rem aperiam,
-                    eaque ipsa quae ab illo inventore veritatis et quasi ropeior architecto beatae vitae
-                    dicta sunt explicabo. Nemo eniem ipsam voluptatem quia voluptas sit aspernatur aut odit
-                    aut fugit, sed quia consequuntur magni dolores eosep quiklop ratione voluptatem sequi
-                    nesciunt. Neque porro quisquam est, quepi dolorem ipsum quia dolor srit amet, consectetur
-                    adipisci velit, seid quia non numquam eiuris modi tempora incidunt ut labore et
-                    dolore magnam aliquam quaerat iope voluptatem.
+                    <?php echo $secoli_page_foto_bloco2_desc ?>
                 </p>
             </div>
         </div>
@@ -94,21 +87,14 @@ if (have_posts()) {
 <div class="full">
     <div class="container">
         <div class="B_A">
-            <img src="https://picsum.photos/seed/foto2/520/520">
+            <img src=" <?php echo $secoli_page_foto_bloco3_img ?>" onerror="this.src='https://picsum.photos/seed/foto2/520/520'">
             <div>
                 <h2 class="title">
-                    Bloco de texto a direita com imagem a esquerda.
+                    <?php echo $secoli_page_foto_bloco3_title ?>
                 </h2>
                 <div class="space"></div>
                 <p class="text">
-                    Culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis
-                    iste natus error sit voluptartem accusantium doloremque laudantium, totam rem aperiam,
-                    eaque ipsa quae ab illo inventore veritatis et quasi ropeior architecto beatae vitae
-                    dicta sunt explicabo. Nemo eniem ipsam voluptatem quia voluptas sit aspernatur aut odit
-                    aut fugit, sed quia consequuntur magni dolores eosep quiklop ratione voluptatem sequi
-                    nesciunt. Neque porro quisquam est, quepi dolorem ipsum quia dolor srit amet, consectetur
-                    adipisci velit, seid quia non numquam eiuris modi tempora incidunt ut labore et
-                    dolore magnam aliquam quaerat iope voluptatem.
+                    <?php echo $secoli_page_foto_bloco3_desc ?>
                 </p>
             </div>
         </div>

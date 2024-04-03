@@ -3,7 +3,7 @@
 function custom_rewrite_rule()
 {
     add_rewrite_rule(
-        '^brindes/([^/]*)/?',
+        '^rules_and_laws/([^/]*)/?',
         'index.php?rules_and_laws=$matches[1]',
         // 'index.php?pagename=brindes&produto=$matches[1]',
         'top'

@@ -74,14 +74,14 @@ Template Name: Página CARRINHO
                     </div>
                     <div class="space"></div>
                     <div class="grid c-1 lg-c-3">
-                        <button type="reset" class="btn btn__or" onclick="cart.clear()">
+                        <button type="reset" class="btn btn__or btn_mobile_cart" onclick="cart.clear()">
                             LIMPAR CARRINHO
                         </button>
-                        <a href="<?php __L('/produtos/?cat=0') ?>" class="btn gradient-1 ">
+                        <a href="<?php __L('/produtos/?cat=0') ?>" class="btn gradient-1 btn_mobile_cart">
                             <i class="fa-solid fa-plus"></i>
                             <span>ESCOLHER MAIS PRODUTOS</span>
                         </a>
-                        <button type="submit" class="btn gradient-1 btn__opaco">
+                        <button type="submit" class="btn gradient-1 btn__opaco btn_mobile_cart">
                             SOLICITAR ORÇAMENTO
                         </button>
                     </div>

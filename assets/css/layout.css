@@ -1241,3 +1241,10 @@ div#hostinger-preview-banner {
 .btn__whats {
   font-size: 9px;
 }
+
+.btn_mobile_cart {
+  width: 300px;
+  @media (min-width: 640px) {
+    width: 100%;
+  }
+}

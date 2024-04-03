@@ -1300,7 +1300,7 @@ div#hostinger-preview-banner {
   margin: 0;
   padding: 0;
 }
-.listar__categorias > li {
+.listar__categorias > li > span {
   display: grid;
   grid-template-columns: 1fr 18px;
 }

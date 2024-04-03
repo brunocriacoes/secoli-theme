@@ -1,15 +1,15 @@
 <?php
 
 
-add_action('init', function() {
-    $payload = array(
-        array('nome' => 'secoli_page_foto_banner_title', 'tipo' => 'text'),
-        array('nome' => 'secoli_page_foto_banner_desc', 'tipo' => 'text'),
-        array('nome' => 'secoli_page_foto_banner_img', 'tipo' => 'text'),
+// add_action('init', function() {
+//     $payload = array(
+//         array('nome' => 'secoli_page_foto_banner_title', 'tipo' => 'text'),
+//         array('nome' => 'secoli_page_foto_banner_desc', 'tipo' => 'text'),
+//         array('nome' => 'secoli_page_foto_banner_img', 'tipo' => 'text'),
 
-    );
-    adicionar_campos_personalizados($payload, 'page', 'secoli_page_foto_banner_metabox', 'Banner');
-});
+//     );
+//     adicionar_campos_personalizados($payload, 'page', 'secoli_page_foto_banner_metabox', 'Banner');
+// });
 
 add_action('init', function() {
     $payload = array(

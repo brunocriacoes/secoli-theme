@@ -1243,7 +1243,7 @@ div#hostinger-preview-banner {
 }
 
 .btn_mobile_cart {
-  width: 300px;
+  width: 250px;
   @media (min-width: 640px) {
     width: 100%;
   }

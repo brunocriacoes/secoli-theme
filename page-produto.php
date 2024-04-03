@@ -5,7 +5,9 @@ Template Name: Smartlead página produto
 ?>
 
 <?php get_header(); ?>
+
 <?php
+
 $id = $_GET['id'];
 $url_prod = API_SMARTLEAD . '/wp-json/smartlead-api/v1/produto/?produto_id=' . $id;
 
@@ -15,7 +17,9 @@ $response_prod = json_decode($response_prod, true);
 $relacionados = $response_prod['relacionado'];
 
 ?>
+
 <span class="long-space"></span>
+
 <div class="full">
     <div class="container">
         <div class="grid__prod">
@@ -97,7 +101,9 @@ $relacionados = $response_prod['relacionado'];
         </div>
     </div>
 </div>
+
 <div class="space"></div>
+
 <div class="single__produto__bg">
     <div class="single__produto">
         <img src="<?php __F('media/paginas/produto/single-1.png') ?>">
@@ -122,7 +128,9 @@ $relacionados = $response_prod['relacionado'];
         </a>
     </div>
 </div>
+
 <div class="space"></div>
+
 <div class="full">
     <div class="container">
         <h2 class="title">
@@ -145,5 +153,7 @@ $relacionados = $response_prod['relacionado'];
         </div>
     </div>
 </div>
+
 <div class="space"></div>
+
 <?php get_footer() ?>

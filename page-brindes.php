@@ -5,7 +5,7 @@
  * Template Post Type: brindes
  */
 
- $slug = get_query_var('slug');
+ $slug = get_query_var('prodSlug');
 
 ?>
 

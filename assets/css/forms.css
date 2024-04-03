@@ -269,6 +269,7 @@ h6 {
 .slider__blog {
     overflow: hidden;
     position: relative;
+    padding: 0 16px;
 }
 
 .slider__blog__next {

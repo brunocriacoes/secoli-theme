@@ -2,16 +2,15 @@
 
 function custom_image_meta_box() {
     add_meta_box(
-        'custom_image_meta_box',
+        'add_meta_boxes',
         'Imagem Destacada Personalizada',
         'custom_image_meta_box_callback',
         'post',
-        'side',
-        'default'
+        // 'side',
+        // 'default'
     );
 }
 add_action('add_meta_boxes', 'custom_image_meta_box');
-
 
 function custom_image_meta_box_callback($post) {
     $imagem_destacada_personalizada = get_post_meta($post->ID, 'custom_featured_image', true);

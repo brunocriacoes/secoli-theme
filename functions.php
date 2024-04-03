@@ -61,7 +61,6 @@ function __L($texto)
   echo get_site_url() . $texto;
 }
 
-
 function more_link_person($more_link_text) {
   return '';
 }

@@ -1,17 +1,10 @@
 <?php
 
-function gp_rewrite() {
-
-    add_rewrite_tag(
-        '%%customvariable%%',
-        '([^/]+)'
-    );
+function custom_rewrite_rule() {
     add_rewrite_rule(
-        '^page/([^/]+)/?',
-        'index.php?pagename=brindes&customvariable=$matches[1]', 
+        '^brindes/([^/]*)/?',
+        'index.php?pagename=brindes&slug=$matches[1]',
         'top'
     );
-    
-  }
-  
-  add_action( 'init', 'gp_rewrite' );
+}
+add_action('init', 'custom_rewrite_rule', 10, 0);

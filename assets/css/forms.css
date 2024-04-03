@@ -352,6 +352,8 @@ h6 {
 .page__image_destaque {
     display: block;
     width: 100%;
+    max-width: 95vw;
+    margin: 0 auto;
     border-radius: 16px;
 }
 

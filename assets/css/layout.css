@@ -1240,6 +1240,12 @@ div#hostinger-preview-banner {
   max-width: 95vw;
 }
 
+.container__blog 
+{
+  width: 870px;
+  max-width: 95vw;
+}
+
 .btn__contact {
   width: 270px;
   & span {

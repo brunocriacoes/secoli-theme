@@ -59,7 +59,7 @@ $blog = get_blog_posts();
 
 <?php if (count($blog) > 0) { ?>
     <div class="full">
-        <div class="container">
+        <div class="container container__blog">
             <div class="long-space"></div>
             <div class="slider__blog">
                 <div class="slider__blog__inner swiper-wrapper">

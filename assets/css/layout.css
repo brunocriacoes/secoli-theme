@@ -734,11 +734,13 @@ body {
 }
 
 .tecnologia__bg {
-  background-image: url(../../media/paginas/produtos/tecnologia.png);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: auto 70%;
   padding: var(--long-space) 0;
+  @media (min-width: 640px) {
+    background-image: url(../../media/paginas/produtos/tecnologia.png);
+  }
 }
 
 .tecnologia__bg .title {

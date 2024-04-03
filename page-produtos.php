@@ -46,7 +46,7 @@ $response_prod = json_decode($response_prod, true);
 			<div class="categorias">
 				<strong style="cursor:pointer;">CATEGORIAS</strong>
 				<div class="space"></div>
-				<ul id="listaCategorias">
+				<ul class="listar__categorias">
 					<?php foreach ($response as $cat) { ?>
 						<li onclick="toggleClass(this)">
 							<span style="cursor:pointer;">

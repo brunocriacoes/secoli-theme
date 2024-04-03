@@ -1248,3 +1248,7 @@ div#hostinger-preview-banner {
     width: 100%;
   }
 }
+
+.btn__blog {
+  margin: 0 auto;
+}

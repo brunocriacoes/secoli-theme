@@ -79,7 +79,7 @@ $blog = get_blog_posts();
                                 <?php echo $b['description'] ?>
                             </p>
                             <div class="space"></div>
-                            <a href="<?php echo $b['link'] ?>" class="btn gradient-1">
+                            <a href="<?php echo $b['link'] ?>" class="btn gradient-1 btn__blog">
                                 VEJA MAIS
                             </a>
                             <div class="space"></div>

@@ -1,39 +1,45 @@
 :root {
-    --cor-1: #F8A98B;
-    --cor-2: #F7931E;
-    --cor-3: #F15A24;
-    --cor-4: #FFF8F5;
-    --cor-5: #f7f7f7;
-    --cor-6: #333333;
-    --cor-7: #cccccc;
+  --cor-1: #f8a98b;
+  --cor-2: #f7931e;
+  --cor-3: #f15a24;
+  --cor-4: #fff8f5;
+  --cor-5: #f7f7f7;
+  --cor-6: #333333;
+  --cor-7: #cccccc;
+  --cor-8: #6fd367;
 
-    --fs-1: 34px;
-    --fs-2: 24px;
-    --fs-3: 12px;
+  --fs-1: 34px;
+  --fs-2: 24px;
+  --fs-3: 12px;
 
-    --font: "Nunito Sans", sans-serif;
+  --font: "Nunito Sans", sans-serif;
 
-    --margin: 16px;
-    --padding: 8px;
-    --round: 8px;
-    --gap: 16px;
+  --margin: 16px;
+  --padding: 8px;
+  --round: 8px;
+  --gap: 16px;
 
-    --space: 18px;
-    --long-space: 36px;
+  --space: 18px;
+  --long-space: 36px;
 
-    @media (min-width: 640px) {}
+  @media (min-width: 640px) {
+  }
 
-    @media (min-width: 768px) {}
+  @media (min-width: 768px) {
+  }
 
-    @media (min-width: 1024px) {
-        --fs-1: 50px;
-        --fs-2: 40px;
-        --fs-3: 16px;
-    }
+  @media (min-width: 1024px) {
+    --fs-1: 50px;
+    --fs-2: 40px;
+    --fs-3: 16px;
+  }
 }
 
-@media (min-width: 640px) {}
+@media (min-width: 640px) {
+}
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+}
 
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+}

@@ -63,28 +63,29 @@ $opcoes = get_option('secoli_theme_info');
 
         <?php include __DIR__ . '/parts/promo.php' ?>
 
-        <div class="full">
-            <div class="container">
-                <div class="menu__mobile">
-                    <div class="grid grid__menu__mobile">
-                        <label for="menu__mobile__id">
-                            <i class="fa-solid fa-bars"></i>
-                        </label>
-                        <div>
-                            <a href="<?php __L('/') ?>">
-                                <img height="26" src="<?php echo esc_url(get_theme_file_uri('/assets/images/logo.svg')); ?>" alt="logo">
-                            </a>
+
+        <div class="header__fix">
+            <div class="full bg__menu__mobile">
+                <div class="container">
+                    <div class="menu__mobile">
+                        <div class="grid grid__menu__mobile">
+                            <label for="menu__mobile__id">
+                                <i class="fa-solid fa-bars"></i>
+                            </label>
+                            <div>
+                                <a href="<?php __L('/') ?>">
+                                    <img height="26" src="<?php echo esc_url(get_theme_file_uri('/assets/images/logo.svg')); ?>" alt="logo">
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <input id="menu__mobile__id" type="checkbox" class="menu__mobile__check">
-                    <div class="menu__itens">
-                        <?php print_menu('menu_principal', 'header__menu') ?>
+                        <input id="menu__mobile__id" type="checkbox" class="menu__mobile__check">
+                        <div class="menu__itens">
+                            <?php print_menu('menu_principal', 'header__menu') ?>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="header__fix">
             <div class="full header__bg">
                 <div class="container">
                     <div class="grid grid__menu">
@@ -114,12 +115,12 @@ $opcoes = get_option('secoli_theme_info');
                         <div>
                             <a href="<?php __L('/a-secoli') ?>" class="btn header__btn__black">
                                 <i class="fa-solid fa-house"></i>
-                                &emsp;CONHEÇA A SECOLI
+                                CONHEÇA A SECOLI
                             </a>
                             <span class="space js__space__remove"></span>
                             <a href="<?php __L('/carrinho') ?>" class="btn gradient-1">
                                 <i class="fa-solid fa-cart-shopping"></i>
-                                &emsp;CARRINHO
+                                CARRINHO
                             </a>
                         </div>
                     </div>
@@ -194,6 +195,9 @@ $opcoes = get_option('secoli_theme_info');
                                     <?php echo $cat["name"] ?>
                                 </a>
                                 <ul>
+                                    <div class="name_category">
+                                        <?php echo $cat["name"] ?>
+                                    </div>
                                     <?php foreach ($cat["subcategories"] as $sub) { ?>
                                         <li>
                                             <a href="produtos?cat=<?php echo $sub['id'] ?>">

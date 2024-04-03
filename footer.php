@@ -5,14 +5,14 @@ $opcoes = get_option('secoli_theme_info');
 ?>
 <div class="full news__bg">
     <div class="container">
-        <h4 class="title">
+        <h4 class="title text__mobile__center">
             Cadastre-se e receba novidades!
         </h4>
         <p class="text">
             Receba também promoções em primeira mão.
         </p>
         <span class="space"></span>
-        <form class="grid c-1 md-c-3" onsubmit="addLead(event, this)" action="javascript:void(0)">
+        <form class="grid__news" onsubmit="addLead(event, this)" action="javascript:void(0)">
             <div class="">
                 <input class="news__input js_lead_name" type="text" name="nome" placeholder="Nome" required>
             </div>
@@ -33,8 +33,8 @@ $opcoes = get_option('secoli_theme_info');
 <div class="full gradient-1 footer">
     <div class="container">
         <div class="long-space"></div>
-        <div class="grid c-1 md-c-5">
-            <div>
+        <div class="grid c-2 md-c-5 ">
+            <div class="footer__institucional">
                 <h5 class="footer__tittle">
                     INSTITUCIONAL
                 </h5>

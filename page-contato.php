@@ -44,13 +44,13 @@ if (isset($_POST['email'])) {
 </div>
 
 <div class="full">
-    <div class="container">
+    <div class="container container__contact">
         <div class="long-space"></div>
         <h2 class=" text-center">
             Envie uma mensagem e retornaremos em breve
         </h2>
         <div class="long-space"></div>
-        <form action="<?php __L('/contato')?>" method="POST">
+        <form action="<?php __L('/contato') ?>" method="POST">
             <div class=" grid c-1 lg-c-2">
                 <label class="input__theme">
                     <span>NOME</span>
@@ -106,7 +106,7 @@ if (isset($_POST['email'])) {
                     </div>
                 ';
             }
-            
+
             ?>
         </form>
         <div class="long-space"></div>
@@ -114,11 +114,11 @@ if (isset($_POST['email'])) {
 </div>
 
 <div class="full">
-    <div class="container">
+    <div class="container container__contact">
         <div class="long-space"></div>
         <div class="grid c-1 lg-c-2">
 
-            <div>
+            <div class="text__mobile__center">
                 <h4 class="title">Nas redes sociais</h4>
                 <div class="space"></div>
                 <div>
@@ -136,13 +136,12 @@ if (isset($_POST['email'])) {
                 <div>
                     <a href="https://wa.me/55<?php echo $opcoes['secoli_telefone_whatsapp'] ?>" target="_blank" class="btn gradient-1" rel="noopener noreferrer">
                         <i class="fa-brands fa-whatsapp"></i>
-                        &emsp;
-                        <span>FALE PELO NOSSO WHATSAPP</span>
+                        <span class="btn__whats">FALE PELO NOSSO WHATSAPP</span>
                     </a>
                 </div>
             </div>
             <div>
-                <h4 class="title">Outros contatos</h4>
+                <h4 class="title text__mobile__center">Outros contatos</h4>
                 <h5 class="sub-title">Telefones</h5>
                 <small>Compras</small>
                 <a class="contact__link " href="tel:+55<?php echo $opcoes['telefone_header'] ?>">

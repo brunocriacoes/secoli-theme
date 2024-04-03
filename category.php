@@ -32,7 +32,7 @@
                             <?php the_excerpt() ?>
                         </p>
                         <div class="space"></div>
-                        <a href="<?php the_permalink() ?>" class="btn gradient-1">
+                        <a href="<?php the_permalink() ?>" class="btn gradient-1 btn__blog">
                             VEJA MAIS
                         </a>
                         <div class="space"></div>

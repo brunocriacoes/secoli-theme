@@ -7,8 +7,6 @@
 
 <?php
 
-
-
 function get_blog_posts($post_type = 'post', $posts_per_page = 10)
 {
     $args = array(
@@ -33,9 +31,6 @@ function get_blog_posts($post_type = 'post', $posts_per_page = 10)
     return $blog;
 }
 $blog = get_blog_posts();
-
-
-
 
 ?>
 

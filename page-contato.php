@@ -81,7 +81,7 @@ if (isset($_POST['email'])) {
             <div class="space"></div>
             <div class="to-right">
                 <button type="submit" class="btn gradient-1 btn__contact">
-                    ENVIAR MENSAGEM
+                    <span>ENVIAR MENSAGEM</span>
                 </button>
             </div>
             <?php

@@ -3,6 +3,7 @@
 include __DIR__ . "/includ/factor-cunston-posts.php";
 include __DIR__ . "/includ/factor-meta-box.php";
 include __DIR__ . "/includ/widget.php";
+include __DIR__ . "/includ/router-magic.php";
 
 include __DIR__ . "/admin/config.php";
 include __DIR__ . "/admin/banner.php";

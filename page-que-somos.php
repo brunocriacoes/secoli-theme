@@ -59,7 +59,7 @@ $blog = get_blog_posts();
 
 <?php if (count($blog) > 0) { ?>
     <div class="full">
-        <div class="container">
+        <div class="container container__blog">
             <div class="long-space"></div>
             <div class="slider__blog">
                 <div class="slider__blog__inner swiper-wrapper">
@@ -67,7 +67,7 @@ $blog = get_blog_posts();
                         <div class="slide__blog__iten swiper-slide">
                             <img src="<?php echo $b['image'] ?>" alt="<?php echo $b['title'] ?>" onerror="this.src='<?php __F('/assets/images/img-default.png') ?>'">
                             <div class="space"></div>
-                            <h2 class="title">
+                            <h2 class="title title__blog">
                                 <?php echo $b['title'] ?>
                             </h2>
                             <p class="text">

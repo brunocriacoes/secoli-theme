@@ -37,7 +37,7 @@ if (have_posts()) {
             <?php echo $title ?>
         </h1>
         <p class="text">
-            <?php echo $resumo ?>
+            <?php echo strip_tags( $content ) ?>
         </p>
     </div>
 </div>

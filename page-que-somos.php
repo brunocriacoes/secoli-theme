@@ -21,7 +21,7 @@ function get_blog_posts($post_type = 'post', $posts_per_page = 10)
             $posts->the_post();
             $blog[] = [
                 "title" => get_the_title(),
-                "description" => get_the_excerpt(),
+                "description" => strip_tags( get_the_content() ),
                 "link" => get_permalink(),
                 "image" => get_the_post_thumbnail_url(get_the_ID(), 'full'),
             ];

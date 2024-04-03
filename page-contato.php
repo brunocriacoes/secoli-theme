@@ -134,9 +134,9 @@ if (isset($_POST['email'])) {
                 </div>
                 <div class="space"></div>
                 <div>
-                    <a href="https://wa.me/55<?php echo $opcoes['secoli_telefone_whatsapp'] ?>" target="_blank" class="btn gradient-1" rel="noopener noreferrer">
+                    <a href="https://wa.me/55<?php echo $opcoes['secoli_telefone_whatsapp'] ?>" target="_blank" class="btn gradient-1 btn__whats" rel="noopener noreferrer">
                         <i class="fa-brands fa-whatsapp"></i>
-                        <span class="btn__whats">FALE PELO NOSSO WHATSAPP</span>
+                        <span>FALE PELO NOSSO WHATSAPP</span>
                     </a>
                 </div>
             </div>

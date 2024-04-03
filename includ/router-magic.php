@@ -6,7 +6,8 @@ function custom_rewrite_rule() {
         'index.php?pagename=brindes&slug=$matches[1]',
         'top'
     );
-    // flush_rewrite_rules();
+    add_rewrite_tag('%%slug%%','([^/]+)');
+    flush_rewrite_rules();
 }
 
 add_action('init', 'custom_rewrite_rule', 10, 0);

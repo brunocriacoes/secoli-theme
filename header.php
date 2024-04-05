@@ -118,7 +118,7 @@ $opcoes = get_option('secoli_theme_info');
                                 CONHEÇA A SECOLI
                             </a>
                             <span class="space js__space__remove"></span>
-                            <a href="<?php __L('/carrinho') ?>" class="btn gradient-1">
+                            <a href="<?php __L('/carrinho') ?>" class="btn gradient-1 header__btn__cart">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 CARRINHO
                             </a>

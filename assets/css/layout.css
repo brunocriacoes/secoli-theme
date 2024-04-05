@@ -271,6 +271,11 @@ body {
   color: #000000;
   background-color: var(--cor-5);
   border: 1px solid #000000;
+  width: 230px;
+}
+
+.header__btn__cart {
+  width: 230px;
 }
 
 .grid.grid__menu {

@@ -43,7 +43,7 @@
 		</label>
 		<label class="dialog__lb ">
 			<i class="fa-solid fa-envelope"></i>
-			<input class="js_dialog_email" type="email" name="email" placeholder="error@mail.com" required>
+			<input class="js_dialog_email" type="email" name="email" placeholder="email@email.com.br" required>
 		</label>
 		<label class="dialog__lb ">
 			<i class="fa-solid fa-building"></i>

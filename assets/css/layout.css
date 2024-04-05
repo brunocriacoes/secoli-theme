@@ -297,16 +297,10 @@ a.btn.gradient-1.header__btn__cart span {
 }
 
 .grid.grid__menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* .grid.grid__menu {
   display: grid;
   grid-template-columns: 170px 1fr 200px;
   place-items: center;
-} */
+}
 
 .grid__menu {
   --c: 170px 1fr 200px;

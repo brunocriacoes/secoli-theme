@@ -5,7 +5,7 @@ $opcoes = get_option('secoli_theme_info');
 ?>
 <div class="full news__bg">
     <div class="container">
-        <h4 class="title text__mobile__center">
+        <h4 class="title">
             Cadastre-se e receba novidades!
         </h4>
         <p class="text">

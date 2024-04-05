@@ -86,7 +86,7 @@ $opcoes = get_option('secoli_theme_info');
 	<div class="container">
 		<div class="long-space"></div>
 		<div class="long-space"></div>
-		<div class="grid c-1 md-c-2  v-center">
+		<div class="grid c-1 md-c-2  v-center order__iverter">
 			<div>
 				<h1 class="title">
 					Porque escolher a Secoli?

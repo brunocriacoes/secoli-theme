@@ -1352,3 +1352,7 @@ div#hostinger-preview-banner {
   display: flex;
   justify-content: space-around;
 }
+
+.order__iverter:nth-child(1) {
+  order: 2;
+}

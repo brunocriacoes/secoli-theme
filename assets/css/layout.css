@@ -370,7 +370,7 @@ a.btn.gradient-1.header__btn__cart span {
   margin: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 1300px;
+  width: calc(100vw - 160px);
   position: absolute;
   top: 80px;
   left: 0;
@@ -1207,10 +1207,6 @@ div#hostinger-preview-banner {
 .about-title {
   display: block;
   text-align: center;
-}
-
-.swiper-wrapper {
-  padding: 8px;
 }
 
 .title__idealize {

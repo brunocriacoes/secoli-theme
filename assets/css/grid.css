@@ -229,10 +229,9 @@
   display: block;
 
   max-width: 100vw;
-  max-width: 100dvw;
   margin: 0 auto;
   @media (min-width: 640px) {
-    width: 1300px;
+    width: calc(100vw - 160px);
   }
 }
 

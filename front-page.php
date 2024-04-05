@@ -66,8 +66,7 @@ $opcoes = get_option('secoli_theme_info');
 				</h3>
 				<span class="space"></span>
 				<p class="text">
-					Somos especialistas no desenvolvimento
-					de projetos especiais.
+					Somos especialistas em projetos especiais de brindes. Para falar com um dos nossos especialistas em brindes promocionais, clique abaixo e conte mais sobre seu projeto.
 				</p>
 				<span class="long-space"></span>
 				<span class="long-space"></span>
@@ -99,7 +98,7 @@ $opcoes = get_option('secoli_theme_info');
 					em criar produtos personalizados exclusivos
 				</p>
 				<span class="long-space"></span>
-				<a class="btn gradient-1" href="">SAIBA MAIS</a>
+				<a class="btn gradient-1" href="<?php __L('/a-secoli') ?>">SAIBA MAIS</a>
 			</div>
 			<div class="text-center">
 				<div class="video-mask">

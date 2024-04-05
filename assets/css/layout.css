@@ -1352,9 +1352,8 @@ div#hostinger-preview-banner {
   display: flex;
   justify-content: space-around;
 }
-
 .order__invert > div:first-child {
-  order: 3;
+  order: 2;
 }
 
 .order__invert > div:last-child {

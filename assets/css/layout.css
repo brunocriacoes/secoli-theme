@@ -62,7 +62,7 @@ body {
 
 .btn {
   display: flex;
-  font-size: var(--fs-3);
+  font-size: 14px;
   color: var(--cor-4);
   text-decoration: none;
   cursor: pointer;

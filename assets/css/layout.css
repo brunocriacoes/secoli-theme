@@ -191,6 +191,10 @@ body {
   color: var(--cor-2);
   line-height: 48px;
   margin-right: 8px;
+  text-transform: uppercase;
+  &:hover {
+    color: var(--cor-3);
+  }
 }
 
 .header__search__contact {

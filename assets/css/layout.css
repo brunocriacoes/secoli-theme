@@ -296,12 +296,6 @@ a.btn.gradient-1.header__btn__cart span {
   font-size: 14px;
 }
 
-.grid.grid__menu {
-  display: grid;
-  grid-template-columns: 170px 1fr 200px;
-  place-items: center;
-}
-
 .grid__menu {
   --c: 170px 1fr 200px;
   align-items: center;

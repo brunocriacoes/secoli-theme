@@ -269,6 +269,7 @@ body {
 }
 
 .header__contact {
+  width: 280px;
   text-decoration: none;
   color: #000000;
 }

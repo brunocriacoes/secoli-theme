@@ -273,7 +273,11 @@ body {
   border: 1px solid #000000;
   width: 230px;
 }
-.header__btn__black > span {
+a.btn.header__btn__black i.fa-solid.fa-house {
+  font-size: 24px;
+}
+
+a.btn.header__btn__black span {
   font-size: 14px;
 }
 

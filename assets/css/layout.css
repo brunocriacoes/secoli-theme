@@ -284,6 +284,13 @@ a.btn.header__btn__black span {
 .header__btn__cart {
   width: 230px;
 }
+a.btn.header__btn__cart i.fa-solid fa-cart-shopping {
+  font-size: 14px;
+}
+
+a.btn.gradient-1.header__btn__cart span {
+  font-size: 14px;
+}
 
 .grid.grid__menu {
   display: flex;

@@ -1349,3 +1349,7 @@ div#hostinger-preview-banner {
 .header__none {
   justify-content: space-around;
 }
+
+.header__position {
+  justify-content: space-around;
+}

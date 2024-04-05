@@ -93,7 +93,7 @@ $opcoes = get_option('secoli_theme_info');
                             <img class="header__logo" src="<?php echo esc_url(get_theme_file_uri('/assets/images/logo.svg')); ?>" alt="logo">
                         </a>
                         <div>
-                            <div class="header__none">
+                            <div class="header__none header__position">
                                 <?php print_menu('menu_principal', 'header__menu') ?>
                             </div>
 

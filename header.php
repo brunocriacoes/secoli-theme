@@ -115,12 +115,12 @@ $opcoes = get_option('secoli_theme_info');
                         <div>
                             <a href="<?php __L('/a-secoli') ?>" class="btn header__btn__black">
                                 <i class="fa-solid fa-house"></i>
-                                CONHEÇA A SECOLI
+                                <span>CONHEÇA A SECOLI</span>
                             </a>
                             <span class="space js__space__remove"></span>
                             <a href="<?php __L('/carrinho') ?>" class="btn gradient-1 header__btn__cart">
                                 <i class="fa-solid fa-cart-shopping"></i>
-                                CARRINHO
+                                <span>CARRINHO</span>
                             </a>
                         </div>
                     </div>

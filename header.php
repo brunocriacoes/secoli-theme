@@ -97,7 +97,7 @@ $opcoes = get_option('secoli_theme_info');
                                 <?php print_menu('menu_principal', 'header__menu') ?>
                             </div>
 
-                            <div class="header__search__contact contatos__empilhados">
+                            <div class="header__search__contact contatos__empilhados header__position">
                                 <form class="header__search" action="<?php __L('/') ?>" method="get">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                     <input class="header__input" type="search" name="s" required placeholder="Buscar no site">

@@ -189,7 +189,7 @@ $opcoes = get_option('secoli_theme_info');
                             </a>
                         </li>
                         <?php foreach ($response as $cat) { ?>
-                            <li>
+                            <li class="cat__color__<?php echo $cat['id'] ?>">
                                 <a href="produtos?cat=<?php echo $cat['id'] ?>">
                                     <img class="icon_category_menu" src="<?php echo __F('assets/icons/' . $cat['id'] . '.svg') ?>" alt="">
                                     <?php echo $cat["name"] ?>

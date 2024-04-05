@@ -1334,3 +1334,7 @@ div#hostinger-preview-banner {
 .listar__categorias > li.ativo > span > i {
   transform: rotate(-90deg);
 }
+
+.cat__color__9 {
+  background: var(--cor-8);
+}

@@ -66,7 +66,7 @@ $opcoes = get_option('secoli_theme_info');
 
         <div class="header__fix">
             <div class="full bg__menu__mobile">
-                <div class="container">
+                <div class="container__full">
                     <div class="menu__mobile">
                         <div class="grid grid__menu__mobile">
                             <label for="menu__mobile__id">
@@ -87,7 +87,7 @@ $opcoes = get_option('secoli_theme_info');
             </div>
 
             <div class="full header__bg">
-                <div class="container">
+                <div class="container__full">
                     <div class="grid grid__menu">
                         <a href="<?php __L('/') ?>">
                             <img class="header__logo" src="<?php echo esc_url(get_theme_file_uri('/assets/images/logo.svg')); ?>" alt="logo">
@@ -127,7 +127,7 @@ $opcoes = get_option('secoli_theme_info');
                 </div>
             </div>
             <div class="full category__bg">
-                <div class="container">
+                <div class="container__full">
                     <div class="category__mobile">
                         <div class="grid__category__mobile">
                             <label for="menu__category__mobile">
@@ -171,7 +171,7 @@ $opcoes = get_option('secoli_theme_info');
                 </div>
             </div>
             <div class="full category__bg category__desktop">
-                <div class="container">
+                <div class="container__full">
                     <?php
                     $url = API_SMARTLEAD . '/wp-json/smartlead-api/v1/categorias/';
                     $response = file_get_contents($url);

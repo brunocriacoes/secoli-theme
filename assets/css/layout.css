@@ -1343,4 +1343,11 @@ div#hostinger-preview-banner {
   display: grid;
   grid-template-columns: 18px 1fr;
   gap: 8px;
+  align-items: center;
+}
+
+.icon_category_menu__sub {
+  display: block;
+  width: 100%;
+  opacity: 0.5;
 }

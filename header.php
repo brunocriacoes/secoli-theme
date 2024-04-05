@@ -201,7 +201,7 @@ $opcoes = get_option('secoli_theme_info');
                                     <?php foreach ($cat["subcategories"] as $sub) { ?>
                                         <li>
                                             <a class="g__link__subcategoria" href="produtos?cat=<?php echo $sub['id'] ?>">
-                                                <img class="icon_category_menu" src="<?php echo __F('assets/icons/' . $cat['id'] . '.svg') ?>" alt="">
+                                                <img class="icon_category_menu__sub" src="<?php echo __F('assets/icons/' . $cat['id'] . '.svg') ?>" alt="">
                                                 <span><?php echo $sub["name"] ?></span>
                                             </a>
                                         </li>

@@ -1338,3 +1338,9 @@ div#hostinger-preview-banner {
 .cat__color__9 {
   background: var(--cor-8);
 }
+
+.g__link__subcategoria {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 8px;
+}

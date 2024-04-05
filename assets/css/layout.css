@@ -201,6 +201,7 @@ body {
   display: flex;
   gap: 20px;
   align-items: center;
+  justify-content: space-around;
 }
 
 .contatos-empilhados {
@@ -1343,4 +1344,8 @@ div#hostinger-preview-banner {
   display: block;
   width: 100%;
   opacity: 0.5;
+}
+
+.header__none {
+  justify-content: space-around;
 }

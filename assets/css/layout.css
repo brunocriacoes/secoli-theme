@@ -198,13 +198,14 @@ body {
 }
 
 .header__search__contact {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 200px 200px;
   gap: 20px;
   align-items: center;
   justify-content: space-around;
 }
 
-.contatos-empilhados {
+.contatos__empilhados {
   display: grid;
   grid-template-areas:
     "search contact1"
@@ -215,15 +216,15 @@ body {
   width: 100%;
 }
 
-.contatos-empilhados {
+.contatos__empilhados {
   --space: 0;
 }
 
-.contatos-empilhados .header__search {
+.contatos__empilhados .header__search {
   width: 100%;
 }
 
-.contatos-empilhados a {
+.contatos__empilhados a {
   display: block;
 }
 

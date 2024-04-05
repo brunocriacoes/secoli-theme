@@ -11,15 +11,15 @@ $opcoes = get_option('secoli_theme_info');
 
 <div class="full personalizados__bg">
 	<div class="container">
-		<h2 class="title text-center ">
+		<h1 class="title text-center ">
 			Surpreenda seus clientes e seja lembrado
-		</h2>
+		</h1>
 		<span class="long-space"></span>
 		<div class="grid c-1 lg-c-2 v-center">
 			<div>
-				<h2 class="title">
+				<h1 class="title">
 					Conheça a nossa linha de brindes e presentes personalizados.
-				</h2>
+				</h1>
 				<span class="space"></span>
 				<p class="text">
 					Presenteie seus clientes com produtos exclusivos,
@@ -89,9 +89,9 @@ $opcoes = get_option('secoli_theme_info');
 		<div class="long-space"></div>
 		<div class="grid c-1 md-c-2  v-center">
 			<div>
-				<h2 class="title">
+				<h1 class="title">
 					Porque escolher a Secoli?
-				</h2>
+				</h1>
 				<span class="space"></span>
 				<p class="text">
 					Conquistado o equilíbrio entre a mais moderna tecnologia e o cuidado da manufatura

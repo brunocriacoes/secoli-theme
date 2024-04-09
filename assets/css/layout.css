@@ -454,6 +454,12 @@ a.btn.gradient-1.header__btn__cart span {
   align-items: center;
   padding-right: 5%;
 }
+.iten__bg__banner > div {
+  width: 100%;
+  @media (min-width: 640px) {
+    width: 50%;
+  }
+}
 
 .iten__bg__banner .title {
   font-size: 75px;

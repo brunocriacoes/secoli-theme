@@ -790,7 +790,8 @@ a.btn.gradient-1.header__btn__cart span {
 }
 
 .grid_produtos .categorias {
-  position: sticky;
+  position: -webkit-sticky;
+
   height: 50vh;
   overflow: hidden;
   overflow-y: auto;

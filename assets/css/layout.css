@@ -790,6 +790,8 @@ a.btn.gradient-1.header__btn__cart span {
 }
 
 .grid_produtos .categorias {
+  height: 50vh;
+  overflow: hidden;
   padding: 18px;
   border-radius: 16px;
   display: none;

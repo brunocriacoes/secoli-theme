@@ -791,7 +791,7 @@ a.btn.gradient-1.header__btn__cart span {
 
 .grid_produtos .categorias {
   position: sticky;
-  top: 300px;
+  top: 200px;
   height: 50vh;
   overflow: hidden;
   overflow-y: auto;

@@ -3,12 +3,25 @@
 Template Name: Smartlead página produto
 */
 ?>
+
+<?php
+
+$id = $_GET['id'];
+$url_prod = API_SMARTLEAD . '/wp-json/smartlead-api/v1/produto/?produto_id=' . $id;
+
+$response_prod = file_get_contents($url_prod);
+
+$response_prod = json_decode($response_prod, true);
+$relacionados = $response_prod['relacionado'];
+
+?>
+
 <?php
 
 $post_id = -99;
 $post = new stdClass();
 $post->ID = $post_id;
-$post->post_title = 'Some title or other';
+$post->post_title = 'Secoli | ' . $response_prod[0]['name'];
 $wp_post = new WP_Post($post);
 wp_cache_add($post_id, $wp_post, 'posts');
 global $wp, $wp_query;
@@ -24,20 +37,7 @@ $wp->register_globals();
 ?>
 <?php get_header(); ?>
 
-<?php
 
-$id = $_GET['id'];
-$url_prod = API_SMARTLEAD . '/wp-json/smartlead-api/v1/produto/?produto_id=' . $id;
-
-$response_prod = file_get_contents($url_prod);
-
-$response_prod = json_decode($response_prod, true);
-$relacionados = $response_prod['relacionado'];
-
-global $meuValorDinamico;
-$meuValorDinamico = $response_prod[0]['name'];
-
-?>
 
 <span class="long-space"></span>
 

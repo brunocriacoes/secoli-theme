@@ -68,7 +68,7 @@ function more_link_person($more_link_text)
 add_filter('the_content_more_link', 'more_link_person');
 
 
-function custom_url_template_redirect()
+function rota_dinamica_categoria()
 {
   $uri = $_SERVER['REQUEST_URI'];
   if (preg_match('/^\/brindes\/([^\/]+)\/?$/', $uri, $matches)) {
@@ -81,4 +81,19 @@ function custom_url_template_redirect()
     exit();
   }
 }
-add_action('template_redirect', 'custom_url_template_redirect');
+add_action('template_redirect', 'rota_dinamica_categoria');
+
+function rota_dinamica_produto()
+{
+  $uri = $_SERVER['REQUEST_URI'];
+  if (preg_match('/^\/brinde\/([^\/]+)\/?$/', $uri, $matches)) {
+    $valorDinamico = $matches[1];
+    $_GET['id'] = $valorDinamico;
+    global $meuValorDinamico;
+    $meuValorDinamico = $valorDinamico;
+
+    include(get_template_directory() . '/page-produto.php');
+    exit();
+  }
+}
+add_action('template_redirect', 'rota_dinamica_produto');

@@ -90,7 +90,11 @@ function rota_dinamica_produto()
     $valorDinamico = $matches[1];
     $_GET['id'] = $valorDinamico;
     global $meuValorDinamico;
-    global $wp, $wp_query;
+    global $wp_query;
+    $wp_query->is_404 = false;
+    status_header(200);
+
+    global $meuValorDinamico;
     $meuValorDinamico = $valorDinamico;
 
     include(get_template_directory() . '/page-produto.php');
@@ -98,25 +102,3 @@ function rota_dinamica_produto()
   }
 }
 add_action('template_redirect', 'rota_dinamica_produto');
-
-function custom_url_template_redirect()
-{
-  $uri = $_SERVER['REQUEST_URI'];
-  if (preg_match('/^\/minha-url-dinamica\/([^\/]+)\/?$/', $uri, $matches)) {
-    // O valor dinâmico capturado estará em $matches[1]
-    $valorDinamico = $matches[1];
-
-    global $wp_query;
-    $wp_query->is_404 = false; // Informa ao WordPress que não é uma página 404
-    status_header(200); // Envia um cabeçalho HTTP 200 OK
-
-    // Aqui você pode fazer algo com $valorDinamico
-    global $meuValorDinamico;
-    $meuValorDinamico = $valorDinamico;
-
-    // Inclui o template específico
-    include(get_template_directory() . '/page-meu-template.php');
-    exit();
-  }
-}
-add_action('template_redirect', 'custom_url_template_redirect');

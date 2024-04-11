@@ -97,3 +97,15 @@ function rota_dinamica_produto()
   }
 }
 add_action('template_redirect', 'rota_dinamica_produto');
+
+function custom_title($title) {
+  if (is_a(global $wp_query, 'WP_Query') && ($wp_query->is_404)) {
+      $uri = $_SERVER['REQUEST_URI'];
+      if (preg_match('/^\/brinde\/([^\/]+)\/?$/', $uri, $matches)) {
+          $title['title'] = 'Título Personalizado'; // Defina seu título aqui
+          $wp_query->is_404 = false; // Impede que a página seja tratada como 404
+      }
+  }
+  return $title;
+}
+add_filter('document_title_parts', 'custom_title');

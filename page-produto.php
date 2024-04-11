@@ -20,7 +20,7 @@ global $meuValorDinamico;
 $meuValorDinamico = $response_prod[0]['name'];
 
 ?>
-
+<title>tafarel</title>
 <span class="long-space"></span>
 
 <div class="full">

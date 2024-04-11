@@ -16,6 +16,9 @@ $response_prod = file_get_contents($url_prod);
 $response_prod = json_decode($response_prod, true);
 $relacionados = $response_prod['relacionado'];
 
+global $meuValorDinamico;
+$meuValorDinamico = $response_prod[0]['name'];
+
 ?>
 
 <span class="long-space"></span>

@@ -89,13 +89,9 @@ function rota_dinamica_produto()
   if (preg_match('/^\/brinde\/([^\/]+)\/?$/', $uri, $matches)) {
     $valorDinamico = $matches[1];
     $_GET['id'] = $valorDinamico;
-    global $meuValorDinamico;
     global $wp_query;
     $wp_query->is_404 = false;
     status_header(200);
-
-    global $meuValorDinamico;
-    $meuValorDinamico = $valorDinamico;
 
     include(get_template_directory() . '/page-produto.php');
     exit();

@@ -60,8 +60,19 @@ function __L($texto)
   echo get_site_url() . $texto;
 }
 
-function more_link_person($more_link_text) {
+function more_link_person($more_link_text)
+{
   return '';
 }
 
 add_filter('the_content_more_link', 'more_link_person');
+
+
+function custom_url_template_redirect()
+{
+  if ($_SERVER['REQUEST_URI'] == '/brindes') {
+    include(get_template_directory() . '/page-produtos.php');
+    exit();
+  }
+}
+add_action('template_redirect', 'custom_url_template_redirect');

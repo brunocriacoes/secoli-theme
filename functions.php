@@ -91,6 +91,7 @@ function rota_dinamica_produto()
     $_GET['id'] = $valorDinamico;
     global $wp_query;
     $wp_query->is_404 = false;
+    $wp_query->is_page = true;
     status_header(200);
 
     include(get_template_directory() . '/page-produto.php');

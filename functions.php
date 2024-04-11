@@ -74,8 +74,10 @@ function rota_dinamica_categoria()
   if (preg_match('/^\/brindes\/([^\/]+)\/?$/', $uri, $matches)) {
     $valorDinamico = $matches[1];
     $_GET['cat'] = $valorDinamico;
-    global $meuValorDinamico;
-    $meuValorDinamico = $valorDinamico;
+    global $wp_query;
+    $wp_query->is_404 = false;
+    $wp_query->is_page = true;
+    status_header(200);
 
     include(get_template_directory() . '/page-produtos.php');
     exit();

@@ -4,8 +4,6 @@ Template Name: Smartlead lista de produtos
 */
 ?>
 
-<?php get_header(); ?>
-
 <?php
 $url = API_SMARTLEAD . '/wp-json/smartlead-api/v1/categorias';
 
@@ -29,6 +27,30 @@ $response_prod = file_get_contents($url_prod);
 $response_prod = json_decode($response_prod, true);
 
 ?>
+
+<?php
+
+$post_id = -99;
+$post = new stdClass();
+$post->ID = $post_id;
+$post->post_title = 'Secoli | ' . $categoriaAtual;
+$wp_post = new WP_Post($post);
+wp_cache_add($post_id, $wp_post, 'posts');
+global $wp, $wp_query;
+$wp_query->post = $wp_post;
+$wp_query->posts = array($wp_post);
+$wp_query->queried_object = $wp_post;
+$wp_query->queried_object_id = $post_id;
+$wp_query->is_404 = false;
+$wp_query->is_page = true;
+$GLOBALS['wp_query'] = $wp_query;
+$wp->register_globals();
+
+?>
+
+<?php get_header(); ?>
+
+
 <div class="full">
 	<div class="container">
 		<div class="space"></div>

@@ -70,7 +70,13 @@ add_filter('the_content_more_link', 'more_link_person');
 
 function custom_url_template_redirect()
 {
-  if ($_SERVER['REQUEST_URI'] == '/brindes') {
+  $uri = $_SERVER['REQUEST_URI'];
+  if (preg_match('/^\/brindes\/([^\/]+)\/?$/', $uri, $matches)) {
+    $valorDinamico = $matches[1];
+    $_GET['cat'] = $valorDinamico;
+    global $meuValorDinamico;
+    $meuValorDinamico = $valorDinamico;
+
     include(get_template_directory() . '/page-produtos.php');
     exit();
   }

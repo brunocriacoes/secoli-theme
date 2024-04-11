@@ -3,7 +3,25 @@
 Template Name: Smartlead página produto
 */
 ?>
+<?php
 
+$post_id = -99;
+$post = new stdClass();
+$post->ID = $post_id;
+$post->post_title = 'Some title or other';
+$wp_post = new WP_Post($post);
+wp_cache_add($post_id, $wp_post, 'posts');
+global $wp, $wp_query;
+$wp_query->post = $wp_post;
+$wp_query->posts = array($wp_post);
+$wp_query->queried_object = $wp_post;
+$wp_query->queried_object_id = $post_id;
+$wp_query->is_404 = false;
+$wp_query->is_page = true;
+$GLOBALS['wp_query'] = $wp_query;
+$wp->register_globals();
+
+?>
 <?php get_header(); ?>
 
 <?php
@@ -20,7 +38,7 @@ global $meuValorDinamico;
 $meuValorDinamico = $response_prod[0]['name'];
 
 ?>
-<title>tafarel</title>
+
 <span class="long-space"></span>
 
 <div class="full">

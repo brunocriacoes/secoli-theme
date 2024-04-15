@@ -17,12 +17,13 @@ if ($id == 0) {
 
 $categoriaAtual = 'Categoria atual';
 $slug = array_reverse(explode('/', $_SERVER['REQUEST_URI']))[0];
-var_dump($response[0]);
+
 foreach ($response as $c) {
 	if ($slug == $c['id']) {
 		$categoriaAtual = $c['name'];
 	}
 }
+$categoriaAtual = $slug;
 $response_prod = file_get_contents($url_prod);
 
 $response_prod = json_decode($response_prod, true);

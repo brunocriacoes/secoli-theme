@@ -59,7 +59,7 @@ $wp->register_globals();
 			<span>/</span>
 			<a class="text" href="<?php __L('/brindes/0') ?>">Produtos</a>
 			<span>/</span>
-			<a class="text" href="<?php __L('/brindes/' . $_GET['']) ?>">
+			<a class="text" href="<?php __L('\/brindes\/' . $_GET['']) ?>">
 				<?php echo $categoriaAtual ?>
 			</a>
 			<span>/</span>
@@ -73,7 +73,7 @@ $wp->register_globals();
 						<li onclick="toggleClass(this)">
 							<span style="cursor:pointer;">
 								<b>
-									<a href="<?php __L('/brindes/') ?><?php echo $cat['slug'] ?>">
+									<a href="<?php __L('\/brindes\/') ?><?php echo $cat['slug'] ?>">
 										<?php echo $cat['name'] ?>
 									</a>
 								</b>
@@ -104,13 +104,13 @@ $wp->register_globals();
 					<div class="grid c-1 sm-c-2 md-c-2 lg-c-3">
 						<?php foreach ($response_prod as $produto) { ?>
 							<div class="produto">
-								<a href="<?php __L('/brinde/') ?><?php echo $produto['slug'] ?>">
+								<a href="<?php __L('\/brinde\/') ?><?php echo $produto['slug'] ?>">
 									<img src="https://app.secolibrindes.com.br/<?php echo $produto['photos'][0]['path'] ?>" alt="<?php echo $produto['name'] ?>" onerror="this.src='<?php __F('/assets/images/img-default.png') ?>'" />
 								</a>
-								<a href="<?php __L('/brinde/') ?><?php echo $produto['slug'] ?>">
+								<a href="<?php __L('\/brinde\/') ?><?php echo $produto['slug'] ?>">
 									<small> <?php echo $produto['cod'] ?> </small>
 								</a>
-								<a href="<?php __L('/brinde/') ?><?php echo $produto['slug'] ?>">
+								<a href="<?php __L('\/brinde\/') ?><?php echo $produto['slug'] ?>">
 									<strong>
 										<?php echo $produto['name'] ?>
 									</strong>

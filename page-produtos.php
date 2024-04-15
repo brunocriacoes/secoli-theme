@@ -59,7 +59,7 @@ $wp->register_globals();
 			<span>/</span>
 			<a class="text" href="<?php __L('/brindes/0') ?>">Produtos</a>
 			<span>/</span>
-			<a class="text" href="<?php __L('/brindes' . array_reverse(explode('/', $_SERVER['REQUEST_URI']))[0]) ?>">
+			<a class="text" href="<?php __L('\/brindes/' . array_reverse(explode('/', $_SERVER['REQUEST_URI']))[0]) ?>">
 				<?php echo $categoriaAtual ?>
 			</a>
 			<span>/</span>

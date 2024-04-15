@@ -17,7 +17,7 @@ if ($id == 0) {
 
 $categoriaAtual = 'Categoria atual';
 $slug = array_reverse(explode('/', $_SERVER['REQUEST_URI']))[0];
-var_dump($response[0]);
+var_dump($slug);
 foreach ($response as $c) {
 	if ($id == $c['id']) {
 		$categoriaAtual = $c['name'];

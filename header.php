@@ -190,7 +190,7 @@ $opcoes = get_option('secoli_theme_info');
                         </li>
                         <?php foreach ($response as $cat) { ?>
                             <li class="cat__color__<?php echo $cat['id'] ?>">
-                                <a href="<?php __L('/brindes/') ?><?php echo $cat['id'] ?>">
+                                <a href="<?php __L('/brindes/') ?><?php echo $cat['slug'] ?>">
                                     <img class="icon_category_menu" src="<?php echo __F('assets/icons/' . $cat['id'] . '.svg') ?>" alt="">
                                     <?php echo $cat["name"] ?>
                                 </a>
@@ -207,7 +207,7 @@ $opcoes = get_option('secoli_theme_info');
                                         </li>
                                     <?php } ?>
                                     <img src="<?php __F('assets/images/img-category.png') ?>" alt="imagem Categoria">
-                                    <a href="<?php __L('/brindes/') ?><?php echo $cat['id'] ?>">VER TODOS</a>
+                                    <a href="<?php __L('/brindes/') ?><?php echo $cat['slug'] ?>">VER TODOS</a>
                                 </ul>
                             </li>
                         <?php } ?>

@@ -151,13 +151,13 @@ $opcoes = get_option('secoli_theme_info');
                                     <li onclick="toggleClass(this)">
                                         <span class="menu_category__link_mobile">
                                             <img src="<?php echo __F('assets/icons/' . $cat['id'] . '.svg') ?>" alt="">
-                                            <a href="produtos?cat=<?php echo $cat['id'] ?>"> <?php echo $cat["name"] ?> </a>
+                                            <a href="<?php __L('/brindes/') ?><?php echo $cat['id'] ?>"> <?php echo $cat["name"] ?> </a>
                                             <i class="fa-solid fa-chevron-down"></i>
                                         </span>
                                         <ul>
                                             <?php foreach ($cat["subcategories"] as $sub) { ?>
                                                 <li>
-                                                    <a href="produtos?cat=<?php echo $sub['id'] ?>">
+                                                    <a href="<?php __L('/brindes/') ?><?php echo $sub['slug'] ?>">
                                                         <?php echo $sub["name"] ?>
                                                     </a>
                                                 </li>
@@ -183,14 +183,14 @@ $opcoes = get_option('secoli_theme_info');
 
                     <ul class="category__list">
                         <li>
-                            <a href="produtos?cat=0">
+                            <a href="<?php __L('/brindes/') ?>0">
                                 <i class="fa-regular fa-image"></i>
                                 TODAS AS CATEGORIAS
                             </a>
                         </li>
                         <?php foreach ($response as $cat) { ?>
                             <li class="cat__color__<?php echo $cat['id'] ?>">
-                                <a href="produtos?cat=<?php echo $cat['id'] ?>">
+                                <a href="<?php __L('/brindes/') ?><?php echo $cat['id'] ?>">
                                     <img class="icon_category_menu" src="<?php echo __F('assets/icons/' . $cat['id'] . '.svg') ?>" alt="">
                                     <?php echo $cat["name"] ?>
                                 </a>
@@ -200,14 +200,14 @@ $opcoes = get_option('secoli_theme_info');
                                     </div>
                                     <?php foreach ($cat["subcategories"] as $sub) { ?>
                                         <li>
-                                            <a class="g__link__subcategoria" href="produtos?cat=<?php echo $sub['id'] ?>">
+                                            <a class="g__link__subcategoria" href="<?php __L('/brindes/') ?><?php echo $sub['slug'] ?>">
                                                 <img class="icon_category_menu__sub" src="<?php echo __F('assets/icons/' . $cat['id'] . '.svg') ?>" alt="">
                                                 <span><?php echo $sub["name"] ?></span>
                                             </a>
                                         </li>
                                     <?php } ?>
                                     <img src="<?php __F('assets/images/img-category.png') ?>" alt="imagem Categoria">
-                                    <a href="produtos?cat=<?php echo $cat['id'] ?>">VER TODOS</a>
+                                    <a href="<?php __L('/brindes/') ?><?php echo $cat['id'] ?>">VER TODOS</a>
                                 </ul>
                             </li>
                         <?php } ?>

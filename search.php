@@ -6,7 +6,7 @@ $url = API_SMARTLEAD . '/wp-json/smartlead-api/v1/categorias';
 
 $response = file_get_contents($url);
 $response = json_decode($response, true);
-$id = $_GET['cat'];
+// $id = $_GET['cat'];
 
 $url_prod = API_SMARTLEAD . '/wp-json/smartlead-api/v1/produtos/';
 
@@ -34,16 +34,6 @@ $response_prod = array_values($response_prod);
 <div class="full">
     <div class="container">
         <div class="space"></div>
-        <div class="menu__category">
-            <a class="text" href="<?php __L('/') ?>">Home</a>
-            <span>/</span>
-            <a class="text" href="<?php __L('/produtos/?cat=0') ?>">Produtos</a>
-            <span>/</span>
-            <a class="text" href="<?php __L('/produtos/?cat=' . $_GET['cat']) ?>">
-                <?php echo $categoriaAtual ?>
-            </a>
-            <span>/</span>
-        </div>
         <div class="grid_produtos">
             <div class="categorias">
                 <strong style="cursor:pointer;">CATEGORIAS</strong>
@@ -53,14 +43,14 @@ $response_prod = array_values($response_prod);
                         <li id="categoriaMae">
                             <span style="cursor:pointer;">
                                 <b>
-                                    <a href="<?php __L('/') ?>produtos/?cat=<?php echo $cat['id'] ?>">
+                                    <a href="<?php __L('/') ?>brindes/<?php echo $cat['slug'] ?>">
                                         <?php echo $cat['name'] ?>
                                     </a>
                                 </b>
                             </span>
                             <ul class="subcategorias">
                                 <?php foreach ($cat["subcategories"] as $sub) { ?>
-                                    <li><a href="<?php __L('/') ?>produtos/?cat=<?php echo $sub['id'] ?>"><span><?php echo $sub['name'] ?></span></a></li>
+                                    <li><a href="<?php __L('/') ?>brindes/<?php echo $sub['slug'] ?>"><span><?php echo $sub['name'] ?></span></a></li>
                                 <?php } ?>
                             </ul>
                         </li>
@@ -77,19 +67,19 @@ $response_prod = array_values($response_prod);
                             <span class="text"> Ainda não temos produtos disponíveis nesta categoria. Estamos trabalhando constantemente para expandir nossa seleção e trazer novidades. Enquanto isso, convidamos você a explorar outras categorias ou voltar para a nossa página inicial para descobrir tudo o que oferecemos.
                                 Clique aqui para voltar à página inicial</span>
                             <div class="space"></div>
-                            <a class="btn gradient-1 " href="produtos?cat=0">Clique aqui para todas as categorias</a>
+                            <a class="btn gradient-1 " href="<?php __L('/') ?>brindes/0">Clique aqui para todas as categorias</a>
                         </div>
                     <?php } ?>
                     <div class="grid c-1 sm-c-2 md-c-2 lg-c-3">
                         <?php foreach ($response_prod as $produto) { ?>
                             <div class="produto">
-                                <a href="produto?id=<?php echo $produto['id'] ?>">
+                                <a href="<?php __L('/') ?>brinde/<?php echo $produto['slug'] ?>">
                                     <img src="https://app.secolibrindes.com.br/<?php echo $produto['photos'][0]['path'] ?>" alt="<?php echo $produto['name'] ?>" onerror="this.src='<?php __F('/assets/images/img-default.png') ?>'" />
                                 </a>
-                                <a href="produto?id=<?php echo $produto['id'] ?>">
+                                <a href="<?php __L('/') ?>brinde/<?php echo $produto['slug'] ?>">
                                     <small> <?php echo $produto['cod'] ?> </small>
                                 </a>
-                                <a href="produto?id=<?php echo $produto['id'] ?>">
+                                <a href="<?php __L('/') ?>brinde/<?php echo $produto['slug'] ?>">
                                     <strong>
                                         <?php echo $produto['name'] ?>
                                     </strong>
@@ -121,7 +111,7 @@ $response_prod = array_values($response_prod);
                 <span>Expandir para mais produtos</span>
             </a>
             <span class="text">Não está encontrando o que procura?</span>
-            <a class="btn gradient-1 " href="<?php __F('//media/catalogo.pdf') ?>">BAIXE O CATÁLOGO DIGITAL</a>
+            <a class="btn gradient-1 " href="<?php __F('/media/catalogo.pdf') ?>">BAIXE O CATÁLOGO DIGITAL</a>
         </div>
     </div>
 </div>

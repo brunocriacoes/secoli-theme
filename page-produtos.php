@@ -75,7 +75,7 @@ $wp->register_globals();
 						<li onclick="toggleClass(this)">
 							<span style="cursor:pointer;">
 								<b>
-									<a href="<?php __L('\/brindes\/') ?><?php echo $cat['slug'] ?>">
+									<a href="<?php __L('/brindes/') ?><?php echo $cat['slug'] ?>">
 										<?php echo $cat['name'] ?>
 									</a>
 								</b>
@@ -106,13 +106,13 @@ $wp->register_globals();
 					<div class="grid c-1 sm-c-2 md-c-2 lg-c-3">
 						<?php foreach ($response_prod as $produto) { ?>
 							<div class="produto">
-								<a href="<?php __L('\/brinde\/') ?><?php echo $produto['slug'] ?>">
+								<a href="<?php __L('/brinde/') ?><?php echo $produto['slug'] ?>">
 									<img src="https://app.secolibrindes.com.br/<?php echo $produto['photos'][0]['path'] ?>" alt="<?php echo $produto['name'] ?>" onerror="this.src='<?php __F('/assets/images/img-default.png') ?>'" />
 								</a>
-								<a href="<?php __L('\/brinde\/') ?><?php echo $produto['slug'] ?>">
+								<a href="<?php __L('/brinde/') ?><?php echo $produto['slug'] ?>">
 									<small> <?php echo $produto['cod'] ?> </small>
 								</a>
-								<a href="<?php __L('\/brinde\/') ?><?php echo $produto['slug'] ?>">
+								<a href="<?php __L('/brinde/') ?><?php echo $produto['slug'] ?>">
 									<strong>
 										<?php echo $produto['name'] ?>
 									</strong>
@@ -120,7 +120,7 @@ $wp->register_globals();
 								<span class="space"></span>
 								<a class="btn gradient-1" onclick="return cart.add('<?php echo $produto['id'] ?>',
 												'<?php echo $produto['name'] ?>',
-												'https:\/\/app.secolibrindes.com.br\/<?php echo $produto['photos'][0]['path'] ?>', '<?php echo $produto['cod'] ?>', '', 'color', '<?php echo $_GET['cat'] ?>')" href="<?php __L('/') ?>carrinho">
+												'https://app.secolibrindes.com.br/<?php echo $produto['photos'][0]['path'] ?>', '<?php echo $produto['cod'] ?>', '', 'color', '<?php echo $_GET['cat'] ?>')" href="<?php __L('/') ?>carrinho">
 									<i class="fa-solid fa-cart-plus"></i>
 									<span>ORÇAR ESTE PRODUTO</span>
 								</a>

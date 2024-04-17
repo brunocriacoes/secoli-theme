@@ -206,7 +206,7 @@ $opcoes = get_option('secoli_theme_info');
                                             </a>
                                         </li>
                                     <?php } ?>
-                                    <img src="<?php __F('assets/images/img-category.png') ?>" alt="imagem Categoria">
+                                    <img src="<?php __F('assets/image-category/' . $cat['id'] . '.jpg') ?>" alt="imagem Categoria">
                                     <a href="<?php __L('/brindes/') ?><?php echo $cat['slug'] ?>">VER TODOS</a>
                                 </ul>
                             </li>

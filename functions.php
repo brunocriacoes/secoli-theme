@@ -18,7 +18,7 @@ include __DIR__ . "/api/agendar-contato.php";
 
 add_theme_support('post-thumbnails');
 
-define('API_SMARTLEAD', 'https://secoli-com-br.preview-domain.com');
+define('API_SMARTLEAD', 'https://' . $_SERVER['SERVER_NAME']);
 
 function __F($path)
 {

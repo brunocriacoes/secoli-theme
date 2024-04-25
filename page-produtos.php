@@ -52,6 +52,9 @@ $wp->register_globals();
 
 <?php get_header(); ?>
 
+<script>
+	globalThis.zuker = <?php echo json_encode($response_prod) ?>
+</script>
 
 <div class="full">
 	<div class="container">

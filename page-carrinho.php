@@ -8,7 +8,7 @@ Template Name: Página CARRINHO
 
 
 <div class="bg__card">
-    
+
     <div class="long-space"></div>
 
     <div class="full">
@@ -19,7 +19,7 @@ Template Name: Página CARRINHO
             </p>
         </div>
     </div>
-    
+
     <div class="space"></div>
 
     <script>
@@ -46,33 +46,31 @@ Template Name: Página CARRINHO
                         <div>
                             <label class="input__theme">
                                 <span>NOME</span>
-                                <input type="text" name="name" value="Bruno" placeholder="digite" required>
+                                <input type="text" name="name" value="" placeholder="digite" required>
                             </label>
                             <div class="space"></div>
                             <label class="input__theme">
                                 <span>TELEFONE</span>
-                                <input type="text" name="phone" value="+55 (11) 9 4949-9944" placeholder="digite" required>
+                                <input type="text" name="phone" value="" placeholder="digite" required>
                             </label>
                             <div class="space"></div>
                             <label class="input__theme">
                                 <span>EMAIL</span>
-                                <input type="text" name="email" value="br.rafael@outlook.com" placeholder="digite" required>
+                                <input type="text" name="email" value="" placeholder="digite" required>
                             </label>
                             <div class="space"></div>
                             <label class="input__theme">
                                 <span>CNPJ</span>
-                                <input type="text" placeholder="digite" value="11.111.0001-11" name="cnpj" required>
+                                <input type="text" placeholder="digite" value="" name="cnpj" required>
                             </label>
                             <div class="space"></div>
                             <label class="input__theme">
                                 <span>EMPRESA</span>
-                                <input type="text" placeholder="digite" name="company" value="brc" required>
+                                <input type="text" placeholder="digite" name="company" value="" required>
                             </label>
                         </div>
                         <label class="input__theme">
-                            <textarea name="description" required placeholder="Conte-nos um pouco mais sobre seu projeto...">
-                                    teste
-                                </textarea>
+                            <textarea name="description" required placeholder="Conte-nos um pouco mais sobre seu projeto..."></textarea>
                         </label>
                     </div>
                     <div class="space"></div>

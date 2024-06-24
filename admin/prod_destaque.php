@@ -6,8 +6,7 @@ add_action('init', function () {
 
 add_action('init', function() {
     $campos_personalizados = array(
-        array('nome' => 'secoli_prod_dest_link', 'tipo' => 'url'),
-
+        array('nome' => 'secoli_prod_dest_link', 'tipo' => 'text'),
     );
     adicionar_campos_personalizados($campos_personalizados, 'post_prod_dest', 'secoli_prod_dest_metabox', 'Campos personalizados');
 });

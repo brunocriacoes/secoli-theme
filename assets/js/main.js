@@ -326,6 +326,7 @@ async function send_orcamento($f) {
   let form = document.querySelector(".js-form");
 
   try {
+    fetch(_domain + "/wp-json/smartlead-api/v1/new-budget")
     let req = await fetch(_domain + "/wp-json/smartlead-api/v1/orcamento", {
       method: "POST",
       body: formData,
